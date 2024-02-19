@@ -33,20 +33,14 @@ public class PlayerState
 		player.Anim.SetBool(animBoolName, false);
 	}
 	
-	public virtual void LogicUpdate() 
-	{
-		
-	}
+	public virtual void LogicUpdate() {}
 	
 	public virtual void PhysicsUpdate()
 	{
 		Validate();	
 	}
 	
-	public virtual void Validate()
-	{
-		
-	}
+	public virtual void Validate() {}
 	
 	public virtual void AnimationTrigger() {}
 	
