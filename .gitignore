@@ -59,7 +59,9 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+#SI3 and vsConfig
+jasper the lost twin/.vsconfig
 jasper the lost twin/ProjectSettings/ShaderGraphSettings.asset
 jasper the lost twin/Assets/Plugins/Editor/ScriptInspector3.meta
 jasper the lost twin/Assets/Plugins/Editor/ScriptInspector3.meta
-jasper the lost twin/Assets/NewBehaviourScript.cs.meta
