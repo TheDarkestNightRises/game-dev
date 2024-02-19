@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -70,11 +72,12 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -736,38 +742,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SPA_Player_Ginger_7: 580831379
-      SPA_Player_Ginger_3: 876383493
-      SPA_Player_Ginger_15: -1802687035
-      SPA_Player_Ginger_1: -447063592
-      SPA_Player_Ginger_28: 363801603
-      SPA_Player_Ginger_19: -870866980
-      SPA_Player_Ginger_23: 715123695
-      SPA_Player_Ginger_2: 248316919
       SPA_Player_Ginger_0: 1855344113
-      SPA_Player_Ginger_14: -41249391
-      SPA_Player_Ginger_17: 1580662780
-      SPA_Player_Ginger_16: -1457172145
-      SPA_Player_Ginger_21: 864739096
-      SPA_Player_Ginger_9: -1184596203
-      SPA_Player_Ginger_6: -1680959438
-      SPA_Player_Ginger_22: 606612702
-      SPA_Player_Ginger_26: 1492238091
-      SPA_Player_Ginger_24: 271418523
-      SPA_Player_Ginger_4: -475857897
+      SPA_Player_Ginger_1: -447063592
       SPA_Player_Ginger_10: 1956572891
-      SPA_Player_Ginger_12: 524606598
-      SPA_Player_Ginger_25: 165465299
-      SPA_Player_Ginger_18: -1132412760
-      SPA_Player_Ginger_13: -1167420058
-      SPA_Player_Ginger_20: -1803172168
-      SPA_Player_Ginger_8: -1339322465
-      SPA_Player_Ginger_27: 1676798138
       SPA_Player_Ginger_11: -861971770
+      SPA_Player_Ginger_12: 524606598
+      SPA_Player_Ginger_13: -1167420058
+      SPA_Player_Ginger_14: -41249391
+      SPA_Player_Ginger_15: -1802687035
+      SPA_Player_Ginger_16: -1457172145
+      SPA_Player_Ginger_17: 1580662780
+      SPA_Player_Ginger_18: -1132412760
+      SPA_Player_Ginger_19: -870866980
+      SPA_Player_Ginger_2: 248316919
+      SPA_Player_Ginger_20: -1803172168
+      SPA_Player_Ginger_21: 864739096
+      SPA_Player_Ginger_22: 606612702
+      SPA_Player_Ginger_23: 715123695
+      SPA_Player_Ginger_24: 271418523
+      SPA_Player_Ginger_25: 165465299
+      SPA_Player_Ginger_26: 1492238091
+      SPA_Player_Ginger_27: 1676798138
+      SPA_Player_Ginger_28: 363801603
+      SPA_Player_Ginger_3: 876383493
+      SPA_Player_Ginger_4: -475857897
       SPA_Player_Ginger_5: 1278742427
-  spritePackingTag: 
+      SPA_Player_Ginger_6: -1680959438
+      SPA_Player_Ginger_7: 580831379
+      SPA_Player_Ginger_8: -1339322465
+      SPA_Player_Ginger_9: -1184596203
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

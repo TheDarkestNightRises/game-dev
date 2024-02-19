@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -70,11 +72,12 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -757,39 +763,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SPA_Rock_Grass_Water_4: 1693995664
-      SPA_Rock_Grass_Water_24: 1515028310
-      SPA_Rock_Grass_Water_16: 598573972
-      SPA_Rock_Grass_Water_5: -125239328
-      SPA_Rock_Grass_Water_1: 2128836906
-      SPA_Rock_Grass_Water_14: -1792837333
-      SPA_Rock_Grass_Water_20: -1145920474
-      SPA_Rock_Grass_Water_17: 1442173388
-      SPA_Rock_Grass_Water_25: 127176786
-      SPA_Rock_Grass_Water_21: -1727424584
-      SPA_Rock_Grass_Water_26: -1852856748
-      SPA_Rock_Grass_Water_2: 389791961
-      SPA_Rock_Grass_Water_12: -315592832
       SPA_Rock_Grass_Water_0: -1592810371
-      SPA_Rock_Grass_Water_9: 1820047113
-      SPA_Rock_Grass_Water_29: 218540869
-      SPA_Rock_Grass_Water_6: -797337277
-      SPA_Rock_Grass_Water_18: -1546644079
-      SPA_Rock_Grass_Water_23: 2127032687
-      SPA_Rock_Grass_Water_19: 1669293370
+      SPA_Rock_Grass_Water_1: 2128836906
       SPA_Rock_Grass_Water_10: 1200852399
-      SPA_Rock_Grass_Water_15: -93404092
-      SPA_Rock_Grass_Water_22: 326982620
-      SPA_Rock_Grass_Water_7: 1143623960
-      SPA_Rock_Grass_Water_27: -1901171047
       SPA_Rock_Grass_Water_11: -980395098
-      SPA_Rock_Grass_Water_28: -518129202
-      SPA_Rock_Grass_Water_3: 529094090
-      SPA_Rock_Grass_Water_8: -885229193
+      SPA_Rock_Grass_Water_12: -315592832
       SPA_Rock_Grass_Water_13: -2050716820
-  spritePackingTag: 
+      SPA_Rock_Grass_Water_14: -1792837333
+      SPA_Rock_Grass_Water_15: -93404092
+      SPA_Rock_Grass_Water_16: 598573972
+      SPA_Rock_Grass_Water_17: 1442173388
+      SPA_Rock_Grass_Water_18: -1546644079
+      SPA_Rock_Grass_Water_19: 1669293370
+      SPA_Rock_Grass_Water_2: 389791961
+      SPA_Rock_Grass_Water_20: -1145920474
+      SPA_Rock_Grass_Water_21: -1727424584
+      SPA_Rock_Grass_Water_22: 326982620
+      SPA_Rock_Grass_Water_23: 2127032687
+      SPA_Rock_Grass_Water_24: 1515028310
+      SPA_Rock_Grass_Water_25: 127176786
+      SPA_Rock_Grass_Water_26: -1852856748
+      SPA_Rock_Grass_Water_27: -1901171047
+      SPA_Rock_Grass_Water_28: -518129202
+      SPA_Rock_Grass_Water_29: 218540869
+      SPA_Rock_Grass_Water_3: 529094090
+      SPA_Rock_Grass_Water_4: 1693995664
+      SPA_Rock_Grass_Water_5: -125239328
+      SPA_Rock_Grass_Water_6: -797337277
+      SPA_Rock_Grass_Water_7: 1143623960
+      SPA_Rock_Grass_Water_8: -885229193
+      SPA_Rock_Grass_Water_9: 1820047113
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
