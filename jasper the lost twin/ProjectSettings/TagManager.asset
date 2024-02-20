@@ -41,3 +41,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1338759683
+    locked: 0
+  - name: Water
+    uniqueID: 908773777
+    locked: 0
+  - name: Platform
+    uniqueID: 2735986521
+    locked: 0
+  - name: Climbing
+    uniqueID: 2475078569
+    locked: 0
+  - name: Interactable
+    uniqueID: 3162512291
+    locked: 0
+  - name: Enemies
+    uniqueID: 1422739263
+    locked: 0
+  - name: Player
+    uniqueID: 4291000387
+    locked: 0
+  - name: Hazards
+    uniqueID: 2846115457
+    locked: 0
