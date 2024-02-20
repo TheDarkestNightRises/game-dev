@@ -14,7 +14,8 @@ public class PlayerScript : MonoBehaviour
 	public PlayerInputHandler InputHandler { get; set; }
 	public Rigidbody2D RB { get; set; }
 	public Vector2 CurrentVelocity { get; set; }
-	public PlayerData PlayerData { get; set; }
+	[SerializeField]
+	private PlayerData PlayerData;
     
 	public void Awake() 
 	{
