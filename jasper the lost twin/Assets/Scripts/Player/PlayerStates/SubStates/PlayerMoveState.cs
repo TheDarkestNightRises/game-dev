@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,8 @@ public class PlayerMoveState : PlayerGroundState
 
     public override void LogicUpdate()
     {
-        base.LogicUpdate();
+	    base.LogicUpdate();
+	    player.CheckIfShouldFlip(xInput);
         player.SetVelocityX(playerData.movementVelocity * xInput);
 
         if (xInput == 0)
