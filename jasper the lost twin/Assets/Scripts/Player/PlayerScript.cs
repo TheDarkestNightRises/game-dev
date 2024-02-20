@@ -14,10 +14,32 @@ public class PlayerScript : MonoBehaviour
 	public PlayerInputHandler InputHandler { get; set; }
 	public Rigidbody2D RB { get; set; }
 	public Vector2 CurrentVelocity { get; set; }
-
+	public PlayerData PlayerData { get; set; }
+    
+	public void Awake() 
+	{
+		StateMachine = new PlayerStateMachine();
+		IdleState = new PlayerIdleState(this, StateMachine, PlayerData, "idle");	
+		MoveState = new PlayerMoveState(this, StateMachine, PlayerData, "move");
+	}
+	
+	public void Start()
+	{
+		Anim = GetComponent<Animator>();
+		InputHandler = GetComponent<PlayerInputHandler>();
+		RB = GetComponent<Rigidbody2D>();
+		StateMachine.Initialize(IdleState);
+	}
+	
 	public void Update()
 	{
 		CurrentVelocity = RB.velocity;
+		StateMachine.CurrentState.LogicUpdate();
+	}
+	
+	public void FixedUpdate()
+	{
+		StateMachine.CurrentState.PhysicsUpdate();	
 	}
 
 	public void SetVelocityX(float velocityX)
@@ -31,5 +53,6 @@ public class PlayerScript : MonoBehaviour
 		Vector2 velocity = new Vector2(CurrentVelocity.x, velocityY);
 		RB.velocity = velocity;
 	}
+	
 }
 
