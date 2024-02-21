@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoveState : PlayerGroundState
+public class PlayerMoveState : PlayerGroundedState
 {
-
-    public PlayerMoveState(PlayerScript player, PlayerStateMachine playerStateMachine, PlayerData playerData, string animBoolName) : base(player, playerStateMachine, playerData, animBoolName)
-    {
-
-    }
-
+	public PlayerMoveState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+	{
+		
+	}
+	
 	public override void LogicUpdate()
 	{
 		base.LogicUpdate();

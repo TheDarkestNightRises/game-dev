@@ -18,9 +18,10 @@ public class PlayerAbilityState : PlayerState
 		isAbilityDone = false;
 	}
 	
-	public override void Validate()
+	public override void DoChecks()
 	{
-		base.Validate();
+		base.DoChecks();
+		
 		isGrounded = player.CheckIfTouchingGround();
 	}
 	

@@ -11211,7 +11211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1eef6cb7e20084191ab492adcd27d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputHoldTime: 0.2
+  inputHoldTime: 0.3
 --- !u!50 &1057649269
 Rigidbody2D:
   serializedVersion: 4
@@ -11272,7 +11272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2140525ff9549b64a9c05070067602a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 0}
   playerData: {fileID: 11400000, guid: cec72dca542c515448e37a062182150a, type: 2}
 --- !u!70 &1057649272
 CapsuleCollider2D:
