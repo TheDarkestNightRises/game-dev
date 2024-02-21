@@ -10,15 +10,15 @@ public class PlayerMoveState : PlayerGroundState
 
     }
 
-    public override void LogicUpdate()
-    {
-	    base.LogicUpdate();
-	    player.CheckIfShouldFlip(xInput);
-        player.SetVelocityX(playerData.movementVelocity * xInput);
-
-        if (xInput == 0)
-        {
-            stateMachine.ChangeState(player.IdleState);
-        }
-    }
+	public override void LogicUpdate()
+	{
+		base.LogicUpdate();
+		player.CheckIfShouldFlip(xInput);
+		player.SetVelocityX(playerData.movementVelocity * xInput);
+		
+		if (xInput == 0)
+		{
+			stateMachine.ChangeState(player.IdleState);
+		}
+	}
 }
