@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateMachine : MonoBehaviour
+public class PlayerStateMachine 
 {
-	public PlayerState CurrentState { get; set; }
+	public PlayerState CurrentState { get; private set;}
 	
-	public void Initialize(PlayerState startState)
+	public void Initialize(PlayerState startingState)
 	{
-		CurrentState = startState;
+		CurrentState = startingState;
 		CurrentState.Enter();
 	}
 	

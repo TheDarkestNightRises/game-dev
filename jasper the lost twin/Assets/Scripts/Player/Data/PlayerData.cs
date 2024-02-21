@@ -9,4 +9,7 @@ public class PlayerData : ScriptableObject
 	[Header("MoveStats")]
     public float movementVelocity = 10f;
 	
+	[Header("JumpStats")]
+	public float jumpVelocity = 10f;
+	public int amountOfJumps = 2;
 }
