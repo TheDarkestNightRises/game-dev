@@ -22,6 +22,7 @@ public class PlayerScript : MonoBehaviour
 	private Transform groundCheck;
 	[SerializeField]
 	private PlayerData playerData;
+	private BoxCollider2D myFeetCollider;
     
 	public void Awake() 
 	{
@@ -35,6 +36,7 @@ public class PlayerScript : MonoBehaviour
 	
 	public void Start()
 	{
+		myFeetCollider = GetComponent<BoxCollider2D>();
 		Anim = GetComponent<Animator>();
 		InputHandler = GetComponent<PlayerInputHandler>();
 		RB = GetComponent<Rigidbody2D>();
@@ -78,7 +80,7 @@ public class PlayerScript : MonoBehaviour
 
 	public bool CheckIfTouchingGround()
 	{
-		return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+		return myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")); 
 	}
 	
 	private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
