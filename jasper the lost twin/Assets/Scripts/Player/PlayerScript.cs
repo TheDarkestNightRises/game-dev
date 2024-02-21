@@ -8,6 +8,9 @@ public class PlayerScript : MonoBehaviour
 	public PlayerStateMachine StateMachine { get; set; }
 	public PlayerIdleState IdleState { get; set; }
 	public PlayerMoveState MoveState { get; set; }
+	public PlayerJumpState JumpState { get; set; }
+	public PlayerInAirState InAirState { get; set; }	
+	public PlayerLandState LandState { get; set; }
 	#endregion
 
 	public Animator Anim { get; set; }
@@ -16,13 +19,18 @@ public class PlayerScript : MonoBehaviour
 	public Vector2 CurrentVelocity { get; set; }
 	public int FacingDirection { get; set;}
 	[SerializeField]
-	private PlayerData PlayerData;
+	private Transform groundCheck;
+	[SerializeField]
+	private PlayerData playerData;
     
 	public void Awake() 
 	{
 		StateMachine = new PlayerStateMachine();
-		IdleState = new PlayerIdleState(this, StateMachine, PlayerData, "idle");	
-		MoveState = new PlayerMoveState(this, StateMachine, PlayerData, "move");
+		IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");	
+		MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
+		JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
+		InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
+		LandState = new PlayerLandState(this, StateMachine, playerData, "land");
 	}
 	
 	public void Start()
@@ -68,6 +76,13 @@ public class PlayerScript : MonoBehaviour
 	    if (xInput != 0 && xInput != FacingDirection) Flip();
 	}
 
+	public bool CheckIfTouchingGround()
+	{
+		return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+	}
 	
+	private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
+	
+	private void AnimationFinishedTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
 }
 
