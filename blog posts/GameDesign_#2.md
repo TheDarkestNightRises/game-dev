@@ -3,7 +3,9 @@
 ### Game Concept 
 
 Captured by X, Jasper has begun his journey into unknown lands in search of his twin. Dive into an immersive world with intricate level designs, challenging platforms, and deadly foes. Unveil the mysteries of Y, collect rewards, unlock new weapons and abilities, and become stronger with each encounter. <ending>    
-Genre
+
+### Genre
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/91905169/40894e1e-0505-4bb6-b255-5693f8e6a728)
 Inspired by games like Hollow Knight or Dead Cells, Jasper, the lost twin features interconnected exploration, unique ability and weapons, and nonlinear storytelling making it a classic Metroidvania.
   
 ###  Target Audience
@@ -19,14 +21,14 @@ With an enchanting mechanics aesthetic and combat, along with challenging and un
 The player is a skillful individual who will constantly feel the craving to make his character stronger, explore new areas, and fight new enemies. This way the player will have an intrinsic motivation to get better at the game and the curiosity to explore various environments which will keep him engaged and contribute to its sense of progression.
 
 ### Visual and audio style
-
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/91905169/0697ffbd-958f-4e0c-a528-9c32552c649b)
 The game will use pixel art as its core aesthetic which will evoke nostalgia for the classic games and charm for the simplicity of art, but it will also leave room for the player imagination to fill in the details. It will include different biomes, each one of them with a different palette scheme and distinct feel. 
  
 ## Detailed & Game Systems Design
 
 ### Platform, Technology, and Scope
 
-The game will be made in Unity in 2D, and it will be available on Windows PCs as well as on Arcade Machines4
+The game will be made in Unity in 2D, and it will be available on Windows PCs as well as on Arcade Machines
 
 ### Monetization
 
