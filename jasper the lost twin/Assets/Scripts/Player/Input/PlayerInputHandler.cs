@@ -18,7 +18,18 @@ public class PlayerInputHandler : MonoBehaviour
 	public void OnJumpInput(InputAction.CallbackContext context)
 	{
 		if(context.started)
+		{
 			Debug.Log("Jumped");
-		
+		}
+		if (context.performed)
+		{
+			Debug.Log("Jump is being held down");
+		}
+		if(context.canceled)
+		{
+			Debug.Log("Jump button has been released");
+		}
+
+		Debug.Log("Jump input");
 	}
 }
