@@ -13,4 +13,9 @@ public class PlayerData : ScriptableObject
 	[Header("JumpStats")]
 	public float jumpVelocity = 10f;
 	public int amountOfJumps = 2;
+	
+	[Header("FallingStats")]
+	public float maximumFallingSpeed = 10f;
+	public float fallGravityMultiplier = 3f;
+	public float gravityScale = 5f;
 }
