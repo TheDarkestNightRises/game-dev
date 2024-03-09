@@ -539,12 +539,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ccf8fc50cd6634fbd95b97d04bad74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectsToHide:
-  - {fileID: 1598975301}
-  - {fileID: 504952098}
-  _loadingBarObject: {fileID: 0}
-  _firstLevel: Level_1
-  _persistentScene: PersistScene
+  _firstLevel:
+    m_SceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+    m_SceneName: Level_1
+  _persistentScene:
+    m_SceneAsset: {fileID: 102900000, guid: f4e07dd197de82e44b1ebc00d8bf1bec, type: 3}
+    m_SceneName: PersistScene
 --- !u!1 &1285687282
 GameObject:
   m_ObjectHideFlags: 0

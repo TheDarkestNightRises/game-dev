@@ -6,23 +6,13 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour
 {
-	[SerializeField] private GameObject[] _objectsToHide;
-	[SerializeField] private GameObject _loadingBarObject;
-	[SerializeField] private string _firstLevel = "Level_1";
-	[SerializeField] private string _persistentScene = "PersistScene";
+	[SerializeField] private SceneField _firstLevel;
+	[SerializeField] private SceneField _persistentScene;
 	
 	public void StartGame()
 	{
-		HideMenu();
 		SceneManager.LoadSceneAsync(_persistentScene);
 		SceneManager.LoadSceneAsync(_firstLevel, LoadSceneMode.Additive);
 	}	
 
-	private void HideMenu()
-	{
-		foreach (GameObject objToHide in _objectsToHide)
-		{
-			objToHide.SetActive(false);
-		}
-	}
 }
