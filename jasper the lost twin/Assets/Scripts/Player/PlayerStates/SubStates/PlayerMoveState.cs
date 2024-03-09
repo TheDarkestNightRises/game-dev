@@ -13,8 +13,25 @@ public class PlayerMoveState : PlayerGroundedState
 	{
 		base.LogicUpdate();
 		player.CheckIfShouldFlip(xInput);
-		player.SetVelocityX(playerData.movementVelocity * xInput);
 		
+		//var currentVelocity = Mathf.MoveTowards(player.CurrentVelocity.x, playerData.movementVelocity * xInput, playerData.accelaration * Time.deltaTime);
+		//player.SetVelocityX(currentVelocity);
+		
+		// Calculate acceleration based on player input
+		float targetSpeed = playerData.movementVelocity * xInput;
+
+		// Calculate acceleration rate (similar to your Run method)
+		float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? playerData.runAccell : playerData.decAccell;
+
+		// Calculate the difference between current velocity and desired velocity
+		float speedDif = targetSpeed - player.RB.velocity.x;
+
+		// Calculate force along the x-axis to apply to the player
+		float movement = speedDif * accelRate;
+
+		// Apply the acceleration force to the player's velocity
+		player.RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
+
 		if (xInput == 0)
 		{
 			stateMachine.ChangeState(player.IdleState);
