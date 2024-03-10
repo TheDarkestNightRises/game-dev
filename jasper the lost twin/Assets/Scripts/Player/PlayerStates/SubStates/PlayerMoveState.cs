@@ -13,6 +13,16 @@ public class PlayerMoveState : PlayerGroundedState
 	{
 		base.LogicUpdate();
 		player.CheckIfShouldFlip(xInput);
+
+		if (xInput == 0)
+		{
+			stateMachine.ChangeState(player.IdleState);
+		}
+	}
+	
+	public override void PhysicsUpdate()
+	{
+		base.PhysicsUpdate();
 		
 		//var currentVelocity = Mathf.MoveTowards(player.CurrentVelocity.x, playerData.movementVelocity * xInput, playerData.accelaration * Time.deltaTime);
 		//player.SetVelocityX(currentVelocity);
@@ -32,9 +42,5 @@ public class PlayerMoveState : PlayerGroundedState
 		// Apply the acceleration force to the player's velocity
 		player.RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
 
-		if (xInput == 0)
-		{
-			stateMachine.ChangeState(player.IdleState);
-		}
 	}
 }

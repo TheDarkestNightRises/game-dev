@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerIdleState : PlayerGroundedState
 {
-	public float friction = 0.2f;
-
 	public PlayerIdleState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
 	{
 		
@@ -19,18 +17,22 @@ public class PlayerIdleState : PlayerGroundedState
 	public override void LogicUpdate()
 	{
 		base.LogicUpdate();
-		ApplyFriction();
 		if (xInput != 0)
 		{
 			stateMachine.ChangeState(player.MoveState);
 		}
 	}
 	
+	public override void PhysicsUpdate()
+	{
+		ApplyFriction();
+	}
+	
 	private void ApplyFriction()
 	{
 		// Calculate friction force based on the current velocity
 		var velocityX = player.RB.velocity.x;
-		float frictionForce = Mathf.Min(Mathf.Abs(velocityX), friction);
+		float frictionForce = Mathf.Min(Mathf.Abs(velocityX), playerData.friction);
 		frictionForce *= Mathf.Sign(velocityX);
 
 		// Apply the friction force to the player's velocity

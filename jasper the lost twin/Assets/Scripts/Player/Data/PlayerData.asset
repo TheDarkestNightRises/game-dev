@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 10
   runAccell: 9
-  decAccell: 8
-  jumpVelocity: 17
-  amountOfJumps: 1
+  decAccell: 24
+  friction: 2
+  jumpVelocity: 15
+  amountOfJumps: 2
   coyoteTime: 0.2
-  jumpHoldMultiplier: 5
+  jumpHoldMultiplier: 0.5
   maximumFallingSpeed: 13
   fallGravityMultiplier: 1.5
-  gravityScale: 2.5
+  gravityScale: 3.5

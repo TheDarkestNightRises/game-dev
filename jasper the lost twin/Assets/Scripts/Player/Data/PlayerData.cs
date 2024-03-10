@@ -9,6 +9,7 @@ public class PlayerData : ScriptableObject
 	public float movementVelocity = 10f;
 	public float runAccell = 9f;
 	public float decAccell = 8f;
+	public float friction = 0.2f;
 	
 	[Header("JumpStats")]
 	public float jumpVelocity = 17f;
