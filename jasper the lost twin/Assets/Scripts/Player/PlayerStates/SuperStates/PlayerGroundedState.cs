@@ -32,6 +32,7 @@ public class PlayerGroundedState : PlayerState
 		}
 		else if(!player.CheckIfTouchingGround())
 		{
+			player.InAirState.StartCoyote();
 			stateMachine.ChangeState(player.InAirState);
 		}
 	}

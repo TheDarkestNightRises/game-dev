@@ -13,6 +13,7 @@ public class PlayerInputHandler : MonoBehaviour
 	private float inputHoldTime = 0.2f;
 	private float jumpInputStartTime;
 	public bool JumpInput { get; set; }
+	public bool JumpInputStop { get; set; }
 	
 	public void OnMoveInput(InputAction.CallbackContext context)
 	{
@@ -31,9 +32,16 @@ public class PlayerInputHandler : MonoBehaviour
 		if (context.started)
 		{
 			JumpInput = true;
+			JumpInputStop = false;
 			jumpInputStartTime = Time.time;
 		}
+
+		if (context.canceled)
+		{
+			JumpInputStop = true;
+		}
 	}
+
 	
 	public void UseJumpInput() => JumpInput = false;
 	

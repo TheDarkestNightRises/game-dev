@@ -14,22 +14,14 @@ public class PlayerJumpState : PlayerAbilityState
 	public override void Enter()
 	{
 		base.Enter();
-		player.SetVelocityY(playerData.jumpVelocity);
+		player.SetVelocityY(0);
+		player.RB.AddForce(Vector2.up * playerData.jumpVelocity, ForceMode2D.Impulse);
 		isAbilityDone = true;
 		DecreaseAmmountOfJumpsLeft();
+		player.InAirState.SetIsJumping();
 	}
 	
-	public bool CanJump()
-	{
-		if (ammountOfJumpsLeft > 0) 
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
+	public bool CanJump() => ammountOfJumpsLeft > 0;
 	
 	public void ResetAmmountOfJumpsLeft() => ammountOfJumpsLeft = playerData.amountOfJumps;
 	
@@ -37,5 +29,5 @@ public class PlayerJumpState : PlayerAbilityState
 	{
 		ammountOfJumpsLeft--;
 		Debug.Log($"Ammounts of jumps left : {ammountOfJumpsLeft}");
-	}
+	}	
 }
