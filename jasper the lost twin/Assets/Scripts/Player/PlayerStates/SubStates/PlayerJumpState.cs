@@ -17,6 +17,7 @@ public class PlayerJumpState : PlayerAbilityState
 		player.SetVelocityY(0);
 		player.RB.AddForce(Vector2.up * playerData.jumpVelocity, ForceMode2D.Impulse);
 		isAbilityDone = true;
+		player.dust.Play();
 		DecreaseAmmountOfJumpsLeft();
 		player.InAirState.SetIsJumping();
 	}

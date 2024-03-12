@@ -23,6 +23,10 @@ public class PlayerScript : MonoBehaviour
 	private BoxCollider2D myFeetCollider;
 	#endregion
 	
+	#region Particles
+	public ParticleSystem dust;
+	#endregion
+	
 	public Vector2 CurrentVelocity { get; set; }
 	public int FacingDirection { get; set; }
 	private Vector2 workspace;
@@ -83,6 +87,11 @@ public class PlayerScript : MonoBehaviour
 		if (xInput != 0 && xInput != FacingDirection)
 		{
 			Flip();
+		}
+		
+		if (CheckIfTouchingGround())
+		{
+			dust.Play();
 		}
 	}
 	
