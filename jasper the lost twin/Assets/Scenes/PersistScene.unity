@@ -8589,26 +8589,14 @@ PrefabInstance:
       propertyPath: m_AnimatedTarget
       value: 
       objectReference: {fileID: 1398471671}
+    - target: {fileID: 3372382951028004007, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
+      propertyPath: m_ChildCameras.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4229592386948385261, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1398471670}
-    - target: {fileID: 4977305054479749976, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4977305054479749976, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4977305054479749976, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4977305054479749976, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8866394977442676195, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

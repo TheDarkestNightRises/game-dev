@@ -435,19 +435,13 @@ MonoBehaviour:
     m_ParentHash: 756556552
   - m_Hash: 757738748
     m_ParentHash: 756556552
-  - m_Hash: -1227034385
+  - m_Hash: 532024161
     m_ParentHash: 757738748
-  - m_Hash: 802529621
+  - m_Hash: 248209688
     m_ParentHash: 757738748
-  - m_Hash: 1490194883
+  - m_Hash: -1221543184
     m_ParentHash: 757738748
-  - m_Hash: -2018437806
-    m_ParentHash: 757738748
-  - m_Hash: -1399044463
-    m_ParentHash: 757738748
-  - m_Hash: -1249413168
-    m_ParentHash: 757738748
-  - m_Hash: -1991001413
+  - m_Hash: 1024689088
     m_ParentHash: 757738748
   - m_Hash: 558702772
     m_ParentHash: 756556552
@@ -710,7 +704,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
