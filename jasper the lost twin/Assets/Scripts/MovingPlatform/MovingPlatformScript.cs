@@ -7,32 +7,33 @@ public class MovingPlatformScript : MonoBehaviour
 	public float PlatformSpeed;
 	public int StartingPoint;
 	public Transform[] Points;
-	private int i;
-    // Start is called before the first frame update
+	private int currentPointIndex;
+	
     void Start()
     {
 	    transform.position = Points[StartingPoint].position;
     }
 
-    // Update is called once per frame
-    void Update()
+	void FixedUpdate()
 	{
-		if(Vector2.Distance(transform.position, Points[i].position) < 0.1f )
+		if(Vector2.Distance(transform.position, Points[currentPointIndex].position) < 0.1f )
 		{
-			i++;
-			if( i == Points.LongLength )
+			currentPointIndex++;
+			if(currentPointIndex == Points.LongLength )
 			{
-				i = 0;
+				currentPointIndex = 0;
 			}
 		}
 		
-	    transform.position = Vector2.MoveTowards(transform.position, Points[i].position, PlatformSpeed * Time.deltaTime);
+	    transform.position = Vector2.MoveTowards(transform.position, Points[currentPointIndex].position, PlatformSpeed * Time.deltaTime);
 	}
-	private void OnCollisionEnter2D ( Collision2D col )
+	
+	private void OnTriggerEnter2D(Collider2D col)
 	{
 		col.transform.SetParent(transform);
 	}
-	private void OnCollisionExit2D (Collision2D col)
+	
+	private void OnTriggerExit2D(Collider2D col)
 	{
 		col.transform.SetParent(null);
 	}
