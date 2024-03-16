@@ -15,7 +15,7 @@ MonoBehaviour:
   movementVelocity: 10
   runAccell: 9
   decAccell: 24
-  friction: 2
+  friction: 20
   jumpVelocity: 15
   amountOfJumps: 2
   coyoteTime: 0.2
@@ -23,3 +23,4 @@ MonoBehaviour:
   maximumFallingSpeed: 13
   fallGravityMultiplier: 1.5
   gravityScale: 3.5
+  deathKick: 30
