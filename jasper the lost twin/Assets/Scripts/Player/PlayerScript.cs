@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class PlayerScript : MonoBehaviour
 	public Vector2 CurrentVelocity { get; set; }
 	public int FacingDirection { get; set; }
 	private Vector2 workspace;
+	private CinemachineImpulseSource myImpulseSource;
 
 	
 
@@ -57,6 +59,7 @@ public class PlayerScript : MonoBehaviour
 		Anim = GetComponent<Animator>();
 		InputHandler = GetComponent<PlayerInputHandler>();
 		RB = GetComponent<Rigidbody2D>();
+		myImpulseSource = GetComponent<CinemachineImpulseSource>();
 		FacingDirection = 1;
 		StateMachine.Initialize(IdleState);
 	}
@@ -99,6 +102,7 @@ public class PlayerScript : MonoBehaviour
 			isAlive = false;
 			Anim.SetTrigger("die");
 			RB.AddForce(Vector2.up * playerData.deathKick, ForceMode2D.Impulse);
+			myImpulseSource.GenerateImpulse(playerData.deathImpulse);
 			ApplyFriction();
 			Invoke(nameof(RemovePhysics), 1f);
 		}

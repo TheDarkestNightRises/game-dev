@@ -24,4 +24,5 @@ public class PlayerData : ScriptableObject
 	
 	[Header("Death")]
 	public float deathKick = 2f;
+	public float deathImpulse = 1f;
 }
