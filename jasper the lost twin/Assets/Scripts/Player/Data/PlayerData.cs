@@ -21,4 +21,7 @@ public class PlayerData : ScriptableObject
 	public float maximumFallingSpeed = 13f;
 	public float fallGravityMultiplier = 1.5f;
 	public float gravityScale = 2.5f;
+	
+	[Header("Death")]
+	public float deathKick = 2f;
 }

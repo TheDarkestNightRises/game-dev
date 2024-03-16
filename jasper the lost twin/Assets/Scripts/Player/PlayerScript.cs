@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour
 	private CapsuleCollider2D myBodyCollider;
 	
 	[SerializeField]
-	Vector2 deathKick = new Vector2(5f, 5f);
+	Vector2 deathKick = new Vector2(10f, 10f);
 	
 	#endregion
 	
@@ -66,7 +66,6 @@ public class PlayerScript : MonoBehaviour
 		if (!isAlive) return;
 		CurrentVelocity = RB.velocity;
 		StateMachine.CurrentState.LogicUpdate();
-		Die();
 	
 	}
 	
@@ -74,6 +73,7 @@ public class PlayerScript : MonoBehaviour
 	{
 		if (!isAlive) return;
 		StateMachine.CurrentState.PhysicsUpdate();
+		Die();
 		
 	}
 	
@@ -98,6 +98,8 @@ public class PlayerScript : MonoBehaviour
 		{
 			isAlive = false;
 			Anim.SetTrigger("die");
+			RB.AddForce(Vector2.up * playerData.deathKick, ForceMode2D.Impulse);
+			ApplyFriction();
 			Invoke(nameof(RemovePhysics), 1f);
 		}
 	}
@@ -105,6 +107,17 @@ public class PlayerScript : MonoBehaviour
 	private void RemovePhysics()
 	{
 		RB.simulated = false;
+	}
+	
+	public void ApplyFriction()
+	{
+		// Calculate friction force based on the current velocity
+		var velocityX = RB.velocity.x;
+		float frictionForce = Mathf.Min(Mathf.Abs(velocityX), playerData.friction);
+		frictionForce *= Mathf.Sign(velocityX);
+
+		// Apply the friction force to the player's velocity
+		RB.AddForce(-frictionForce * Vector2.right, ForceMode2D.Impulse);
 	}
 	
 	public void Flip()
