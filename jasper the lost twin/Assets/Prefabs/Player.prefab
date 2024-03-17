@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 9062736465338474711}
   - component: {fileID: 5331614158497466031}
   - component: {fileID: 7731516008864658814}
+  - component: {fileID: 1522171973529792929}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -265,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: cec72dca542c515448e37a062182150a, type: 2}
+  deathKick: {x: 10, y: 10}
   dust: {fileID: 8713166915087933689}
 --- !u!95 &2973429098760841886
 Animator:
@@ -394,6 +396,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.037692904, y: 0.01104641}
   m_Size: {x: 0.47416556, y: 1.2055345}
   m_Direction: 0
+--- !u!114 &1522171973529792929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496498690081166411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f7a7ca7c7dc7541a4ac0260cac354e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 256
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1001 &7442122222229331139
 PrefabInstance:
   m_ObjectHideFlags: 0
