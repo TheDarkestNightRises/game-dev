@@ -8455,6 +8455,14 @@ PrefabInstance:
       propertyPath: deathKick.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1522171973529792929, guid: 6445a5efd291adc41b69e5654463443a, type: 3}
+      propertyPath: whatIsGround
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522171973529792929, guid: 6445a5efd291adc41b69e5654463443a, type: 3}
+      propertyPath: whatIsPlayer
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3602582882004244476, guid: 6445a5efd291adc41b69e5654463443a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.9
