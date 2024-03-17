@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6248928662144280807}
   - component: {fileID: 30316404528155494}
   - component: {fileID: 757644872131473588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OnewayPlatform
-  m_TagString: Untagged
+  m_TagString: OneWayPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1558980775
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1792837333, guid: 8f5bb810e727c0b43b66f359151bf859, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0068047047, y: 0.031057954}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.032258, y: 1.032258}
+  m_Size: {x: 0.9478898, y: 0.91475177}
   m_EdgeRadius: 0
 --- !u!251 &757644872131473588
 PlatformEffector2D:
@@ -139,7 +139,7 @@ PlatformEffector2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4999361223611952369}
   m_Enabled: 1
-  m_UseColliderMask: 0
+  m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
