@@ -39,7 +39,7 @@ public class PlayerScript : MonoBehaviour
 	public int FacingDirection { get; set; }
 	private Vector2 workspace;
 	private CinemachineImpulseSource myImpulseSource;
-
+	public PlayerInventory Inventory { get; set; }
 	
 
 	public void Awake()
@@ -64,7 +64,9 @@ public class PlayerScript : MonoBehaviour
 		InputHandler = GetComponent<PlayerInputHandler>();
 		RB = GetComponent<Rigidbody2D>();
 		myImpulseSource = GetComponent<CinemachineImpulseSource>();
+		Inventory = GetComponent<PlayerInventory>();
 		FacingDirection = 1;
+		PrimaryAttackState.SetWeapon(Inventory.Weapons[0]);
 		StateMachine.Initialize(IdleState);
 	}
 	
