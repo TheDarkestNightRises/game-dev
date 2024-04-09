@@ -14,7 +14,35 @@ public class PlayerInputHandler : MonoBehaviour
 	private float jumpInputStartTime;
 	public bool JumpInput { get; set; }
 	public bool JumpInputStop { get; set; }
+	public bool PrimaryAttackInput { get; set; }
+	public bool SecondaryAttackInput { get; set; }
 	
+	public void OnPrimaryAttackInput(InputAction.CallbackContext context)
+	{
+		if (context.started)
+		{
+			PrimaryAttackInput = true;
+		}
+		
+		if (context.canceled)
+		{
+			PrimaryAttackInput = false;
+		}
+	}
+		
+	public void OnSecondaryAttackInput(InputAction.CallbackContext context)
+	{
+		if (context.started)
+		{
+			SecondaryAttackInput = true;
+		}
+		
+		if (context.canceled)
+		{
+			SecondaryAttackInput = false;
+		}
+	}
+
 	public void OnMoveInput(InputAction.CallbackContext context)
 	{
 		MovementInput = context.ReadValue<Vector2>();
@@ -52,4 +80,10 @@ public class PlayerInputHandler : MonoBehaviour
 			JumpInput = false;
 		}
 	}
+}
+
+public enum CombatInputs
+{
+	primary,
+	secondary
 }

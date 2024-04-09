@@ -12,6 +12,8 @@ public class PlayerScript : MonoBehaviour
 	public PlayerJumpState JumpState { get; set; }
 	public PlayerInAirState InAirState { get; set; }	
 	public PlayerLandState LandState { get; set; }
+	public PlayerAttackState PrimaryAttackState { get; set; }
+	public PlayerAttackState SecondaryAttackState { get; set; }
 	#endregion
 
 	#region Player Components
@@ -48,6 +50,8 @@ public class PlayerScript : MonoBehaviour
 		JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
 		InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
 		LandState = new PlayerLandState(this, StateMachine, playerData, "land");
+		PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+		SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 	}
 	
 	bool isAlive = true;
