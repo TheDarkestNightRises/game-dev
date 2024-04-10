@@ -32,8 +32,15 @@ public class PlayerInAirState : PlayerState
 		jumpInputStop = player.InputHandler.JumpInputStop;
 
 		CheckJumpHold();
-        
-		if (isGrounded && player.CurrentVelocity.y < 0.01f)
+		if (player.InputHandler.PrimaryAttackInput)
+		{
+			stateMachine.ChangeState(player.PrimaryAttackState);
+		}
+		else if (player.InputHandler.SecondaryAttackInput)
+		{
+			stateMachine.ChangeState(player.SecondaryAttackState);
+		}
+		else if (isGrounded && player.CurrentVelocity.y < 0.01f)
 		{
 			HandleLanding();
 		}

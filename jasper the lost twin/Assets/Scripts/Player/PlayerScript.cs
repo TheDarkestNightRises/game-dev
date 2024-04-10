@@ -12,6 +12,8 @@ public class PlayerScript : MonoBehaviour
 	public PlayerJumpState JumpState { get; set; }
 	public PlayerInAirState InAirState { get; set; }	
 	public PlayerLandState LandState { get; set; }
+	public PlayerAttackState PrimaryAttackState { get; set; }
+	public PlayerAttackState SecondaryAttackState { get; set; }
 	#endregion
 
 	#region Player Components
@@ -37,7 +39,7 @@ public class PlayerScript : MonoBehaviour
 	public int FacingDirection { get; set; }
 	private Vector2 workspace;
 	private CinemachineImpulseSource myImpulseSource;
-
+	public PlayerInventory Inventory { get; set; }
 	
 
 	public void Awake()
@@ -48,6 +50,8 @@ public class PlayerScript : MonoBehaviour
 		JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
 		InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
 		LandState = new PlayerLandState(this, StateMachine, playerData, "land");
+		PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+		SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 	}
 	
 	bool isAlive = true;
@@ -60,7 +64,9 @@ public class PlayerScript : MonoBehaviour
 		InputHandler = GetComponent<PlayerInputHandler>();
 		RB = GetComponent<Rigidbody2D>();
 		myImpulseSource = GetComponent<CinemachineImpulseSource>();
+		Inventory = GetComponent<PlayerInventory>();
 		FacingDirection = 1;
+		PrimaryAttackState.SetWeapon(Inventory.Weapons[0]);
 		StateMachine.Initialize(IdleState);
 	}
 	
