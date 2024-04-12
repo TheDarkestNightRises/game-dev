@@ -4440,11 +4440,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
---- !u!4 &780580176 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
-  m_PrefabInstance: {fileID: 780580175}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &862942011
 GameObject:
   m_ObjectHideFlags: 0
@@ -8603,7 +8598,7 @@ PrefabInstance:
     - target: {fileID: 1122774546676598905, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 780580176}
+      objectReference: {fileID: 0}
     - target: {fileID: 1621803476484751813, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -8707,7 +8702,7 @@ PrefabInstance:
     - target: {fileID: 4115939163265166221, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 780580176}
+      objectReference: {fileID: 0}
     - target: {fileID: 4115939163265166221, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 5
@@ -8715,7 +8710,7 @@ PrefabInstance:
     - target: {fileID: 4229592386948385261, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 780580176}
+      objectReference: {fileID: 0}
     - target: {fileID: 4576817583938229381, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.68
