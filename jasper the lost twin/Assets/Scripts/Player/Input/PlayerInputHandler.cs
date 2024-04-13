@@ -5,8 +5,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-
+	private PlayerInput playerInput;
+	private Camera cam;
 	public Vector2 MovementInput {get; set;}
+	public Vector2 RawDashDirectionInput {get; set;}
+	public Vector2Int DashDirectionInput { get; set; }
 	public int InputX{get; set;}
 	public int InputY{get; set;}
 	[SerializeField]
@@ -19,6 +22,12 @@ public class PlayerInputHandler : MonoBehaviour
 	public bool SecondaryAttackInput { get; set; }
 	public bool DashInput {get; set;}
 	public bool DashInputStop {get; set;}
+	
+	public void Start()
+	{
+		playerInput = GetComponent<PlayerInput>();
+		cam = Camera.main;
+	}
 	
 	public void OnPrimaryAttackInput(InputAction.CallbackContext context)
 	{
@@ -58,6 +67,16 @@ public class PlayerInputHandler : MonoBehaviour
 		{
 			DashInputStop = true;
 		}
+	}
+	
+	public void OnDashDirection(InputAction.CallbackContext context)
+	{
+		RawDashDirectionInput = context.ReadValue<Vector2>();
+		if(playerInput.currentControlScheme == "Keyboard")
+		{
+			RawDashDirectionInput = cam.ScreenToWorldPoint((Vector3)RawDashDirectionInput) - transform.position; 
+		}
+		DashDirectionInput = Vector2Int.RoundToInt(RawDashDirectionInput.normalized);
 	}
 
 	public void OnMoveInput(InputAction.CallbackContext context)

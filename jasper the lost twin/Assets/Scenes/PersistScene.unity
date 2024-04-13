@@ -4404,18 +4404,30 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_ActionId
       value: d7a12669-ed8e-46dc-9540-0b4e71d5ef86
       objectReference: {fileID: 0}
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: 9b311d58-6dc1-462b-8f3b-9cbfa80b85bc
+      objectReference: {fileID: 0}
+    - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_ActionName
       value: Gameplay/Dash[/Keyboard/leftShift]
       objectReference: {fileID: 0}
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: Gameplay/DashDirection[/Mouse/position]
+      objectReference: {fileID: 0}
+    - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
@@ -4423,7 +4435,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 384363350}
+    - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 384363350}
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
@@ -4431,15 +4451,31 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnDashInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDashDirection
       objectReference: {fileID: 0}
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayerInputHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerInputHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 818792536768505040, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}

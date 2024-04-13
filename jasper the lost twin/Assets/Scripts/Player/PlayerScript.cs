@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour
 	#region Player Components
 	public Animator Anim { get; private set; }	
 	public PlayerInputHandler InputHandler { get; set; }
-	
+	public Transform DashDirectionIndicator {get; set;}
 	[SerializeField]
 	private PlayerData playerData;
 	public Rigidbody2D RB { get; set; }
@@ -67,6 +67,7 @@ public class PlayerScript : MonoBehaviour
 		RB = GetComponent<Rigidbody2D>();
 		myImpulseSource = GetComponent<CinemachineImpulseSource>();
 		Inventory = GetComponent<PlayerInventory>();
+		DashDirectionIndicator = transform.Find("DashDirectionIndicator");
 		FacingDirection = 1;
 		PrimaryAttackState.SetWeapon(Inventory.Weapons[0]);
 		StateMachine.Initialize(IdleState);

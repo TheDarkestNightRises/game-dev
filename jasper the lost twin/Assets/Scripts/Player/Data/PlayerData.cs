@@ -24,7 +24,14 @@ public class PlayerData : ScriptableObject
 	
 	[Header("DashState")]
 	public float dashCooldown = 0.5f;
-	
+	public float maxHoldTime = 1f;
+	public float holdTimeScale = 0.25f;
+	public float dashTime = 0.2f;
+	public float dashVelocity = 30f;
+	public float drag = 10f;
+	public float dashEndYMultiplayer = 0.2f;
+	public float distacenBetweenAfterImages = 0.5f;
+		
 	[Header("Death")]
 	public float deathKick = 2f;
 	public float deathImpulse = 1f;
