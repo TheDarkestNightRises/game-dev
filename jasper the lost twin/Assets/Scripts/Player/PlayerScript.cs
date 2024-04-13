@@ -86,7 +86,13 @@ public class PlayerScript : MonoBehaviour
 		if (!isAlive) return;
 		StateMachine.CurrentState.PhysicsUpdate();
 		Die();
-		
+	}
+	
+	public void SetVelocity(float velocity, Vector2 direction)
+	{
+		workspace = direction * velocity;
+		RB.velocity = workspace;
+		CurrentVelocity = workspace;
 	}
 	
 	public void SetVelocityX(float velocity)

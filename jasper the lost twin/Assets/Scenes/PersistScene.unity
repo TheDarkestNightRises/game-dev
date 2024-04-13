@@ -4479,12 +4479,20 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8726
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8793
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.68
+      value: -7.8074
       objectReference: {fileID: 0}
     - target: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 2.4693
       objectReference: {fileID: 0}
     - target: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4516,6 +4524,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672085232841144247, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6496498690081166411, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
