@@ -14,12 +14,13 @@ public class PlayerScript : MonoBehaviour
 	public PlayerLandState LandState { get; set; }
 	public PlayerAttackState PrimaryAttackState { get; set; }
 	public PlayerAttackState SecondaryAttackState { get; set; }
+	public PlayerDashState DashState {get; set; }
 	#endregion
 
 	#region Player Components
 	public Animator Anim { get; private set; }	
 	public PlayerInputHandler InputHandler { get; set; }
-	
+	public Transform DashDirectionIndicator {get; set;}
 	[SerializeField]
 	private PlayerData playerData;
 	public Rigidbody2D RB { get; set; }
@@ -52,6 +53,7 @@ public class PlayerScript : MonoBehaviour
 		LandState = new PlayerLandState(this, StateMachine, playerData, "land");
 		PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 		SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+		DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
 	}
 	
 	bool isAlive = true;
@@ -65,6 +67,7 @@ public class PlayerScript : MonoBehaviour
 		RB = GetComponent<Rigidbody2D>();
 		myImpulseSource = GetComponent<CinemachineImpulseSource>();
 		Inventory = GetComponent<PlayerInventory>();
+		DashDirectionIndicator = transform.Find("DashDirectionIndicator");
 		FacingDirection = 1;
 		PrimaryAttackState.SetWeapon(Inventory.Weapons[0]);
 		StateMachine.Initialize(IdleState);
@@ -83,7 +86,13 @@ public class PlayerScript : MonoBehaviour
 		if (!isAlive) return;
 		StateMachine.CurrentState.PhysicsUpdate();
 		Die();
-		
+	}
+	
+	public void SetVelocity(float velocity, Vector2 direction)
+	{
+		workspace = direction * velocity;
+		RB.velocity = workspace;
+		CurrentVelocity = workspace;
 	}
 	
 	public void SetVelocityX(float velocity)

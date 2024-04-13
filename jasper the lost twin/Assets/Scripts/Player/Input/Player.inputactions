@@ -15,18 +15,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Jump",
+                    "name": "PrimaryAttack",
                     "type": "Button",
-                    "id": "90496005-fa75-455d-afd8-854113b6c87d",
+                    "id": "41b722df-c11a-455a-978d-10d8e037f0a5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PrimaryAttack",
+                    "name": "Jump",
                     "type": "Button",
-                    "id": "41b722df-c11a-455a-978d-10d8e037f0a5",
+                    "id": "90496005-fa75-455d-afd8-854113b6c87d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -40,6 +40,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "d7a12669-ed8e-46dc-9540-0b4e71d5ef86",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DashDirection",
+                    "type": "Value",
+                    "id": "9b311d58-6dc1-462b-8f3b-9cbfa80b85bc",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -100,17 +118,6 @@
                 },
                 {
                     "name": "",
-                    "id": "2113202b-55dd-4d7a-b3f9-09f198e242a3",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b748c030-273f-4b37-a72a-265f8a5cb820",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -128,6 +135,39 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "SecondaryAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2113202b-55dd-4d7a-b3f9-09f198e242a3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0cf57e6b-eaa6-4486-8a77-d88b93f4e618",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8df6ad36-f0ee-4b4a-af94-cc5747ad0f95",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "DashDirection",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
