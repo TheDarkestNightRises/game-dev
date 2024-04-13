@@ -23,4 +23,13 @@ MonoBehaviour:
   maximumFallingSpeed: 13
   fallGravityMultiplier: 1.5
   gravityScale: 3.5
+  dashCooldown: 0.5
+  maxHoldTime: 1
+  holdTimeScale: 0.25
+  dashTime: 0.2
+  dashVelocity: 10
+  drag: 10
+  dashEndYMultiplayer: 0.2
+  distacenBetweenAfterImages: 0.5
   deathKick: 30
+  deathImpulse: 1

@@ -12,6 +12,8 @@ public class PlayerDashState : PlayerAbilityState
 	
 	private Vector2 dashDirection;
 	private Vector2 dashDirectionInput;
+	private Vector2 lastAfterImagePosition;
+	
 	
  public PlayerDashState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
 	{
@@ -69,12 +71,13 @@ public class PlayerDashState : PlayerAbilityState
 				player.RB.drag = playerData.drag;
 				player.SetVelocity(playerData.dashVelocity, dashDirection);
 				player.DashDirectionIndicator.gameObject.SetActive(false);
-
+				PlaceAfterImage();
 			}
 		}
 		else
 		{
 			player.SetVelocity(playerData.dashVelocity, dashDirection);
+			CheckIfShouldPlaceAfterImage();
 			if(Time.time >= startTime + playerData.dashTime)
 			{
 				player.RB.drag = 0f;
@@ -84,6 +87,22 @@ public class PlayerDashState : PlayerAbilityState
 			
 		}
 	}
+	
+	private void CheckIfShouldPlaceAfterImage()
+	{
+		if(Vector2.Distance(player.transform.position, lastAfterImagePosition) >= playerData.distacenBetweenAfterImages)
+			{
+				PlaceAfterImage();
+			}
+	}
+	
+	private void PlaceAfterImage()
+	{
+		PlayerAfterImagePool.Instance.GetFromPool();
+	    lastAfterImagePosition = player.transform.position;
+	}
+	
+	
 	
 	public bool CheckIfCanDash()
 	{
