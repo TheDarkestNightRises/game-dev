@@ -22,6 +22,9 @@ public class PlayerData : ScriptableObject
 	public float fallGravityMultiplier = 1.5f;
 	public float gravityScale = 2.5f;
 	
+	[Header("DashState")]
+	public float dashCooldown = 0.5f;
+	
 	[Header("Death")]
 	public float deathKick = 2f;
 	public float deathImpulse = 1f;
