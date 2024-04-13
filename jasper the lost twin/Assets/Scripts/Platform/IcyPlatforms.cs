@@ -6,7 +6,7 @@ public class IcyPlatforms : MonoBehaviour
 {
 	private Rigidbody2D rb;
 	[SerializeField]
-	private float SlipperyFriction = 0.2;
+	private float SlipperyFriction = 0.2f;
 	private float currentPlayerFriction;
 
 	public void Start()
