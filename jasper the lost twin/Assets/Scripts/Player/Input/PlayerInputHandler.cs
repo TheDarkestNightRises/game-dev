@@ -12,10 +12,13 @@ public class PlayerInputHandler : MonoBehaviour
 	[SerializeField]
 	private float inputHoldTime = 0.2f;
 	private float jumpInputStartTime;
+	private float dashInputStartTime;
 	public bool JumpInput { get; set; }
 	public bool JumpInputStop { get; set; }
 	public bool PrimaryAttackInput { get; set; }
 	public bool SecondaryAttackInput { get; set; }
+	public bool DashInput {get; set;}
+	public bool DashInputStop {get; set;}
 	
 	public void OnPrimaryAttackInput(InputAction.CallbackContext context)
 	{
@@ -43,6 +46,20 @@ public class PlayerInputHandler : MonoBehaviour
 		}
 	}
 
+	public void OnDashInput(InputAction.CallbackContext context)
+	{
+		if(context.started)
+		{
+			DashInput = true;
+			DashInputStop = false;
+			dashInputStartTime = Time.time;
+		}
+		else if(context.canceled) 
+		{
+			DashInputStop = true;
+		}
+	}
+
 	public void OnMoveInput(InputAction.CallbackContext context)
 	{
 		MovementInput = context.ReadValue<Vector2>();
@@ -53,6 +70,7 @@ public class PlayerInputHandler : MonoBehaviour
 	protected void Update()
 	{
 		CheckJumpInputHoldTime();
+		CheckDashInputHoldTime();
 	}
 	
 	public void OnJumpInput(InputAction.CallbackContext context)
@@ -73,12 +91,23 @@ public class PlayerInputHandler : MonoBehaviour
 	
 	public void UseJumpInput() => JumpInput = false;
 	
+	public void UseDashInput() => DashInput = false;
+	
+	
 	private void CheckJumpInputHoldTime()
 	{
 		if (Time.time >= jumpInputStartTime + inputHoldTime)
 		{
 			JumpInput = false;
 		}
+	}
+	
+	private void CheckDashInputHoldTime()
+	{
+		if (Time.time >= dashInputStartTime + inputHoldTime)
+		{
+			DashInput = false;
+		}	
 	}
 }
 
