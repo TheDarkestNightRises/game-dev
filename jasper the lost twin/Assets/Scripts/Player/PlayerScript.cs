@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour
 	public PlayerInputHandler InputHandler { get; set; }
 	public Transform DashDirectionIndicator {get; set;}
 	[SerializeField]
-	private PlayerData playerData;
+	public PlayerData playerData;
 	public Rigidbody2D RB { get; set; }
 	private BoxCollider2D myFeetCollider;
 	private CapsuleCollider2D myBodyCollider;
