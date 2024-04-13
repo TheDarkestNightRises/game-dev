@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
 	public PlayerLandState LandState { get; set; }
 	public PlayerAttackState PrimaryAttackState { get; set; }
 	public PlayerAttackState SecondaryAttackState { get; set; }
+	public PlayerDashState DashState {get; set; }
 	#endregion
 
 	#region Player Components
@@ -52,6 +53,7 @@ public class PlayerScript : MonoBehaviour
 		LandState = new PlayerLandState(this, StateMachine, playerData, "land");
 		PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 		SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+		DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
 	}
 	
 	bool isAlive = true;
