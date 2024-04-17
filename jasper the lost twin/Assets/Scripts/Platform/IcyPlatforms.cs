@@ -25,7 +25,7 @@ public class IcyPlatforms : MonoBehaviour
 	private void Slip(GameObject other)
 	{
 		var player = other.GetComponent<PlayerScript>();
-		currentPlayerFriction = player.playerData.friction;
+		//currentPlayerFriction = player.playerData.friction; TODO: make it work / it doesn't retreive the current friction
 		player.playerData.friction = SlipperyFriction;
 	}
 	
@@ -35,7 +35,7 @@ public class IcyPlatforms : MonoBehaviour
 		if (other.gameObject.CompareTag("Player"))
 		{
 			var player = other.gameObject.GetComponent<PlayerScript>();
-			player.playerData.friction = currentPlayerFriction;
+			player.playerData.friction = 30f;
 		}
 	}
 	
