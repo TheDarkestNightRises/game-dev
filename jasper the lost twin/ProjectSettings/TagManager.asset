@@ -15,9 +15,9 @@ TagManager:
   - Ground
   - Background
   - Player
-  - Bouncing
+  - Enemies
   - Hazards
-  - Nature
+  - Bouncing
   - 
   - 
   - Interactables
