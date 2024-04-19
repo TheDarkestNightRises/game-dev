@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 610100060916347643}
-  parallaxEffect: 0.7
+  parallaxEffect: 0.4
 --- !u!1 &127674676
 GameObject:
   m_ObjectHideFlags: 0
@@ -5160,7 +5160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 610100060916347643}
-  parallaxEffect: 1
+  parallaxEffect: 0.1
 --- !u!1 &853799095
 GameObject:
   m_ObjectHideFlags: 0
@@ -9525,7 +9525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 610100060916347643}
-  parallaxEffect: 0.8
+  parallaxEffect: 0.3
 --- !u!1 &1108025167
 GameObject:
   m_ObjectHideFlags: 0
@@ -9748,7 +9748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 610100060916347643}
-  parallaxEffect: 0.3
+  parallaxEffect: 0.8
 --- !u!1 &1295367147
 GameObject:
   m_ObjectHideFlags: 0
@@ -9849,7 +9849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 610100060916347643}
-  parallaxEffect: 0.5
+  parallaxEffect: 0.7
 --- !u!4 &1297616948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
@@ -10335,7 +10335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 610100060916347643}
-  parallaxEffect: 0.1
+  parallaxEffect: 1
 --- !u!1 &1781444566
 GameObject:
   m_ObjectHideFlags: 0
@@ -10436,7 +10436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 610100060916347643}
-  parallaxEffect: 0.6
+  parallaxEffect: 0.5
 --- !u!1 &1797393408
 GameObject:
   m_ObjectHideFlags: 0
