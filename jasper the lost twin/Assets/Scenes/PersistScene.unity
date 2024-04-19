@@ -4492,7 +4492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.4693
+      value: 6.27
       objectReference: {fileID: 0}
     - target: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8551,6 +8551,11 @@ MonoBehaviour:
   RoomScene:
     m_SceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
     m_SceneName: Level_1
+--- !u!4 &1297616948 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3602582882004244476, guid: 5461cc7e37d4c8945846c5f292256a06, type: 3}
+  m_PrefabInstance: {fileID: 780580175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1360469683
 GameObject:
   m_ObjectHideFlags: 0
@@ -8742,18 +8747,18 @@ PrefabInstance:
     - target: {fileID: 1122774546676598905, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1297616948}
     - target: {fileID: 1621803476484751813, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Name
       value: Cameras
       objectReference: {fileID: 0}
     - target: {fileID: 2635444744016844364, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.68
+      value: -7.8074
       objectReference: {fileID: 0}
     - target: {fileID: 2635444744016844364, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 6.27
       objectReference: {fileID: 0}
     - target: {fileID: 3372382951028004007, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_AnimatedTarget
@@ -8846,7 +8851,7 @@ PrefabInstance:
     - target: {fileID: 4115939163265166221, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1297616948}
     - target: {fileID: 4115939163265166221, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 5
@@ -8854,14 +8859,14 @@ PrefabInstance:
     - target: {fileID: 4229592386948385261, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1297616948}
     - target: {fileID: 4576817583938229381, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.68
+      value: -7.8074
       objectReference: {fileID: 0}
     - target: {fileID: 4576817583938229381, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 6.27
       objectReference: {fileID: 0}
     - target: {fileID: 4977305054479749976, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: orthographic size
@@ -8869,11 +8874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6482479926040001552, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.68
+      value: -7.8074
       objectReference: {fileID: 0}
     - target: {fileID: 6482479926040001552, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 6.27
       objectReference: {fileID: 0}
     - target: {fileID: 8866394977442676195, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8917,11 +8922,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9144840375469731269, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.68
+      value: -7.8074
       objectReference: {fileID: 0}
     - target: {fileID: 9144840375469731269, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 6.27
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
