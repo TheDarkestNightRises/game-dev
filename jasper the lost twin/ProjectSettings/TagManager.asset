@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Map
   - Water
   - UI
   - Ground
@@ -21,7 +21,7 @@ TagManager:
   - Parallax
   - 
   - Interactables
-  - Map
+  - 
   - 
   - 
   - 
@@ -42,8 +42,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Parallax
-    uniqueID: 2170738451
+  - name: Map
+    uniqueID: 1993729083
     locked: 0
   - name: Background
     uniqueID: 664741417
