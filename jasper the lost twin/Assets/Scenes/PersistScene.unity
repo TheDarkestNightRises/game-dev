@@ -8487,9 +8487,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5331614158497466031, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5557226
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331614158497466031, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      propertyPath: m_Size.y
+      value: 0.08538079
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331614158497466031, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06454438
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331614158497466031, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.46135354
+      objectReference: {fileID: 0}
     - target: {fileID: 6496498690081166411, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
       propertyPath: m_Name
       value: Player Lumber
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731516008864658814, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      propertyPath: m_Size.x
+      value: 0.37852496
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731516008864658814, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0227396
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731516008864658814, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.085513204
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731516008864658814, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.014021516
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8654,6 +8686,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 2131927305}
+    - target: {fileID: 1122774546676598905, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1621803476484751813, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -8824,12 +8860,16 @@ PrefabInstance:
       objectReference: {fileID: 2131927305}
     - target: {fileID: 4115939163265166221, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4229592386948385261, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 2131927305}
+    - target: {fileID: 4229592386948385261, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4576817583938229381, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.01
@@ -8840,7 +8880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4977305054479749976, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6482479926040001552, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
