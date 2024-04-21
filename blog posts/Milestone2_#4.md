@@ -45,11 +45,11 @@ The logic of dashing is that if the player is holding the dash input, it updates
 In the game, the dash mechanic looks something like this:
 
 ### Slimes
-The slimes moves horizontally both left and right, jumping. The slime enemy changes its direction when it collides with other objects in the game such as a wall. 
+The slime moves horizontally in both directions and is also capable of jumping. It adjusts its movement direction when colliding with objects such as walls. This directional change occurs when another collider exits the boundary of the slime's collider.
 
 ![dff380a79fc68a96d2a0a7e6f33de551](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/b6c67e31-d5f4-4f85-bc20-64baa39d81c9)
 
-The FlipSprite() method is a private method that is used to change the sprite orientation based on the direction of the slime.
+The FlipSprite() method adjusts the slime sprite's orientation based on the direction of its movement. It analyzes the sign of the slime's horizontal velocity to determine whether to flip the sprite left or right. 
 ![870f24a5699550a3f7754c8ca863f3ce](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/8da68067-3af7-4e85-8686-8d7943bbcfca)
 
 
