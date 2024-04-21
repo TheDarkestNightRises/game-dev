@@ -46,6 +46,7 @@ In the game, the dash mechanic looks something like this:
 
 ### Slimes
 The slimes moves horizontally both left and right, jumping. The slime enemy changes its direction when it collides with other objects in the game such as a wall. 
+
 ![dff380a79fc68a96d2a0a7e6f33de551](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/b6c67e31-d5f4-4f85-bc20-64baa39d81c9)
 
 The FlipSprite() method is a private method that is used to change the sprite orientation based on the direction of the slime.
