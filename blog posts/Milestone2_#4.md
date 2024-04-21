@@ -9,7 +9,8 @@
 ### design
 ## Game Design Swamp
 The Slump biome wad added to the game level design. It has some platform and a parallax showing a background of old trees and roots. Moreover, on the scene there are some hazards like water, and enemy slimes. 
-![ab687c30c841307d3d204e1f697939cc.png](:/d9aa0e639cb048688f77fbf57b002d6b)
+![slime](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/c0f6819c-b5cc-458f-8469-5f12aed300a0)
+
 
 ### Icy / Slippery Platforms
 
