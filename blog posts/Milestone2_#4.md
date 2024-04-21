@@ -7,6 +7,9 @@
 ### Biomes
 
 ### design
+## Game Design Swamp
+The Slump biome wad added to the game level design. It has some platform and a parallax showing a background of old trees and roots. Moreover, on the scene there are some hazards like water, and enemy slimes. 
+![ab687c30c841307d3d204e1f697939cc.png](:/d9aa0e639cb048688f77fbf57b002d6b)
 
 ### Icy / Slippery Platforms
 
@@ -41,6 +44,10 @@ The logic of dashing is that if the player is holding the dash input, it updates
 In the game, the dash mechanic looks something like this:
 
 ### Slimes
+The slimes moves horizontally both left and right, jumping. The slime enemy changes its direction when it collides with other objects in the game such as a wall. 
+![dff380a79fc68a96d2a0a7e6f33de551.png](:/761b3c9a0165406797f6997d59f06655)
+The FlipSprite() method is a private method that is used to change the sprite orientation based on the direction of the slime.
+![870f24a5699550a3f7754c8ca863f3ce.png](:/7e49583a7eb5427e8fc49d41aaae4234)
 
 ### Birds
 
