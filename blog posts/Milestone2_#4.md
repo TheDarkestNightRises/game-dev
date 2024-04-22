@@ -5,13 +5,10 @@ In this milestone, our main focus was on creating a coherent level design that c
 
 ## Level design
 
-### Biomes
+### Swamp biome
 
-### design
-## Game Design Swamp
 The Swamp biome wad added to the game level design. It has some platform and a parallax showing a background of old trees and roots. Moreover, on the scene there are some hazards like water, and enemy slimes. 
 ![slime](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/c0f6819c-b5cc-458f-8469-5f12aed300a0)
-
 
 ### Icy / Slippery Platforms
 
@@ -51,14 +48,15 @@ The slime moves horizontally in both directions and is also capable of jumping. 
 ![dff380a79fc68a96d2a0a7e6f33de551](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/b6c67e31-d5f4-4f85-bc20-64baa39d81c9)
 
 The FlipSprite() method adjusts the slime sprite's orientation based on the direction of its movement. It analyzes the sign of the slime's horizontal velocity to determine whether to flip the sprite left or right. 
-![870f24a5699550a3f7754c8ca863f3ce](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/8da68067-3af7-4e85-8686-8d7943bbcfca)
 
+![870f24a5699550a3f7754c8ca863f3ce](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/8da68067-3af7-4e85-8686-8d7943bbcfca)
 
 ### Birds
 When designing birds in the game , we aimed for the unnatural movement of flight. Birds should be able to avoid obstacles as well as fly upwards towards the player, creating the ilusion of the player being hunted down. To acheive this uncanny movement, we used the A* pathfinding library that can create paths based on 2d layers, similar to how NavMesh works. By setting the velocity of the bird as well as how much a bird should stay idle in one position, the bird keeps flying from one point to another but not reaching it instantly. The target is the player and the bird doesn't automatically know where the player is, but after a few seconds the bird becomes aware of the location of the player. Overall this method of creating enemy pathfinding can help with different animals in our game, creating different patterns for grounded enemies as well.
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/91905169/451d2af9-8e22-4209-8376-13fc4eb5eaa1)
 
 ### Melee attack
+
 The player should be able to attack other enemies by using his axe, as well as perform combos. For this code to be reusable , a new attack state was created. The player has a weapon in his hand that contains an animator controller. Once the player starts attacking by using the input key for attack, the attack animator takes over the main one. The attack state remembers how many attacks the player has done , and calls the animator to animate the next one in the sequence. At the moment the player has a 3x hit combo with his axe, creating a dynamic combat. The player is also able to move a little during his attacks to change direction of his attack. Each attack can be animated to contain a hitbox where the player axe should hit. 
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/91905169/ec2d1894-d651-46ee-8039-700de7e0fb68)
 
