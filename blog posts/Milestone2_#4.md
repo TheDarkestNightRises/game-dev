@@ -4,10 +4,8 @@
 In this milestone, our main focus was on creating a coherent level design that can elevate the gameplay portion of the game as well as introducing combat. Players can now explore diverse biomes such as the murky Swamp and the frosty Ice areas, encountering new challenges and hazards along the way. Additionally new enemies and combat mechanics were introduced like player attacks, dash and different enemies.
 
 ## Level design
-
-### Swamp biome
-
-The Swamp biome wad added to the game level design. It has some platform and a parallax showing a background of old trees and roots. Moreover, on the scene there are some hazards like water, and enemy slimes. 
+For the level design we made four biomes in total. Each biome reprresents a different location related to nature with its own unique identity. The desert represents an arid area with dunes and sand as well as mummies and pyramids. The Swamp biome has some platforms, and a parallax showing a background of old trees and roots. Moreover, on the scene there are some hazards like water, and enemy slimes. The ice zones contains ice slides as well as snow and polar bears and other northic creatures.
+While designing the levels we added different platforming sections that should challenge the player.
 
 ![slime](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/c0f6819c-b5cc-458f-8469-5f12aed300a0)
 
