@@ -24,7 +24,11 @@ public class Hound_IdleState : IdleState
 	{
 		base.LogicUpdate();
 
-		if (isIdleTimeOver)
+		if (isPlayerInMinRange)
+		{
+			stateMachine.ChangeState(enemy.PlayerDetectedState);
+		}
+		else if (isIdleTimeOver)
 		{
 			stateMachine.ChangeState(enemy.MoveState);
 		}

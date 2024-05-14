@@ -1,18 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class D_PlayerDetected : MonoBehaviour
+[CreateAssetMenu(fileName = "newMoveData", menuName = "Data/Enemy/Detected state")]
+public class D_PlayerDetected : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	
 }

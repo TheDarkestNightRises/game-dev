@@ -24,10 +24,13 @@ public class Hound_Move_State : MoveState
 	public override void LogicUpdate()
 	{
 		base.LogicUpdate();
-		Debug.Log($"WALL {isDetectingWall}");
-		Debug.Log($"LEDGE {isDetectingLedge}");
+		Debug.Log($"IsPlayerInMinRange {isPlayerInMinRange}");
+		if (isPlayerInMinRange)
+		{
+			stateMachine.ChangeState(hound.PlayerDetectedState);
+		}
 
-		if (isDetectingWall || !isDetectingLedge)
+		else if (isDetectingWall || !isDetectingLedge)
 		{
 			hound.IdleState.SetFlipAfterIdle(true);
 			stateMachine.ChangeState(hound.IdleState);
