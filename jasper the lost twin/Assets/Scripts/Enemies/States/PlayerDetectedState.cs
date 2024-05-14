@@ -7,7 +7,7 @@ public class PlayerDetectedState : State
 	protected D_PlayerDetected stateData;
 	protected bool isPlayerInMinRange;
 	protected bool isPlayerInMaxRange;
-
+	protected bool performLongRangeAction;
 	
 	public PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData) : base(entity, stateMachine, animBoolName)
 	{
@@ -17,7 +17,7 @@ public class PlayerDetectedState : State
 	public override void Enter()
 	{
 		base.Enter();
-		
+		performLongRangeAction = false;
 		entity.SetVelocityX(0f);
 	}
 	
@@ -26,5 +26,16 @@ public class PlayerDetectedState : State
 		base.DoChecks();
 		isPlayerInMinRange = entity.CheckPlayerInMinRange();
 		isPlayerInMaxRange = entity.CheckPlayerInMaxRange();
+	}
+	
+	
+	public override void LogicUpdate()
+	{
+		base.LogicUpdate();
+		
+		if (Time.time >= startTime + stateData.longRangeActionTime)
+		{
+			performLongRangeAction = true;
+		}
 	}
 }

@@ -15,10 +15,14 @@ public class Hound_PlayerDetectedState : PlayerDetectedState
 	{
 		base.LogicUpdate();
 		
-		if (!isPlayerInMaxRange)
+		if (performLongRangeAction)
 		{
 			hound.IdleState.SetFlipAfterIdle(false);
-			stateMachine.ChangeState(hound.IdleState);
+			stateMachine.ChangeState(hound.PursueState);
+		}
+		else if (!isPlayerInMaxRange)
+		{
+			stateMachine.ChangeState(hound.InvestigateState);
 		}
 	}
 }

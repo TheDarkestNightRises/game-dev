@@ -24,7 +24,6 @@ public class Hound_Move_State : MoveState
 	public override void LogicUpdate()
 	{
 		base.LogicUpdate();
-		Debug.Log($"IsPlayerInMinRange {isPlayerInMinRange}");
 		if (isPlayerInMinRange)
 		{
 			stateMachine.ChangeState(hound.PlayerDetectedState);
