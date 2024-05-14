@@ -22,11 +22,11 @@ public class Entity : MonoBehaviour
 		RB = GetComponent<Rigidbody2D>();	
 		Anim = GetComponent<Animator>();	
 		stateMachine = new FiniteStateMachine();
+		FacingDirection = -1;
 	}
 		
 	public virtual void Start()
 	{
-		FacingDirection = 1;
 	}
 	
 	protected void Update()

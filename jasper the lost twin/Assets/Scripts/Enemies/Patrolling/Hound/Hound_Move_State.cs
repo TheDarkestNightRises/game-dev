@@ -11,14 +11,24 @@ public class Hound_Move_State : MoveState
 		this.hound = hound;
 	}
 	
+	public override void Enter()
+	{
+		base.Enter();
+	}
+	
+	public override void Exit()
+	{
+		base.Exit();
+	}
+	
 	public override void LogicUpdate()
 	{
 		base.LogicUpdate();
-		
-		if (isDetectingWall) // || !isDetectingLedge)
+		Debug.Log($"WALL {isDetectingWall}");
+		Debug.Log($"LEDGE {isDetectingLedge}");
+
+		if (isDetectingWall || !isDetectingLedge)
 		{
-			Debug.Log($"WALL {isDetectingWall}");
-			Debug.Log($"LEDGE {isDetectingLedge}");
 			hound.IdleState.SetFlipAfterIdle(true);
 			stateMachine.ChangeState(hound.IdleState);
 		}
