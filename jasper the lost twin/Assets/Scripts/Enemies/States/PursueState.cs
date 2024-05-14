@@ -9,6 +9,7 @@ public class PursueState : State
 	protected bool isDetectingLedge;
 	protected bool isDetectingWall;
 	protected bool isPursueOver;
+	protected bool isInMeleeRange;
 
 	public PursueState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PursueState stateData) : base(entity, stateMachine, animBoolName)
 	{
@@ -28,6 +29,7 @@ public class PursueState : State
 		isPlayerInMinAgroRange = entity.CheckPlayerInMinRange();
 		isDetectingWall = entity.CheckWall();
 		isDetectingLedge = entity.CheckLedge();
+		isInMeleeRange = entity.CheckPlayerInMeleeRangeAction();
 	}
 	
 	public override void LogicUpdate()

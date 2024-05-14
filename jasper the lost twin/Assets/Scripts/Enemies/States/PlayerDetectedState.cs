@@ -8,6 +8,7 @@ public class PlayerDetectedState : State
 	protected bool isPlayerInMinRange;
 	protected bool isPlayerInMaxRange;
 	protected bool performLongRangeAction;
+	protected bool isInMeleeRange;
 	
 	public PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData) : base(entity, stateMachine, animBoolName)
 	{
@@ -26,8 +27,8 @@ public class PlayerDetectedState : State
 		base.DoChecks();
 		isPlayerInMinRange = entity.CheckPlayerInMinRange();
 		isPlayerInMaxRange = entity.CheckPlayerInMaxRange();
+		isInMeleeRange = entity.CheckPlayerInMeleeRangeAction();
 	}
-	
 	
 	public override void LogicUpdate()
 	{

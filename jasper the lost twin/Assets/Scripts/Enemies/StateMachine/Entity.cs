@@ -65,8 +65,12 @@ public class Entity : MonoBehaviour
 	{
 		return Physics2D.Raycast(playerCheck.position, transform.right, entityData.maxAggroDistance, entityData.whatIsPlayer);
 	}
-
 	
+	public bool CheckPlayerInMeleeRangeAction()
+	{
+		return Physics2D.Raycast(playerCheck.position, transform.right, entityData.meleeAttackRange, entityData.whatIsPlayer);
+	}
+
 	public void Flip()
 	{
 		FacingDirection *= -1;
