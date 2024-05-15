@@ -36,7 +36,7 @@ public class PursueState : State
 	{
 		base.LogicUpdate();
 		
-		if (Time.time >= startTime + stateData.pursueSpeed)
+		if (Time.time >= startTime + stateData.aggroTime)
 		{
 			isPursueOver = true;
 		}

@@ -9,7 +9,7 @@ public class Hound : Entity
 	public Hound_PlayerDetectedState PlayerDetectedState { get; set; }
 	public Hound_PursueState PursueState { get; set; }
 	public Hound_InvestigateState InvestigateState { get; set; }
-
+	public Hound_MeleeAttackState MeleeAttackState { get; set; }
 	
 	[SerializeField]
 	private D_IdleState idleStateData;
@@ -21,7 +21,11 @@ public class Hound : Entity
 	private D_PursueState pursueData;
 	[SerializeField]
 	private D_InvestigateState investigateData;
-	
+	[SerializeField]
+	private D_MeleeAttack meleeAttackData;
+	[SerializeField]
+	private Transform meleeAttackPosition;
+
 	protected override void Awake()
 	{
 		base.Awake();
@@ -30,10 +34,28 @@ public class Hound : Entity
 		PlayerDetectedState = new Hound_PlayerDetectedState(this, stateMachine, "playerDetected", playerDetectedData, this);
 		PursueState = new Hound_PursueState(this, stateMachine, "pursue", pursueData, this);
 		InvestigateState = new Hound_InvestigateState(this, stateMachine, "investigate", investigateData, this);
+		MeleeAttackState = new Hound_MeleeAttackState(this, stateMachine,"meleeAttack", meleeAttackPosition, meleeAttackData, this);
 	}
 	
 	public override void Start()
 	{		
 		stateMachine.Initialize(MoveState);
+	}
+	
+	protected override void OnDrawGizmos()
+	{
+		base.OnDrawGizmos();
+		
+		Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackData.attackRadius);
+	}
+	
+	public void SendTriggerAttack()
+	{
+		MeleeAttackState.TriggerAttack();
+	}
+	
+	public void SendFinishAttack()
+	{
+		MeleeAttackState.FinishAttack();
 	}
 }

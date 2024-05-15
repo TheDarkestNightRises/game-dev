@@ -15,6 +15,10 @@ public class Hound_PlayerDetectedState : PlayerDetectedState
 	{
 		base.LogicUpdate();
 		
+		if (isInMeleeRange)
+		{
+			stateMachine.ChangeState(hound.MeleeAttackState);
+		}
 		if (performLongRangeAction)
 		{
 			hound.IdleState.SetFlipAfterIdle(false);

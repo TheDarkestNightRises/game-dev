@@ -15,13 +15,18 @@ public class Hound_PursueState : PursueState
 	{
 		base.LogicUpdate();
 		
-		if (!isDetectingLedge || isDetectingWall)
+		if (isInMeleeRange) 
+		{
+			stateMachine.ChangeState(hound.MeleeAttackState);
+		}
+		else if (!isDetectingLedge || isDetectingWall)
 		{
 			stateMachine.ChangeState(hound.InvestigateState);
 		}
 		else if (isPursueOver)
 		{
 			if (isPlayerInMinAgroRange) stateMachine.ChangeState(hound.PlayerDetectedState);
+			stateMachine.ChangeState(hound.MoveState);
 		}
 	}
 }
