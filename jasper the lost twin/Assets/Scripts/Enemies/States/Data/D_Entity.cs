@@ -7,5 +7,9 @@ public class D_Entity : ScriptableObject
 {
 	public float wallCheckRange = 0.2f;
 	public float ledgeCheckRange = 0.4f;
+	public float minAggroDistance = 3f;
+	public float maxAggroDistance = 3f;
+	public float meleeAttackRange = 1f;
 	public LayerMask whatIsGround;
+	public LayerMask whatIsPlayer;
 }

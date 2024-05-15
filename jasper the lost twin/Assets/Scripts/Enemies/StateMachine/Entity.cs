@@ -15,7 +15,8 @@ public class Entity : MonoBehaviour
 	private Transform wallcheck;
 	[SerializeField]
 	private Transform ledgeCheck;
-
+	[SerializeField]
+	private Transform playerCheck;
 
 	protected virtual void Awake()
 	{
@@ -47,7 +48,7 @@ public class Entity : MonoBehaviour
 	
 	public bool CheckWall()
 	{
-		return Physics2D.Raycast(wallcheck.position, transform.right, entityData.wallCheckRange, entityData.whatIsGround);
+		return Physics2D.Raycast(wallcheck.position, -transform.right, entityData.wallCheckRange, entityData.whatIsGround);
 	}
 	
 	public bool CheckLedge()
@@ -55,6 +56,21 @@ public class Entity : MonoBehaviour
 		return Physics2D.Raycast(ledgeCheck.position, Vector2.down, entityData.ledgeCheckRange, entityData.whatIsGround);
 	}
 	
+	public bool CheckPlayerInMinRange()
+	{
+		return Physics2D.Raycast(playerCheck.position, -transform.right, entityData.minAggroDistance, entityData.whatIsPlayer);
+	}
+	
+	public bool CheckPlayerInMaxRange()
+	{
+		return Physics2D.Raycast(playerCheck.position, -transform.right, entityData.maxAggroDistance, entityData.whatIsPlayer);
+	}
+	
+	public bool CheckPlayerInMeleeRangeAction()
+	{
+		return Physics2D.Raycast(playerCheck.position, -transform.right, entityData.meleeAttackRange, entityData.whatIsPlayer);
+	}
+
 	public void Flip()
 	{
 		FacingDirection *= -1;

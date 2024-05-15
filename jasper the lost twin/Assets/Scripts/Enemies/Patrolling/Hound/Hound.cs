@@ -6,21 +6,56 @@ public class Hound : Entity
 {
 	public Hound_IdleState IdleState { get; set; }
 	public Hound_Move_State MoveState { get; set; }
+	public Hound_PlayerDetectedState PlayerDetectedState { get; set; }
+	public Hound_PursueState PursueState { get; set; }
+	public Hound_InvestigateState InvestigateState { get; set; }
+	public Hound_MeleeAttackState MeleeAttackState { get; set; }
 	
 	[SerializeField]
 	private D_IdleState idleStateData;
 	[SerializeField]
 	private D_MoveState moveStateData;
-	
+	[SerializeField]
+	private D_PlayerDetected playerDetectedData;
+	[SerializeField]
+	private D_PursueState pursueData;
+	[SerializeField]
+	private D_InvestigateState investigateData;
+	[SerializeField]
+	private D_MeleeAttack meleeAttackData;
+	[SerializeField]
+	private Transform meleeAttackPosition;
+
 	protected override void Awake()
 	{
 		base.Awake();
 		MoveState = new Hound_Move_State(this, stateMachine, "move", moveStateData, this);
 		IdleState = new Hound_IdleState(this, stateMachine, "idle", idleStateData, this);
+		PlayerDetectedState = new Hound_PlayerDetectedState(this, stateMachine, "playerDetected", playerDetectedData, this);
+		PursueState = new Hound_PursueState(this, stateMachine, "pursue", pursueData, this);
+		InvestigateState = new Hound_InvestigateState(this, stateMachine, "investigate", investigateData, this);
+		MeleeAttackState = new Hound_MeleeAttackState(this, stateMachine,"meleeAttack", meleeAttackPosition, meleeAttackData, this);
 	}
 	
 	public override void Start()
 	{		
 		stateMachine.Initialize(MoveState);
+	}
+	
+	protected override void OnDrawGizmos()
+	{
+		base.OnDrawGizmos();
+		
+		Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackData.attackRadius);
+	}
+	
+	public void SendTriggerAttack()
+	{
+		MeleeAttackState.TriggerAttack();
+	}
+	
+	public void SendFinishAttack()
+	{
+		MeleeAttackState.FinishAttack();
 	}
 }

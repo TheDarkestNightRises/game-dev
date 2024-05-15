@@ -1,18 +1,32 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hound_PlayerDetectedState : MonoBehaviour
+public class Hound_PlayerDetectedState : PlayerDetectedState
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private Hound hound;
+	
+	public Hound_PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData, Hound hound) : base(entity, stateMachine, animBoolName, stateData)
+	{
+		this.hound = hound;
+	}
+	
+	public override void LogicUpdate()
+	{
+		base.LogicUpdate();
+		
+		if (isInMeleeRange)
+		{
+			stateMachine.ChangeState(hound.MeleeAttackState);
+		}
+		if (performLongRangeAction)
+		{
+			hound.IdleState.SetFlipAfterIdle(false);
+			stateMachine.ChangeState(hound.PursueState);
+		}
+		else if (!isPlayerInMaxRange)
+		{
+			stateMachine.ChangeState(hound.InvestigateState);
+		}
+	}
 }
