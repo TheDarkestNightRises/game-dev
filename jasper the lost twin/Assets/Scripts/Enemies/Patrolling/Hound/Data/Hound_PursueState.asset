@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Hound_PursueState
   m_EditorClassIdentifier: 
   pursueSpeed: 5
-  aggroTime: 2
+  aggroTime: 1

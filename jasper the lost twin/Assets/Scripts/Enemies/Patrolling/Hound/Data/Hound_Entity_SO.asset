@@ -15,7 +15,8 @@ MonoBehaviour:
   wallCheckRange: 0.2
   ledgeCheckRange: 0.4
   minAggroDistance: 7
-  maxAggroDistance: 7
+  maxAggroDistance: 8
+  meleeAttackRange: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64

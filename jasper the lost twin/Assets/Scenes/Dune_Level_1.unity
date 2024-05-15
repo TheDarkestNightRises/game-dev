@@ -3279,42 +3279,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!4 &495109704 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4629747811734638279, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-  m_PrefabInstance: {fileID: 4633492624359413467}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &774021523
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 774021524}
-  m_Layer: 9
-  m_Name: MeleeAttackPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &774021524
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774021523}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.78, y: 0.06, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 495109704}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642814206
 GameObject:
   m_ObjectHideFlags: 0
@@ -4549,38 +4513,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mummy
       objectReference: {fileID: 0}
-    - target: {fileID: 1429478570542425831, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429478570542425831, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1826117507427322589, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: m_Size.x
-      value: 0.43176746
-      objectReference: {fileID: 0}
-    - target: {fileID: 1826117507427322589, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: m_Size.y
-      value: 0.9991791
-      objectReference: {fileID: 0}
-    - target: {fileID: 1826117507427322589, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.44000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 1826117507427322589, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.2373215
-      objectReference: {fileID: 0}
-    - target: {fileID: 2753237205161493919, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 2753237205161493919, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
     - target: {fileID: 4629747811734638279, guid: 378558cb911456145aed5d4846bb925b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.42
@@ -4621,32 +4553,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5775430499306437701, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: pursueData
-      value: 
-      objectReference: {fileID: 11400000, guid: 9915f3ffe7f4c0749b34ec1b1ea04c17, type: 2}
-    - target: {fileID: 5775430499306437701, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: investigateData
-      value: 
-      objectReference: {fileID: 11400000, guid: cc371cb8c3b00114db18a678bbbcd180, type: 2}
-    - target: {fileID: 5775430499306437701, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: meleeAttackData
-      value: 
-      objectReference: {fileID: 11400000, guid: 3fbb8ff938b94d541b9488d566fd8b77, type: 2}
-    - target: {fileID: 5775430499306437701, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: meleeAttackPosition
-      value: 
-      objectReference: {fileID: 774021524}
-    - target: {fileID: 7855757107124885493, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.031
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4629747811734638279, guid: 378558cb911456145aed5d4846bb925b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 774021524}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 378558cb911456145aed5d4846bb925b, type: 3}
 --- !u!1660057539 &9223372036854775807

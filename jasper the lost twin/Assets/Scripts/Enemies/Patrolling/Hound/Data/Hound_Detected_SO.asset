@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc91019de9141543bc7d8185bebbc52, type: 3}
   m_Name: Hound_Detected_SO
   m_EditorClassIdentifier: 
+  longRangeActionTime: 0.5
+  shortRangeActionTime: 1.5

@@ -48,7 +48,7 @@ public class Entity : MonoBehaviour
 	
 	public bool CheckWall()
 	{
-		return Physics2D.Raycast(wallcheck.position, transform.right, entityData.wallCheckRange, entityData.whatIsGround);
+		return Physics2D.Raycast(wallcheck.position, -transform.right, entityData.wallCheckRange, entityData.whatIsGround);
 	}
 	
 	public bool CheckLedge()
@@ -58,17 +58,17 @@ public class Entity : MonoBehaviour
 	
 	public bool CheckPlayerInMinRange()
 	{
-		return Physics2D.Raycast(playerCheck.position, transform.right, entityData.minAggroDistance, entityData.whatIsPlayer);
+		return Physics2D.Raycast(playerCheck.position, -transform.right, entityData.minAggroDistance, entityData.whatIsPlayer);
 	}
 	
 	public bool CheckPlayerInMaxRange()
 	{
-		return Physics2D.Raycast(playerCheck.position, transform.right, entityData.maxAggroDistance, entityData.whatIsPlayer);
+		return Physics2D.Raycast(playerCheck.position, -transform.right, entityData.maxAggroDistance, entityData.whatIsPlayer);
 	}
 	
 	public bool CheckPlayerInMeleeRangeAction()
 	{
-		return Physics2D.Raycast(playerCheck.position, transform.right, entityData.meleeAttackRange, entityData.whatIsPlayer);
+		return Physics2D.Raycast(playerCheck.position, -transform.right, entityData.meleeAttackRange, entityData.whatIsPlayer);
 	}
 
 	public void Flip()
