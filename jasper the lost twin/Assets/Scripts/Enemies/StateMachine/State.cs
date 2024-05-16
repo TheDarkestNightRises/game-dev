@@ -22,7 +22,7 @@ public class State
     {
         startTime = Time.time;
 	    entity.Anim.SetBool(animBoolName, true);
-	    Debug.Log($"ENEMY STATE: {animBoolName}");
+	    //Debug.Log($"ENEMY STATE: {animBoolName}");
         DoChecks();
     }
 

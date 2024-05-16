@@ -40,6 +40,11 @@ public class Weapon : MonoBehaviour
 		attackState.AnimationFinishTrigger();
 	}
 	
+	public virtual void AnimationActionTrigger()
+	{
+		
+	}
+	
 	public void InitWeapon(PlayerAttackState attackState)
 	{
 		this.attackState = attackState;
