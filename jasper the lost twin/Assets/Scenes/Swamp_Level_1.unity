@@ -4987,7 +4987,7 @@ MonoBehaviour:
     dialogueLines:
     - character:
         name: Jack
-        icon: {fileID: 0}
+        icon: {fileID: 21300000, guid: 5ee437a22a3b22f499502f987028ade9, type: 3}
       line: Hello
 --- !u!212 &1781626748
 SpriteRenderer:
