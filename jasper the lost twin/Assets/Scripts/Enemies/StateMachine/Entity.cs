@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+public class Entity : MonoBehaviour, IDamageable
 {
 	public D_Entity entityData;
 	public int FacingDirection { get; set; }
@@ -17,9 +17,12 @@ public class Entity : MonoBehaviour
 	private Transform ledgeCheck;
 	[SerializeField]
 	private Transform playerCheck;
+	private float currentHealth;
+	private int lastDamageDirection;
 
 	protected virtual void Awake()
 	{
+		currentHealth = entityData.maxHealth;
 		RB = GetComponent<Rigidbody2D>();	
 		Anim = GetComponent<Animator>();	
 		stateMachine = new FiniteStateMachine();
@@ -70,7 +73,19 @@ public class Entity : MonoBehaviour
 	{
 		return Physics2D.Raycast(playerCheck.position, -transform.right, entityData.meleeAttackRange, entityData.whatIsPlayer);
 	}
-
+	
+	public virtual void Damage(DamageData damageData)
+	{
+		currentHealth -= damageData.Amount;
+		DamageHop(entityData.damageHopVelocity);
+	}
+	
+	public virtual void DamageHop(float velocity)
+	{
+		velocityWorkspace.Set(RB.velocity.x, velocity);
+		RB.velocity = velocityWorkspace;
+	}
+	
 	public void Flip()
 	{
 		FacingDirection *= -1;
