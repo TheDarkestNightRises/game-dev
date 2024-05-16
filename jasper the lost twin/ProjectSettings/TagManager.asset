@@ -14,12 +14,12 @@ TagManager:
   - UI
   - Ground
   - Background
-  - Player
   - Enemies
+  - Player
   - Hazards
   - Bouncing
   - Parallax
-  - 
+  - Weapon
   - Interactables
   - 
   - 

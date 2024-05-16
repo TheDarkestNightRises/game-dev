@@ -10,6 +10,7 @@ public class Hound : Entity
 	public Hound_PursueState PursueState { get; set; }
 	public Hound_InvestigateState InvestigateState { get; set; }
 	public Hound_MeleeAttackState MeleeAttackState { get; set; }
+	public Hound_DeathState DeathState { get; set; }
 	
 	[SerializeField]
 	private D_IdleState idleStateData;
@@ -24,6 +25,8 @@ public class Hound : Entity
 	[SerializeField]
 	private D_MeleeAttack meleeAttackData;
 	[SerializeField]
+	private D_DeadState deathStateData;
+	[SerializeField]
 	private Transform meleeAttackPosition;
 
 	protected override void Awake()
@@ -35,6 +38,7 @@ public class Hound : Entity
 		PursueState = new Hound_PursueState(this, stateMachine, "pursue", pursueData, this);
 		InvestigateState = new Hound_InvestigateState(this, stateMachine, "investigate", investigateData, this);
 		MeleeAttackState = new Hound_MeleeAttackState(this, stateMachine,"meleeAttack", meleeAttackPosition, meleeAttackData, this);
+		DeathState = new Hound_DeathState(this, stateMachine,"death", deathStateData, this);
 	}
 	
 	public override void Start()
@@ -57,5 +61,15 @@ public class Hound : Entity
 	public void SendFinishAttack()
 	{
 		MeleeAttackState.FinishAttack();
+	}
+	
+	public override void Damage(DamageData damageData)
+	{
+		base.Damage(damageData);
+		
+		if (!isAlive)
+		{
+			stateMachine.ChangeState(DeathState);
+		}
 	}
 }

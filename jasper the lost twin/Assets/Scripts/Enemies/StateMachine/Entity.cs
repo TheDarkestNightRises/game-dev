@@ -17,9 +17,10 @@ public class Entity : MonoBehaviour, IDamageable
 	private Transform ledgeCheck;
 	[SerializeField]
 	private Transform playerCheck;
+	[SerializeField]
 	private float currentHealth;
-	private int lastDamageDirection;
-
+	protected bool isAlive;
+	
 	protected virtual void Awake()
 	{
 		currentHealth = entityData.maxHealth;
@@ -27,6 +28,7 @@ public class Entity : MonoBehaviour, IDamageable
 		Anim = GetComponent<Animator>();	
 		stateMachine = new FiniteStateMachine();
 		FacingDirection = -1;
+		currentHealth = entityData.maxHealth;
 	}
 		
 	public virtual void Start()
@@ -79,6 +81,11 @@ public class Entity : MonoBehaviour, IDamageable
 		Debug.Log("Took damage lol {damageData.Amount}");
 		currentHealth -= damageData.Amount;
 		DamageHop(entityData.damageHopVelocity);
+		
+		if (currentHealth <= 0)
+		{
+			isAlive = false;
+		}
 	}
 	
 	public virtual void DamageHop(float velocity)
