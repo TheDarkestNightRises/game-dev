@@ -199,6 +199,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46906062}
   m_CullTransparentMesh: 1
+--- !u!1 &158240484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7583056364566669499, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+  m_PrefabInstance: {fileID: 1563805328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &158240487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158240484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9665d7e992bdb3d4eb51a78260acee8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aggresiveWeaponData: {fileID: 11400000, guid: 5f87f87e49a01354990a24a5a6340c90, type: 2}
 --- !u!1 &263022613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,14 +4547,14 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.25241923, y: -0.16140175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 1.03125}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4545,6 +4563,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3761077, y: 0.34294033}
   m_EdgeRadius: 0
+--- !u!114 &662424840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662424834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1fb8f6a8227a2498ed9c49704c3981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &749136449
 GameObject:
   m_ObjectHideFlags: 0
@@ -9232,7 +9262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2336957590601888902, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3602582882004244476, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9274,6 +9304,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4395241941706036609, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      propertyPath: Weapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 158240487}
     - target: {fileID: 5331614158497466031, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
       propertyPath: m_Size.x
       value: 0.5557226
@@ -9318,9 +9352,15 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7583056364566669499, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 158240487}
     - targetCorrespondingSourceObject: {fileID: 1677093906534078822, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
       insertIndex: -1
       addedObject: {fileID: 662424839}
+    - targetCorrespondingSourceObject: {fileID: 1677093906534078822, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 662424840}
   m_SourcePrefab: {fileID: 100100000, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
 --- !u!1 &1706802382
 GameObject:

@@ -76,6 +76,7 @@ public class Entity : MonoBehaviour, IDamageable
 	
 	public virtual void Damage(DamageData damageData)
 	{
+		Debug.Log("Took damage lol {damageData.Amount}");
 		currentHealth -= damageData.Amount;
 		DamageHop(entityData.damageHopVelocity);
 	}

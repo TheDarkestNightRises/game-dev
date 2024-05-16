@@ -29,6 +29,5 @@ public class PlayerJumpState : PlayerAbilityState
 	public void DecreaseAmmountOfJumpsLeft()
 	{
 		ammountOfJumpsLeft--;
-		Debug.Log($"Ammounts of jumps left : {ammountOfJumpsLeft}");
 	}	
 }

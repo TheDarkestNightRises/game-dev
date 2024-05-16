@@ -4513,6 +4513,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mummy
       objectReference: {fileID: 0}
+    - target: {fileID: 1826117507427322589, guid: 378558cb911456145aed5d4846bb925b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.94286394
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826117507427322589, guid: 378558cb911456145aed5d4846bb925b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2149754
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826117507427322589, guid: 378558cb911456145aed5d4846bb925b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.48543096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826117507427322589, guid: 378558cb911456145aed5d4846bb925b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.19756937
+      objectReference: {fileID: 0}
     - target: {fileID: 4629747811734638279, guid: 378558cb911456145aed5d4846bb925b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.42
