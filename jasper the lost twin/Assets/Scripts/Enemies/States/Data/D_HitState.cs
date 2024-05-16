@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class D_StunState : ScriptableObject
+public class D_HitState : ScriptableObject
 {
 	
 }

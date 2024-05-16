@@ -19,7 +19,7 @@ public class Entity : MonoBehaviour, IDamageable
 	private Transform playerCheck;
 	[SerializeField]
 	private float currentHealth;
-	protected bool isAlive;
+	protected bool isAlive = true;
 	
 	protected virtual void Awake()
 	{
@@ -28,11 +28,12 @@ public class Entity : MonoBehaviour, IDamageable
 		Anim = GetComponent<Animator>();	
 		stateMachine = new FiniteStateMachine();
 		FacingDirection = -1;
-		currentHealth = entityData.maxHealth;
 	}
 		
 	public virtual void Start()
 	{
+		currentHealth = entityData.maxHealth;
+		FacingDirection = -1;
 	}
 	
 	protected void Update()
