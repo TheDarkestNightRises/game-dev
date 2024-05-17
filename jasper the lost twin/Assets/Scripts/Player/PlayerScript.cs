@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public PlayerAttackState SecondaryAttackState { get; set; }
 	public PlayerDashState DashState { get; set; }
 	public PlayerHitState HitState { get; set; }
+	public PlayerDeathState DeathState { get; set; }
 
 	#endregion
 
@@ -27,11 +28,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public PlayerData playerData;
 	public Rigidbody2D RB { get; set; }
 	private BoxCollider2D myFeetCollider;
-	private CapsuleCollider2D myBodyCollider;
-	
-	[SerializeField]
-	Vector2 deathKick = new Vector2(10f, 10f);
-	
+	private CapsuleCollider2D myBodyCollider;	
 	#endregion
 	
 	#region Particles
@@ -41,9 +38,16 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public Vector2 CurrentVelocity { get; set; }
 	public int FacingDirection { get; set; }
 	private Vector2 workspace;
-	private CinemachineImpulseSource myImpulseSource;
+	private CinemachineImpulseSource impulseCamera;
 	public PlayerInventory Inventory { get; set; }
 	public bool IsInvincibile { get; set; }
+	[SerializeField]
+	private float currentHealth;
+	public float CurrentHealth
+	{
+		get { return currentHealth; }
+		set { currentHealth = value; }
+	}
 
 	public void Awake()
 	{
@@ -57,23 +61,23 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 		DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
 		HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
+		DeathState = new PlayerDeathState(this, StateMachine, playerData, "death");
 	}
 	
 	bool isAlive = true;
 	
 	public void Damage(DamageData damageData)
 	{
+		if (!isAlive) return;
 		if (IsInvincibile) 	return;
-		
-		if (StateMachine.CurrentState == HitState) return;
-		
-		
-		if (!isAlive)
+		if (CurrentHealth <= 0)
 		{
-			//StateMachine.ChangeState(DeathState);
+			isAlive = false;
+			StateMachine.ChangeState(DeathState);
 			return;
 		}
-		
+		if (StateMachine.CurrentState == HitState) return;	
+		CurrentHealth -= damageData.Amount;
 		StateMachine.ChangeState(HitState);
 	}
 
@@ -84,10 +88,11 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		Anim = GetComponent<Animator>();
 		InputHandler = GetComponent<PlayerInputHandler>();
 		RB = GetComponent<Rigidbody2D>();
-		myImpulseSource = GetComponent<CinemachineImpulseSource>();
+		impulseCamera = GetComponent<CinemachineImpulseSource>();
 		Inventory = GetComponent<PlayerInventory>();
 		DashDirectionIndicator = transform.Find("DashDirectionIndicator");
 		FacingDirection = 1;
+		CurrentHealth = playerData.maxHealth;
 		PrimaryAttackState.SetWeapon(Inventory.Weapons[0]);
 		StateMachine.Initialize(IdleState);
 	}
@@ -97,7 +102,6 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		if (!isAlive) return;
 		CurrentVelocity = RB.velocity;
 		StateMachine.CurrentState.LogicUpdate();
-	
 	}
 	
 	private void FixedUpdate()
@@ -128,21 +132,20 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		CurrentVelocity = workspace;
 	}
 	
-	// Player dies method
 	void Die()
 	{
 		if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
 		{
 			isAlive = false;
-			Anim.SetTrigger("die");
+			Anim.SetTrigger("death");
 			RB.AddForce(Vector2.up * playerData.deathKick, ForceMode2D.Impulse);
-			myImpulseSource.GenerateImpulse(playerData.deathImpulse);
+			impulseCamera.GenerateImpulse(playerData.deathImpulse);
 			ApplyFriction();
 			Invoke(nameof(RemovePhysics), 1f);
 		}
 	}
 	
-	private void RemovePhysics()
+	public void RemovePhysics()
 	{
 		RB.simulated = false;
 	}
@@ -185,6 +188,11 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
 	
 	private void AnimationFinishedTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
+	
+	public void GenerateImpulse(float impulse)
+	{
+		impulseCamera.GenerateImpulse(impulse);
+	}
 }
 
 
