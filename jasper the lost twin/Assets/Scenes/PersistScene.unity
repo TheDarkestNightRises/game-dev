@@ -4523,8 +4523,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1677093906534078822, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
   m_PrefabInstance: {fileID: 1563805328}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &662424839
-BoxCollider2D:
+--- !u!114 &662424840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662424834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1fb8f6a8227a2498ed9c49704c3981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &662424845
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4555,7 +4567,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.24187517, y: -0.046782732}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4565,21 +4577,17 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3646965, y: 1.2025828}
-  m_EdgeRadius: 0
---- !u!114 &662424840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662424834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b1fb8f6a8227a2498ed9c49704c3981, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Points:
+    m_Paths:
+    - - {x: -0.033136368, y: 0.75479984}
+      - {x: 0.00038719177, y: 0.19916296}
+      - {x: 0.25307173, y: -0.059636325}
+      - {x: 0.0020204186, y: -0.6234602}
+      - {x: 0.7600876, y: -0.75600076}
+      - {x: 0.595768, y: -0.15064049}
+      - {x: 0.7161665, y: 0.349761}
+      - {x: 0.1226778, y: 0.79279035}
+  m_UseDelaunayMesh: 0
 --- !u!1 &749136449
 GameObject:
   m_ObjectHideFlags: 0
@@ -9527,10 +9535,10 @@ PrefabInstance:
       addedObject: {fileID: 158240487}
     - targetCorrespondingSourceObject: {fileID: 1677093906534078822, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 662424839}
+      addedObject: {fileID: 662424840}
     - targetCorrespondingSourceObject: {fileID: 1677093906534078822, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 662424840}
+      addedObject: {fileID: 662424845}
   m_SourcePrefab: {fileID: 100100000, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
 --- !u!1 &1706802382
 GameObject:
