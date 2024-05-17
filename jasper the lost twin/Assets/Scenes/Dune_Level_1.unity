@@ -4570,6 +4570,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5775430499306437701, guid: 378558cb911456145aed5d4846bb925b, type: 3}
+      propertyPath: hitStateData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0881cfd0449e516499bc6660289d205a, type: 2}
+    - target: {fileID: 5775430499306437701, guid: 378558cb911456145aed5d4846bb925b, type: 3}
       propertyPath: currentHealth
       value: 200
       objectReference: {fileID: 0}

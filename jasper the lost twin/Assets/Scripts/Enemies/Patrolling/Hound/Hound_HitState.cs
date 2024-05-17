@@ -10,5 +10,25 @@ public class Hound_HitState : HitState
 	{
 		this.enemy = enemy;
 	}
+	
+	public override void LogicUpdate()
+	{
+		base.LogicUpdate();
 
+		if (isStunTimeOver)
+		{
+			if (performCloseRangeAction)
+			{
+				stateMachine.ChangeState(enemy.MeleeAttackState);
+			}
+			else if (isPlayerInMinAgroRange)
+			{
+				stateMachine.ChangeState(enemy.PursueState);
+			}
+			else
+			{
+				stateMachine.ChangeState(enemy.InvestigateState);
+			}
+		}
+	}
 }
