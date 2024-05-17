@@ -27,6 +27,7 @@ public class Hound_HitState : HitState
 			}
 			else
 			{
+				enemy.InvestigateState.SetFlipNow(true);
 				stateMachine.ChangeState(enemy.InvestigateState);
 			}
 		}

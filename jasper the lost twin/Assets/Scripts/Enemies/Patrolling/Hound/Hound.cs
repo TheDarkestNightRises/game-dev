@@ -69,14 +69,19 @@ public class Hound : Entity
 	
 	public override void Damage(DamageData damageData)
 	{
-		if (stateMachine.CurrentState != HitState)
+		if (stateMachine.CurrentState == HitState)
 		{
-			stateMachine.ChangeState(HitState);
+			return;
 		}
+		
 		if (!isAlive)
 		{
 			stateMachine.ChangeState(DeathState);
+			return;
 		}
+		
 		base.Damage(damageData);
+		stateMachine.ChangeState(HitState);
+
 	}
 }
