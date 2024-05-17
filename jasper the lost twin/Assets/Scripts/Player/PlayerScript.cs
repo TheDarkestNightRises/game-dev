@@ -43,7 +43,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	private Vector2 workspace;
 	private CinemachineImpulseSource myImpulseSource;
 	public PlayerInventory Inventory { get; set; }
-	
+	public bool IsInvincibile { get; set; }
 
 	public void Awake()
 	{
@@ -63,10 +63,10 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	
 	public void Damage(DamageData damageData)
 	{
-		if (StateMachine.CurrentState == HitState)
-		{
-			return;
-		}
+		if (IsInvincibile) 	return;
+		
+		if (StateMachine.CurrentState == HitState) return;
+		
 		
 		if (!isAlive)
 		{
