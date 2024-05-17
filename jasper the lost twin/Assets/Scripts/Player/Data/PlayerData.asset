@@ -31,5 +31,9 @@ MonoBehaviour:
   drag: 10
   dashEndYMultiplayer: 0.2
   distacenBetweenAfterImages: 0.5
-  deathKick: 30
+  deathKick: 10
   deathImpulse: 1
+  deathKickDirection: {x: 10, y: 10}
+  stunTime: 0.5
+  invincibilityTime: 1
+  maxHealth: 10

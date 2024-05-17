@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHitState : PlayerState
-{
-	protected float stunTime = 0.5f;
-	protected float invincibilityTime = 1f; 
-
-	
+{	
 	public PlayerHitState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
 	{
 		
@@ -23,7 +19,7 @@ public class PlayerHitState : PlayerState
 		base.LogicUpdate();
 		player.SetVelocityX(0f);
 		
-		if (Time.time >= startTime + stunTime) {
+		if (Time.time >= startTime + playerData.stunTime) {
 			stateMachine.ChangeState(player.IdleState);
 		}
 	}
@@ -31,7 +27,7 @@ public class PlayerHitState : PlayerState
 	public override void Exit()
 	{
 		base.Exit();
-		player.StartCoroutine(RemoveInvincibilityAfterDelay(invincibilityTime));
+		player.StartCoroutine(RemoveInvincibilityAfterDelay(playerData.invincibilityTime));
 	}
 	
 	public override void PhysicsUpdate()

@@ -35,4 +35,13 @@ public class PlayerData : ScriptableObject
 	[Header("Death")]
 	public float deathKick = 2f;
 	public float deathImpulse = 1f;
+	public Vector2 deathKickDirection = new Vector2(10f, 10f);
+	
+	[Header("Hit")]
+	public float stunTime = 0.5f;
+	public float invincibilityTime = 1f; 
+
+	[Header("Health")]
+	public float maxHealth = 300f;
+	
 }
