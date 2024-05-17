@@ -17,7 +17,7 @@ public class Hound_MeleeAttackState : MeleeAttackState
 		if (isAnimationFinished)
 		{
 			if (isPlayerInMinRange) stateMachine.ChangeState(enemy.PlayerDetectedState);
-			else stateMachine.ChangeState(enemy.MoveState);
+			else stateMachine.ChangeState(enemy.InvestigateState);
 		}
 	}
 }
