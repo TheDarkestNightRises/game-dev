@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7b00778287cbc4fa7ae06540645944, type: 3}
   m_Name: Hound_Entity_SO
   m_EditorClassIdentifier: 
+  maxHealth: 200
+  damageHopVelocity: 10
   wallCheckRange: 0.2
   ledgeCheckRange: 0.4
   minAggroDistance: 7
   maxAggroDistance: 8
-  meleeAttackRange: 1
+  meleeAttackRange: 0.4
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
