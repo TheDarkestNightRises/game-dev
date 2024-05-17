@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerScript : MonoBehaviour, IDamageable
 {
 	#region States
 	public PlayerStateMachine StateMachine { get; private set; }
@@ -14,7 +14,9 @@ public class PlayerScript : MonoBehaviour
 	public PlayerLandState LandState { get; set; }
 	public PlayerAttackState PrimaryAttackState { get; set; }
 	public PlayerAttackState SecondaryAttackState { get; set; }
-	public PlayerDashState DashState {get; set; }
+	public PlayerDashState DashState { get; set; }
+	public PlayerHitState HitState { get; set; }
+
 	#endregion
 
 	#region Player Components
@@ -54,10 +56,27 @@ public class PlayerScript : MonoBehaviour
 		PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 		SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 		DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
+		HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
 	}
 	
 	bool isAlive = true;
 	
+	public void Damage(DamageData damageData)
+	{
+		if (StateMachine.CurrentState == HitState)
+		{
+			return;
+		}
+		
+		if (!isAlive)
+		{
+			//StateMachine.ChangeState(DeathState);
+			return;
+		}
+		
+		StateMachine.ChangeState(HitState);
+	}
+
 	private void Start()
 	{
 		myFeetCollider = GetComponent<BoxCollider2D>();

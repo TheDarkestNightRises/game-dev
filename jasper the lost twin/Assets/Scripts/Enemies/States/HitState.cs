@@ -6,8 +6,6 @@ public class HitState : State
 {
 	protected D_HitState stateData;
 	protected bool isStunTimeOver;
-	protected bool isGrounded;
-	protected bool isMovementStopped;
 	protected bool performCloseRangeAction;
 	protected bool isPlayerInMinAgroRange;
 
@@ -27,7 +25,6 @@ public class HitState : State
 		base.Enter();
 
 		isStunTimeOver = false;
-		isMovementStopped = false;
 	}
 
 	public override void LogicUpdate() {
