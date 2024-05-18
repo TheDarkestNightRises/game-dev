@@ -44,4 +44,6 @@ public class PlayerData : ScriptableObject
 	[Header("Health")]
 	public float maxHealth = 300f;
 	
+	[Header("Attack")]
+	public float speedWhileAttacking = 4f;
 }
