@@ -10,6 +10,12 @@ public class GunTrap : MonoBehaviour
 	[SerializeField] public Transform firePoint;
 	[SerializeField] public GameObject[] fireballs;
 	private float cooldownTimer;
+	private Animator Anim; 
+	// Awake is called when the script instance is being loaded.
+	protected void Awake()
+	{
+		Anim = GetComponent<Animator>();
+	}
 	
 	private void Attack()
 	{
@@ -17,6 +23,7 @@ public class GunTrap : MonoBehaviour
 		
 		fireballs[FindFireball()].transform.position = firePoint.position;
 		fireballs[FindFireball()].GetComponent<EnemyBullet>().ActivateBullet();
+		Anim.SetTrigger("Fire");
 	}
 	
 	private int FindFireball()

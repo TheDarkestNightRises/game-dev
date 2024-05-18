@@ -16,7 +16,7 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-	    float movementSpeed = speed * Time.deltaTime;
+	    float movementSpeed = -speed * Time.deltaTime;
 	    transform.Translate(movementSpeed,0,0);
 	    
 	    lifetime += Time.deltaTime;
