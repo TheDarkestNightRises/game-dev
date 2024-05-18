@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
+
 using UnityEngine;
 
 public class GunTrap : MonoBehaviour
@@ -14,7 +16,7 @@ public class GunTrap : MonoBehaviour
 		cooldownTimer = 0;
 		
 		fireballs[FindFireball()].transform.position = firePoint.position;
-		//fireballs[FindFireball()].GetComponent<EnemyProjectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+		fireballs[FindFireball()].GetComponent<EnemyBullet>().ActivateBullet();
 	}
 	
 	private int FindFireball()
