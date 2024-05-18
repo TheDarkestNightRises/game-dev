@@ -9,14 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 763ac820ee732cf4bbbd226c2ac6513c, type: 3}
-  m_Name: E2_MeleeAttackStateData
+  m_Script: {fileID: 11500000, guid: 4a7b00778287cbc4fa7ae06540645944, type: 3}
+  m_Name: Archer_Entity_SO
   m_EditorClassIdentifier: 
-  attackRadius: 0.5
-  attackDamage: 10
-  knockbackAngle: {x: 1, y: 1}
-  knockbackStrength: 10
-  PoiseDamage: 100
+  maxHealth: 200
+  damageHopVelocity: 10
+  wallCheckRange: 0.2
+  ledgeCheckRange: 0.4
+  minAggroDistance: 7
+  maxAggroDistance: 8
+  meleeAttackRange: 0.4
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 256
