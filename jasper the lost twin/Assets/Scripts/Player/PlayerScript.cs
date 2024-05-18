@@ -78,6 +78,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		}
 		if (StateMachine.CurrentState == HitState) return;	
 		CurrentHealth -= damageData.Amount;
+		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
 		StateMachine.ChangeState(HitState);
 	}
 
