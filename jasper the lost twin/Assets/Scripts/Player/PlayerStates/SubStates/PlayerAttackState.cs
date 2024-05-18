@@ -14,6 +14,7 @@ public class PlayerAttackState : PlayerAbilityState
 	public override void Enter()
 	{
 		base.Enter();
+		player.SetVelocityX(playerData.speedWhileAttacking * player.FacingDirection);
 		
 		weapon.EnterWeapon();
 	}
