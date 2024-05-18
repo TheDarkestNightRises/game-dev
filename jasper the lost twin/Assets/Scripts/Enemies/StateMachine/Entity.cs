@@ -81,6 +81,7 @@ public class Entity : MonoBehaviour, IDamageable
 	{
 		Debug.Log("Took damage lol {damageData.Amount}");
 		currentHealth -= damageData.Amount;
+		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
 		DamageHop(entityData.damageHopVelocity);
 		
 		if (currentHealth <= 0)

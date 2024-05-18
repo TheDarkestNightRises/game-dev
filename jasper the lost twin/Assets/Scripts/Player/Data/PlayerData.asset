@@ -36,4 +36,4 @@ MonoBehaviour:
   deathKickDirection: {x: 10, y: 10}
   stunTime: 0.5
   invincibilityTime: 1
-  maxHealth: 10
+  maxHealth: 300
