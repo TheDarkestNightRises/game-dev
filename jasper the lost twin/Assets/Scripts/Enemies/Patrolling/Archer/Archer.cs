@@ -11,7 +11,7 @@ public class Archer : Entity
 	public Archer_InvestigateState InvestigateState { get; private set; }
 	public Archer_HitState HitState { get; private set; }
 	public Archer_DeathState DeathState { get; private set; }
-    // public E2_RangedAttackState rangedAttackState { get; private set; }
+	public Archer_RangedAttackState RangedAttackState { get; private set; }
 
     [SerializeField]
     private D_MoveState moveStateData;
@@ -25,8 +25,8 @@ public class Archer : Entity
 	private D_HitState hitStateData;
     [SerializeField]
 	public D_DeadState deathStateData;
-    //[SerializeField]
-    //private D_RangedAttackState rangedAttackStateData;
+    [SerializeField]
+    private D_RangedAttackState rangedAttackStateData;
 
     [SerializeField]
     private Transform rangedAttackPosition;
@@ -41,11 +41,35 @@ public class Archer : Entity
 	    InvestigateState = new Archer_InvestigateState(this, stateMachine, "investigate", investigateData, this);
 	    HitState = new Archer_HitState(this, stateMachine, "hit", hitStateData, this);
 	    DeathState = new Archer_DeathState(this, stateMachine, "death", deathStateData, this);
-        // rangedAttackState = new E2_RangedAttackState(this, stateMachine, "rangedAttack", rangedAttackPosition, rangedAttackStateData, this);
+	    RangedAttackState = new Archer_RangedAttackState(this, stateMachine, "attack", rangedAttackPosition, rangedAttackStateData, this);
     }
     
     private void Start()
     {
 	    stateMachine.Initialize(MoveState);        
     }
+    
+	public void SendTriggerAttack()
+	{
+		RangedAttackState.TriggerAttack();
+	}
+	
+	public override void Damage(DamageData damageData)
+	{
+		if (stateMachine.CurrentState == HitState)
+		{
+			return;
+		}
+		
+		if (!isAlive)
+		{
+			stateMachine.ChangeState(DeathState);
+			return;
+		}
+		
+		base.Damage(damageData);
+		stateMachine.ChangeState(HitState);
+
+	}
+
 }

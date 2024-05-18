@@ -14,8 +14,8 @@ TagManager:
   - UI
   - Ground
   - Background
-  - Enemies
   - Player
+  - Enemies
   - Hazards
   - Bouncing
   - Parallax

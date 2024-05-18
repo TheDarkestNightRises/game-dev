@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8415588544672275101}
-  - component: {fileID: 8683492601862331181}
   - component: {fileID: 160591706356332262}
   - component: {fileID: 3241719737110652333}
   - component: {fileID: 4178480503296321854}
@@ -40,32 +39,6 @@ Transform:
   - {fileID: 5802616050522314298}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8683492601862331181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593555015883776174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2751eba569fc94e8b65f30b0b9d98c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityData: {fileID: 11400000, guid: 2b59ad9960e32a5479b12e7b34bd8dad, type: 2}
-  wallcheck: {fileID: 4231502448998963710}
-  ledgeCheck: {fileID: 4693776478528277925}
-  playerCheck: {fileID: 7020054667907545387}
-  currentHealth: 200
-  idleStateData: {fileID: 11400000, guid: 0d3180c2d85b44d48948fd0b85d909fb, type: 2}
-  moveStateData: {fileID: 11400000, guid: 84fc678ecfc28eb4eb5f9b7856fca422, type: 2}
-  playerDetectedData: {fileID: 11400000, guid: 2f17dcf24f090fb4fa9b52b9af400230, type: 2}
-  pursueData: {fileID: 11400000, guid: 9915f3ffe7f4c0749b34ec1b1ea04c17, type: 2}
-  investigateData: {fileID: 11400000, guid: cc371cb8c3b00114db18a678bbbcd180, type: 2}
-  meleeAttackData: {fileID: 11400000, guid: 3fbb8ff938b94d541b9488d566fd8b77, type: 2}
-  deathStateData: {fileID: 0}
-  hitStateData: {fileID: 11400000, guid: 0881cfd0449e516499bc6660289d205a, type: 2}
-  meleeAttackPosition: {fileID: 8644493629106170899}
 --- !u!95 &160591706356332262
 Animator:
   serializedVersion: 5
@@ -76,7 +49,7 @@ Animator:
   m_GameObject: {fileID: 593555015883776174}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 514923907bd3f5042870c4a072b97202, type: 2}
+  m_Controller: {fileID: 9100000, guid: fcde54d38b5821644abb8326891556ba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -232,7 +205,7 @@ SpriteRenderer:
   m_SortingLayerID: 1422739263
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2080949290, guid: 0e16761334cef42448e9d0a63861c340, type: 3}
+  m_Sprite: {fileID: -862505032, guid: 9401ec31abd9cf846a3db6946d219c3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -315,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8644493629106170899}
   m_Layer: 9
-  m_Name: MeleeAttackPosition
+  m_Name: RangeAttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

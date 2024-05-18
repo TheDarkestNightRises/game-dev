@@ -17,7 +17,7 @@ public class Archer_PlayerDetectedState : PlayerDetectedState
         
         if (performLongRangeAction)
         {
-            // stateMachine.ChangeState(enemy.rangedAttackState);
+	        stateMachine.ChangeState(enemy.RangedAttackState);
         }
         else if (!isPlayerInMaxRange)
         {
