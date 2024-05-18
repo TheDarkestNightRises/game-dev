@@ -126,12 +126,12 @@ TextureImporter:
       name: Mummy_attack_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 17
         y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Mummy_attack_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 65
         y: 0
-        width: 48
+        width: 29
         height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,36 +165,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mummy_attack_2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b160410afbf71a84c8824d95a1f9ffee
-      internalID: 1716188262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mummy_attack_3
       rect:
         serializedVersion: 2
-        x: 144
+        x: 148
         y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,36 +186,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mummy_attack_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 441944fd5e053c6468b096d5592695ba
-      internalID: 315104394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mummy_attack_5
       rect:
         serializedVersion: 2
-        x: 240
+        x: 251
         y: 0
-        width: 48
+        width: 33
         height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,6 +202,48 @@ TextureImporter:
       bones: []
       spriteID: 078ee80c88ab0ac40b911ba9c955b66b
       internalID: 1445639380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mummy_attack_2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 0
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a007cdd91cf86644c9f9e7e2955b0822
+      internalID: 462935014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mummy_attack_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3713d5180243d1841afb2a0cba8ccca6
+      internalID: 31392137
       vertices: []
       indices: 
       edges: []
@@ -261,9 +261,9 @@ TextureImporter:
     nameFileIdTable:
       Mummy_attack_0: 1094234871
       Mummy_attack_1: -1626501521
-      Mummy_attack_2: 1716188262
+      Mummy_attack_2: 462935014
       Mummy_attack_3: -2010506179
-      Mummy_attack_4: 315104394
+      Mummy_attack_4: 31392137
       Mummy_attack_5: 1445639380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

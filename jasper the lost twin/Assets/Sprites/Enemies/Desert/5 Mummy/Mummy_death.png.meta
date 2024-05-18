@@ -126,12 +126,12 @@ TextureImporter:
       name: Mummy_death_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 15
         y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Mummy_death_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 63
         y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: Mummy_death_5
       rect:
         serializedVersion: 2
-        x: 240
+        x: 108
         y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,64 +186,64 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mummy_death_2
+      name: Mummy_death_6
       rect:
         serializedVersion: 2
-        x: 96
+        x: 155
         y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a67b0a11d4e324746b5792a1f472c9de
-      internalID: 80933588
+      spriteID: 2b05e2c79d0b5fe4da067e1ec23fd42e
+      internalID: 57470718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mummy_death_3
+      name: Mummy_death_9
       rect:
         serializedVersion: 2
-        x: 144
+        x: 202
         y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afef57030f750fd41b1c18a29d9d740e
-      internalID: 1584641670
+      spriteID: 040874b0f6895f54db856ea43f9c1c59
+      internalID: -952816331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mummy_death_4
+      name: Mummy_death_10
       rect:
         serializedVersion: 2
-        x: 192
+        x: 250
         y: 0
-        width: 48
-        height: 48
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8533c3a3234a8f4bab3d17b36485398
-      internalID: 461674712
+      spriteID: 8e715481fd160bb4281965d3133f7319
+      internalID: -1215472220
       vertices: []
       indices: 
       edges: []
@@ -261,10 +261,15 @@ TextureImporter:
     nameFileIdTable:
       Mummy_death_0: 900023457
       Mummy_death_1: 107821618
+      Mummy_death_10: -1215472220
       Mummy_death_2: 80933588
       Mummy_death_3: 1584641670
       Mummy_death_4: 461674712
       Mummy_death_5: -1828646581
+      Mummy_death_6: 57470718
+      Mummy_death_7: 1216813945
+      Mummy_death_8: 181414074
+      Mummy_death_9: -952816331
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

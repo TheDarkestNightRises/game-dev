@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4629747811734638279}
-  - component: {fileID: 8312653021934748350}
   - component: {fileID: 5775430499306437701}
   - component: {fileID: 1737843919973585945}
   - component: {fileID: 1605344400028691808}
@@ -40,58 +39,6 @@ Transform:
   - {fileID: 8901507217850195844}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8312653021934748350
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477501965268497408}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1422739263
-  m_SortingLayer: 7
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 2080949290, guid: 0e16761334cef42448e9d0a63861c340, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.48, y: 0.48}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!114 &5775430499306437701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,12 +55,15 @@ MonoBehaviour:
   wallcheck: {fileID: 2753237205161493919}
   ledgeCheck: {fileID: 7855757107124885493}
   playerCheck: {fileID: 1429478570542425831}
+  currentHealth: 0
   idleStateData: {fileID: 11400000, guid: 0d3180c2d85b44d48948fd0b85d909fb, type: 2}
   moveStateData: {fileID: 11400000, guid: 84fc678ecfc28eb4eb5f9b7856fca422, type: 2}
   playerDetectedData: {fileID: 11400000, guid: 2f17dcf24f090fb4fa9b52b9af400230, type: 2}
   pursueData: {fileID: 11400000, guid: 9915f3ffe7f4c0749b34ec1b1ea04c17, type: 2}
   investigateData: {fileID: 11400000, guid: cc371cb8c3b00114db18a678bbbcd180, type: 2}
   meleeAttackData: {fileID: 11400000, guid: 3fbb8ff938b94d541b9488d566fd8b77, type: 2}
+  deathStateData: {fileID: 0}
+  hitStateData: {fileID: 0}
   meleeAttackPosition: {fileID: 8901507217850195844}
 --- !u!95 &1737843919973585945
 Animator:
@@ -198,8 +148,8 @@ BoxCollider2D:
   m_Offset: {x: -0.44000006, y: -0.2373215}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 1, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.875, y: 1.03125}
     newSize: {x: 0.48, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
