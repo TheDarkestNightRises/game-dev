@@ -37,3 +37,4 @@ MonoBehaviour:
   stunTime: 0.5
   invincibilityTime: 1
   maxHealth: 300
+  speedWhileAttacking: 3.8

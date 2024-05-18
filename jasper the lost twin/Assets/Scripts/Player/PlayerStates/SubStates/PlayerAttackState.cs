@@ -14,15 +14,19 @@ public class PlayerAttackState : PlayerAbilityState
 	public override void Enter()
 	{
 		base.Enter();
-		player.SetVelocityX(playerData.speedWhileAttacking * player.FacingDirection);
-		
+		player.SetVelocityX(0f);
+		var xInput = player.InputHandler.InputX;
+		if(xInput != 0 ) 
+		{
+			player.SetVelocityX(playerData.speedWhileAttacking * player.FacingDirection);
+		}
 		weapon.EnterWeapon();
 	}
 	
 	public override void Exit()
 	{
 		base.Exit();
-		
+		player.SetVelocityX(0f);
 		weapon.ExitWeapon();
 	}
 	
