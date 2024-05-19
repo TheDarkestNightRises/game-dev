@@ -596,7 +596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Resume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7aa5ca70134750a468826660dff88bac, type: 2}
   m_sharedMaterial: {fileID: 8979103677015734825, guid: 7aa5ca70134750a468826660dff88bac, type: 2}
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 852185503}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
@@ -875,7 +875,7 @@ GameObject:
   - component: {fileID: 852185502}
   - component: {fileID: 852185503}
   m_Layer: 0
-  m_Name: MenuManager
+  m_Name: PauseMenuManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -905,22 +905,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 852185501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ccf8fc50cd6634fbd95b97d04bad74, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f8d3378af7e5f43b8aecc842c75333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _firstLevel:
-    m_SceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
-    m_SceneName: Level_1
-  _persistentScene:
-    m_SceneAsset: {fileID: 102900000, guid: f4e07dd197de82e44b1ebc00d8bf1bec, type: 3}
-    m_SceneName: PersistScene
-  _settingsMenu:
-    m_SceneAsset: {fileID: 102900000, guid: 387386eb21739f34a950d2d2af3e28c0, type: 3}
-    m_SceneName: SettingsMenu
-  _mainMenu:
-    m_SceneAsset: {fileID: 102900000, guid: 7c017872fc5aecc40a699c4b3dab8b76, type: 3}
-    m_SceneName: StartMenu
-  mainMenuMusic: {fileID: 8300000, guid: 88a16d4a85e2c7b478f183b06d9ca4b7, type: 3}
 --- !u!1 &988970564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,7 +1502,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 852185503}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
         m_MethodName: OpenSettings
         m_Mode: 1
@@ -1958,7 +1945,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 852185503}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
