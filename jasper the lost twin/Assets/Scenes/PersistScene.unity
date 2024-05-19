@@ -4409,7 +4409,7 @@ MonoBehaviour:
     m_AmplitudeGain: 1
     m_FrequencyGain: 1
     m_Duration: 1
-    m_NoiseOffsets: {x: 0, y: 0, z: 0}
+    m_NoiseOffsets: {x: 557.13104, y: -649.3898, z: -639.01904}
 --- !u!1 &593652686
 GameObject:
   m_ObjectHideFlags: 0
@@ -10143,7 +10143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3372382951028004007, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_ChildCameras.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3372382951028004007, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_ParentHash.Array.data[0].m_Hash
@@ -10320,6 +10320,22 @@ PrefabInstance:
     - target: {fileID: 6482479926040001552, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482479926040001552, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482479926040001552, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482479926040001552, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482479926040001552, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8866394977442676195, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_LocalPosition.x
