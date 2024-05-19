@@ -9,6 +9,7 @@ public class MainMenuManager : MonoBehaviour
 	[SerializeField] private SceneField _firstLevel;
 	[SerializeField] private SceneField _persistentScene;
 	[SerializeField] private SceneField _settingsMenu;
+	[SerializeField] private SceneField _mainMenu;
 	
 	public void StartGame()
 	{
@@ -24,6 +25,11 @@ public class MainMenuManager : MonoBehaviour
 	public void QuitGame()
 	{
 		Application.Quit();
+	}
+	
+	public void BackToMainMenu() 
+	{
+		SceneManager.LoadSceneAsync(_mainMenu);
 	}
 
 }

@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Settingss
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7aa5ca70134750a468826660dff88bac, type: 2}
   m_sharedMaterial: {fileID: 8979103677015734825, guid: 7aa5ca70134750a468826660dff88bac, type: 2}
@@ -989,8 +989,11 @@ MonoBehaviour:
     m_SceneAsset: {fileID: 102900000, guid: f4e07dd197de82e44b1ebc00d8bf1bec, type: 3}
     m_SceneName: PersistScene
   _settingsMenu:
-    m_SceneAsset: {fileID: 102900000, guid: 7c017872fc5aecc40a699c4b3dab8b76, type: 3}
+    m_SceneAsset: {fileID: 102900000, guid: 387386eb21739f34a950d2d2af3e28c0, type: 3}
     m_SceneName: SettingsMenu
+  _mainMenu:
+    m_SceneAsset: {fileID: 102900000, guid: 7c017872fc5aecc40a699c4b3dab8b76, type: 3}
+    m_SceneName: StartMenu
 --- !u!1 &988970564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1346042271}
   m_Layer: 5
-  m_Name: BackSection
+  m_Name: QuitSection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1235,7 +1238,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: 'Quit
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7aa5ca70134750a468826660dff88bac, type: 2}
   m_sharedMaterial: {fileID: 8979103677015734825, guid: 7aa5ca70134750a468826660dff88bac, type: 2}
@@ -1361,7 +1366,7 @@ GameObject:
   - component: {fileID: 1551917098}
   - component: {fileID: 1551917097}
   m_Layer: 5
-  m_Name: BackIcon
+  m_Name: QuitIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1956,7 +1961,7 @@ GameObject:
   - component: {fileID: 2111055640}
   - component: {fileID: 2111055643}
   m_Layer: 5
-  m_Name: Back Button
+  m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
