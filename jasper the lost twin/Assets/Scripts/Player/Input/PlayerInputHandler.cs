@@ -24,12 +24,15 @@ public class PlayerInputHandler : MonoBehaviour
 	public bool DashInputStop {get; set;}
 	public delegate void PauseEvent();
 	public static event PauseEvent OnPause;
+
 	
 	public void Start()
 	{
 		playerInput = GetComponent<PlayerInput>();
 		cam = Camera.main;
+		
 	}
+	
 	
 	public void OnPrimaryAttackInput(InputAction.CallbackContext context)
 	{
@@ -61,7 +64,19 @@ public class PlayerInputHandler : MonoBehaviour
 	{
 		if (context.started)
 		{
-			OnPause();
+			InvokeOnPauseEvent();
+		}
+	}
+	
+	private void InvokeOnPauseEvent()
+	{
+		if (OnPause != null)
+		{
+			OnPause(); 
+		}
+		else
+		{
+			Debug.LogWarning("no subscribers");
 		}
 	}
 

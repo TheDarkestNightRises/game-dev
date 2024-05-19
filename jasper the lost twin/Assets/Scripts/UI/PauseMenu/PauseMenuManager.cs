@@ -10,34 +10,32 @@ public class PauseMenuManager : MonoBehaviour
 
 	private void Start()
 	{
+		if (pauseMenuCanvas != null)
+		{
+			pauseMenuCanvas.SetActive(false);
+		}
+
+		Debug.Log("Subscribing to OnPause event...");
 		PlayerInputHandler.OnPause += OpenPauseMenu;
 	}
 
 	private void OnDestroy()
 	{
+		Debug.Log("Unsubscribing from OnPause event...");
 		PlayerInputHandler.OnPause -= OpenPauseMenu;
 	}
 
 	private void OpenPauseMenu()
 	{
+		Debug.Log("Pause menu opened.");
 		if (pauseMenuCanvas != null)
 		{
-			bool isPaused = pauseMenuCanvas.activeSelf;
-			pauseMenuCanvas.SetActive(!isPaused);
-
-			if (isPaused)
-			{
-				Time.timeScale = 1f;
-			}
-			else
-			{
-				Time.timeScale = 0f;
-			}
+			bool isPaused = !pauseMenuCanvas.activeSelf;
+			pauseMenuCanvas.SetActive(isPaused);
 		}
 		else
 		{
 			Debug.LogWarning("Pause menu canvas is not assigned in the inspector.");
 		}
 	}
-
 }
