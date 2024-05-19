@@ -10,11 +10,18 @@ public class BrightnessSlider : MonoBehaviour
 	void Start()
 	{
 		slider.value = PlayerPrefs.GetFloat("BrightnessSliderValue", 0.5f);
+		SetBrightness(slider.value);
 		slider.onValueChanged.AddListener(delegate { SaveSliderValue(); });
 	}
 
 	void SaveSliderValue()
 	{
 		PlayerPrefs.SetFloat("BrightnessSliderValue", slider.value);
+		SetBrightness(slider.value);
+	}
+	
+	void SetBrightness(float value)
+	{
+		RenderSettings.ambientLight = Color.white * value;
 	}
 }
