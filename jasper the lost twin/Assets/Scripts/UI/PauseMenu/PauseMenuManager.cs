@@ -6,39 +6,38 @@ using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
 {
-	//[SerializeField] private SceneField _firstLevel;
-	//[SerializeField] private SceneField _persistentScene;
-	//[SerializeField] private SceneField _settingsMenu;
-	//[SerializeField] private SceneField _mainMenu;
-	//public AudioClip mainMenuMusic;
-	
-	
-	//void Start()
-	//{
-	//	AudioManager.instance.PlayMusic(mainMenuMusic);
-	//}
-	
-	
-	//public void StartGame()
-	//{
-	//	AudioManager.instance.StopMusic();
-	//	SceneManager.LoadSceneAsync(_persistentScene);
-	//	SceneManager.LoadSceneAsync(_firstLevel, LoadSceneMode.Additive);
-	//}	
-	
-	//public void OpenSettings()
-	//{
-	//	SceneManager.LoadSceneAsync(_settingsMenu);
-	//}
-	
-	//public void QuitGame()
-	//{
-	//	Application.Quit();
-	//}
-	
-	//public void BackToMainMenu() 
-	//{
-	//	SceneManager.LoadSceneAsync(_mainMenu);
-	//}
+	public GameObject pauseMenuCanvas;
+
+	private void Start()
+	{
+		PlayerInputHandler.OnPause += OpenPauseMenu;
+	}
+
+	private void OnDestroy()
+	{
+		PlayerInputHandler.OnPause -= OpenPauseMenu;
+	}
+
+	private void OpenPauseMenu()
+	{
+		if (pauseMenuCanvas != null)
+		{
+			bool isPaused = pauseMenuCanvas.activeSelf;
+			pauseMenuCanvas.SetActive(!isPaused);
+
+			if (isPaused)
+			{
+				Time.timeScale = 1f;
+			}
+			else
+			{
+				Time.timeScale = 0f;
+			}
+		}
+		else
+		{
+			Debug.LogWarning("Pause menu canvas is not assigned in the inspector.");
+		}
+	}
 
 }
