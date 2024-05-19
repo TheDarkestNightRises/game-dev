@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public PlayerDashState DashState { get; set; }
 	public PlayerHitState HitState { get; set; }
 	public PlayerDeathState DeathState { get; set; }
+	public PlayerClimbState ClimbState { get; set; }
 
 	#endregion
 
@@ -49,6 +50,9 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		set { currentHealth = value; }
 	}
 
+	private float climbSpeed = 10f;
+	private float gravityAtStart;
+
 	public void Awake()
 	{
 		StateMachine = new PlayerStateMachine();
@@ -62,25 +66,9 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
 		HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
 		DeathState = new PlayerDeathState(this, StateMachine, playerData, "death");
+		ClimbState = new PlayerClimbState(this, StateMachine, playerData, "climb");
 	}
 	
-	bool isAlive = true;
-	
-	public void Damage(DamageData damageData)
-	{
-		if (!isAlive) return;
-		if (IsInvincibile) 	return;
-		if (CurrentHealth <= 0)
-		{
-			isAlive = false;
-			StateMachine.ChangeState(DeathState);
-			return;
-		}
-		if (StateMachine.CurrentState == HitState) return;	
-		CurrentHealth -= damageData.Amount;
-		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
-		StateMachine.ChangeState(HitState);
-	}
 
 	private void Start()
 	{
@@ -96,6 +84,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		CurrentHealth = playerData.maxHealth;
 		PrimaryAttackState.SetWeapon(Inventory.Weapons[0]);
 		StateMachine.Initialize(IdleState);
+		gravityAtStart = RB.gravityScale;
 	}
 	
 	private void Update()
@@ -103,6 +92,24 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		if (!isAlive) return;
 		CurrentVelocity = RB.velocity;
 		StateMachine.CurrentState.LogicUpdate();
+	}
+	
+	public void ClimbLadder()
+	{
+		if(!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) 
+		{
+			RB.gravityScale = gravityAtStart;
+			return;
+		}
+		Vector2 climbVelocity = new Vector2(RB.velocity.x, InputHandler.InputY * climbSpeed);
+		RB.velocity = climbVelocity;
+		RB.gravityScale = 0;
+	}
+	
+	public bool CheckIfTouchingLadder()
+	{
+		if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) return true;
+		return false;
 	}
 	
 	private void FixedUpdate()
@@ -194,6 +201,25 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	{
 		impulseCamera.GenerateImpulse(impulse);
 	}
+	
+	bool isAlive = true;
+	
+	public void Damage(DamageData damageData)
+	{
+		if (!isAlive) return;
+		if (IsInvincibile) 	return;
+		if (CurrentHealth <= 0)
+		{
+			isAlive = false;
+			StateMachine.ChangeState(DeathState);
+			return;
+		}
+		if (StateMachine.CurrentState == HitState) return;	
+		CurrentHealth -= damageData.Amount;
+		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
+		StateMachine.ChangeState(HitState);
+	}
+
 }
 
 
