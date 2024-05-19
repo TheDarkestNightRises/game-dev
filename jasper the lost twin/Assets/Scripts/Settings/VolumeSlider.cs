@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class VolumeSlider : MonoBehaviour
 {
 	
-		public Slider slider; 
+	    public Slider slider; 
+	    public AudioManager audioManager;
 
 		void Start()
      	{
@@ -17,5 +18,6 @@ public class VolumeSlider : MonoBehaviour
 		void SaveSliderValue()
 		{
 			PlayerPrefs.SetFloat("VolumeSliderValue", slider.value);
+			audioManager.musicSource.volume = slider.value;
 		}
 }
