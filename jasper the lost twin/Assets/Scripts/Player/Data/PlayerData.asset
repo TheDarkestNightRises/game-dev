@@ -44,4 +44,4 @@ MonoBehaviour:
   invincibilityTime: 1
   maxHealth: 300
   speedWhileAttacking: 3.8
-  climbSpeed: 3
+  climbSpeed: 7
