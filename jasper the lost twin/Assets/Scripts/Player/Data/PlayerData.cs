@@ -5,6 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newPlayerStats", menuName = "Data/Player Data/Base Data")]
 public class PlayerData : ScriptableObject
 {
+	[Header("Layers")]
+	public LayerMask whatIsGround;
+	public LayerMask whatIsPlayer;
+	
 	[Header("MoveStats")]
 	public float movementVelocity = 10f;
 	public float runAccell = 9f;
@@ -46,4 +50,7 @@ public class PlayerData : ScriptableObject
 	
 	[Header("Attack")]
 	public float speedWhileAttacking = 4f;
+	
+	[Header("Climb")]
+	public float climbSpeed = 10f;
 }
