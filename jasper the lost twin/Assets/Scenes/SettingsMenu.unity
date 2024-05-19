@@ -600,6 +600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 447559608}
   - component: {fileID: 447559609}
+  - component: {fileID: 447559610}
   m_Layer: 5
   m_Name: VolumeSlider
   m_TagString: Untagged
@@ -680,6 +681,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &447559610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447559607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5db5972a35bbb749bd03100cb803c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 447559609}
 --- !u!1 &551747925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,6 +2348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143228172}
   - component: {fileID: 2143228173}
+  - component: {fileID: 2143228174}
   m_Layer: 5
   m_Name: BrightnessSlider
   m_TagString: Untagged
@@ -2414,6 +2429,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2143228174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143228171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 995d204cfcb2d6341a0ef0ada8215ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 2143228173}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
