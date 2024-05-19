@@ -54,6 +54,12 @@ public class Archer : Entity
 		RangedAttackState.TriggerAttack();
 	}
 	
+	public void SendFinishAttack()
+	{
+		RangedAttackState.FinishAttack();
+	}
+
+	
 	public override void Damage(DamageData damageData)
 	{
 		if (stateMachine.CurrentState == HitState)
