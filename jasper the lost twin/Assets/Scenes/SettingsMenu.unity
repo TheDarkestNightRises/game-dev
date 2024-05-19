@@ -1084,63 +1084,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819379148}
   m_CullTransparentMesh: 1
---- !u!1 &852185501
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 852185502}
-  - component: {fileID: 852185503}
-  m_Layer: 0
-  m_Name: MenuManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &852185502
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852185501}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &852185503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852185501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ccf8fc50cd6634fbd95b97d04bad74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _firstLevel:
-    m_SceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
-    m_SceneName: Level_1
-  _persistentScene:
-    m_SceneAsset: {fileID: 102900000, guid: f4e07dd197de82e44b1ebc00d8bf1bec, type: 3}
-    m_SceneName: PersistScene
-  _settingsMenu:
-    m_SceneAsset: {fileID: 102900000, guid: 387386eb21739f34a950d2d2af3e28c0, type: 3}
-    m_SceneName: SettingsMenu
-  _mainMenu:
-    m_SceneAsset: {fileID: 102900000, guid: 7c017872fc5aecc40a699c4b3dab8b76, type: 3}
-    m_SceneName: StartMenu
-  mainMenuMusic: {fileID: 8300000, guid: 88a16d4a85e2c7b478f183b06d9ca4b7, type: 3}
 --- !u!1 &858439343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,9 +2446,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: af97f9e5fa4170b488ccd35da8d02d4d, type: 3}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 248534521}
+        m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
+        m_MethodName: BackToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2670,7 +2613,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 290806801}
   - {fileID: 1945525307}
-  - {fileID: 852185502}
   - {fileID: 264202322}
   - {fileID: 1335089161}
   - {fileID: 1710514038}

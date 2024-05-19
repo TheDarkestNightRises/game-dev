@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class VolumeSlider : MonoBehaviour
 {
-	
-	    public Slider slider; 
-	    public AudioManager audioManager;
+	public Slider slider;
 
-		void Start()
-     	{
-	     	slider.value = PlayerPrefs.GetFloat("VolumeSliderValue", 0.5f);
-			slider.onValueChanged.AddListener(delegate { SaveSliderValue(); });
-		}
+	void Start()
+	{
+		AudioManager audioManager = AudioManager.instance;
 
-		void SaveSliderValue()
-		{
-			PlayerPrefs.SetFloat("VolumeSliderValue", slider.value);
-			audioManager.musicSource.volume = slider.value;
-		}
+		slider.value = PlayerPrefs.GetFloat("VolumeSliderValue", 0.5f);
+		slider.onValueChanged.AddListener(delegate { SaveSliderValue(audioManager); });
+
+		audioManager.musicSource.volume = slider.value;
+	}
+
+	void SaveSliderValue(AudioManager audioManager)
+	{
+		PlayerPrefs.SetFloat("VolumeSliderValue", slider.value);
+		audioManager.musicSource.volume = slider.value;
+	}
 }
