@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 6597038428656366618}
   - component: {fileID: 8743303314275331650}
   - component: {fileID: 7117492784106133660}
+  - component: {fileID: 5212010612828790532}
   m_Layer: 9
   m_Name: Flying
   m_TagString: Untagged
@@ -244,3 +245,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8846823, y: 0.91648036}
   m_EdgeRadius: 0
+--- !u!114 &5212010612828790532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8546157998165569258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09587366862c1b54a92b968f22f45fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  startingPoint: {fileID: 0}
+  stateData: {fileID: 11400000, guid: 374784b4f64051d43ad83390550ca6bf, type: 2}

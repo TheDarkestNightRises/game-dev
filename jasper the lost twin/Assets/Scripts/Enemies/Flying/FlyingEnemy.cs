@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingEnemy : MonoBehaviour
+public class FlyingEnemy : MonoBehaviour, IDamageable
 {
 	public bool Chase { get; set; }
+	private bool isAlive { get; set; }
 	public bool Returning { get; set; }
+	[SerializeField]
+	private float currentHealth;
 	public GameObject Player { get; set; }
 	public Transform startingPoint;
 	public Animator Anim { get; set; }
@@ -38,6 +41,8 @@ public class FlyingEnemy : MonoBehaviour
 	{
 		stateMachine.Initialize(IdleState);
 		Player = GameObject.FindGameObjectWithTag("Player");
+		isAlive = true;
+		currentHealth = stateData.maxHealth;
 	}
 	
 	protected void Update()
@@ -77,5 +82,30 @@ public class FlyingEnemy : MonoBehaviour
 	public void TriggerAttack()
 	{
 		AttackState.PerformAttack();
+	}
+	
+	public void Damage(DamageData damageData)
+	{
+		if (stateMachine.CurrentState == HitState)
+		{
+			return;
+		}
+		
+		if (!isAlive)
+		{
+			stateMachine.ChangeState(DeathState);
+			return;
+		}
+		
+		stateMachine.ChangeState(HitState);
+		
+		Debug.Log("Took damage lol {damageData.Amount}");
+		currentHealth -= damageData.Amount;
+		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
+		
+		if (currentHealth <= 0)
+		{
+			isAlive = false;
+		}
 	}
 }
