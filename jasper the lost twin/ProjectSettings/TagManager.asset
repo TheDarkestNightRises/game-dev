@@ -69,3 +69,6 @@ TagManager:
   - name: Hazards
     uniqueID: 2846115457
     locked: 0
+  - name: Effects
+    uniqueID: 782466665
+    locked: 0
