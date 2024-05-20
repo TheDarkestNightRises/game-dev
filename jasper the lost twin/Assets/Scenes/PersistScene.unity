@@ -5472,7 +5472,7 @@ GameObject:
   - component: {fileID: 920062861}
   - component: {fileID: 920062860}
   m_Layer: 5
-  m_Name: Play Icon
+  m_Name: Resume icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10842,7 +10842,7 @@ GameObject:
   - component: {fileID: 1796498191}
   - component: {fileID: 1796498190}
   m_Layer: 5
-  m_Name: Start Game Button
+  m_Name: Resume Game Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10933,9 +10933,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 1980442617}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11530,7 +11530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070049426}
   m_Layer: 5
-  m_Name: PlaySection
+  m_Name: Resume section
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

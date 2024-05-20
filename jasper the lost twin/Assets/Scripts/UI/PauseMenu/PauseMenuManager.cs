@@ -38,4 +38,8 @@ public class PauseMenuManager : MonoBehaviour
 			pauseMenuCanvas.SetActive(isPaused);
 		}
 	}
+	
+	public void Resume() {
+		pauseMenuCanvas.SetActive(false);
+	}
 }
