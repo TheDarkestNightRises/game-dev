@@ -33,7 +33,6 @@ public class PauseSettingsMenuScript : MonoBehaviour
 	{
 		if (pauseMenuCanvas != null)
 		{
-			Debug.Log("imsdasdiamasiamd");
 			pauseSettingsCanvas.SetActive(false);
 			pauseMenuCanvas.SetActive(true);
 		}
