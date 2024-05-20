@@ -12,6 +12,8 @@ public class Pendulum : MonoBehaviour
 	
 	bool movingClockwise;
 	
+	[SerializeField] public float damage = 30f;
+	
 	
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,17 @@ public class Pendulum : MonoBehaviour
 		if(!movingClockwise)
 		{
 			rb2d.angularVelocity = - 1 * moveSpeed; 
+		}
+	}
+	
+	// Sent when another object enters a trigger collider attached to this object (2D physics only).
+	protected void OnTriggerEnter2D(Collider2D other)
+	{
+		if(other.CompareTag("Player"))
+		{
+			var damageble = other.GetComponent<IDamageable>();
+			var damageData = new DamageData(damage, this.gameObject);
+			damageble.Damage(damageData);
 		}
 	}
 }
