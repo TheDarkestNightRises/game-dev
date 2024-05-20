@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour, IDamageable
 {
 	[SerializeField]
 	private float _maxHealth;
+	public UnityEvent<float, float> healthChanged;
 	
 	public float MaxHealth	
 	{	
@@ -23,11 +25,12 @@ public class Damageable : MonoBehaviour, IDamageable
 	private float _health = 100;
 	
 	[SerializeField]
-	private float Health
+	public float Health
 	{
 		get
 		{
 			return _health;
+			healthChanged?.Invoke(_health, MaxHealth);
 		}
 		set
 		{
