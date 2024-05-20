@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHitState : PlayerState
 {	
+	protected SpriteRenderer spriteRender;
 	public PlayerHitState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
 	{
 		
@@ -11,8 +12,8 @@ public class PlayerHitState : PlayerState
 	
 	public override void Enter() {
 		base.Enter();
-		player.IsInvincibile = true; 
 		player.SetVelocityX(0f);
+		spriteRender = player.GetComponent<SpriteRenderer>();
 	}
 
 	public override void LogicUpdate() {
@@ -27,7 +28,7 @@ public class PlayerHitState : PlayerState
 	public override void Exit()
 	{
 		base.Exit();
-		player.StartCoroutine(RemoveInvincibilityAfterDelay(playerData.invincibilityTime));
+		player.StartCoroutine(Invincibility());
 	}
 	
 	public override void PhysicsUpdate()
@@ -36,8 +37,17 @@ public class PlayerHitState : PlayerState
 		player.ApplyFriction();
 	}
 	
-	private IEnumerator RemoveInvincibilityAfterDelay(float delay) {
-		yield return new WaitForSeconds(delay);
-		player.IsInvincibile = false; 
+	private IEnumerator Invincibility()
+	{
+		player.IsInvincibile = true; 
+		for (int i = 0; i < playerData.numberOfFlashes; i++) {
+			spriteRender.color = new Color(1, 0, 0, 0.55f); 
+			yield return new WaitForSeconds(playerData.invincibilityTime / (playerData.numberOfFlashes * 2));
+			spriteRender.color = Color.white; 
+			yield return new WaitForSeconds(playerData.invincibilityTime / (playerData.numberOfFlashes * 2));
+		}
+
+		player.IsInvincibile = false;
+		spriteRender.color = Color.white; 
 	}
 }

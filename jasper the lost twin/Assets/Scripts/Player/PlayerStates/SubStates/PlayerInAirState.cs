@@ -57,6 +57,10 @@ public class PlayerInAirState : PlayerState
 		{
 			stateMachine.ChangeState(player.DashState);
 		}
+		else if (player.CheckIfTouchingLadder())
+		{
+			stateMachine.ChangeState(player.ClimbState);
+		}
 		else
 		{
 			HandleInAirMovement();

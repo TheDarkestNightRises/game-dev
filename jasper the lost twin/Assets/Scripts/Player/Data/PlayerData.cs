@@ -5,6 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newPlayerStats", menuName = "Data/Player Data/Base Data")]
 public class PlayerData : ScriptableObject
 {
+	[Header("Layers")]
+	public LayerMask whatIsGround;
+	public LayerMask whatIsPlayer;
+	public LayerMask whatIsEnemy;
+	
 	[Header("MoveStats")]
 	public float movementVelocity = 10f;
 	public float runAccell = 9f;
@@ -39,11 +44,15 @@ public class PlayerData : ScriptableObject
 	
 	[Header("Hit")]
 	public float stunTime = 0.5f;
-	public float invincibilityTime = 1f; 
+	public float invincibilityTime = 2f; 
+	public float numberOfFlashes = 5f; 
 
 	[Header("Health")]
 	public float maxHealth = 300f;
 	
 	[Header("Attack")]
 	public float speedWhileAttacking = 4f;
+	
+	[Header("Climb")]
+	public float climbSpeed = 10f;
 }

@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public PlayerDashState DashState { get; set; }
 	public PlayerHitState HitState { get; set; }
 	public PlayerDeathState DeathState { get; set; }
+	public PlayerClimbState ClimbState { get; set; }
 
 	#endregion
 
@@ -49,6 +50,9 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		set { currentHealth = value; }
 	}
 
+	private float climbSpeed = 10f;
+	private float gravityAtStart;
+
 	public void Awake()
 	{
 		StateMachine = new PlayerStateMachine();
@@ -62,25 +66,9 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
 		HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
 		DeathState = new PlayerDeathState(this, StateMachine, playerData, "death");
+		ClimbState = new PlayerClimbState(this, StateMachine, playerData, "climb");
 	}
 	
-	bool isAlive = true;
-	
-	public void Damage(DamageData damageData)
-	{
-		if (!isAlive) return;
-		if (IsInvincibile) 	return;
-		if (CurrentHealth <= 0)
-		{
-			isAlive = false;
-			StateMachine.ChangeState(DeathState);
-			return;
-		}
-		if (StateMachine.CurrentState == HitState) return;	
-		CurrentHealth -= damageData.Amount;
-		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
-		StateMachine.ChangeState(HitState);
-	}
 
 	private void Start()
 	{
@@ -96,6 +84,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		CurrentHealth = playerData.maxHealth;
 		PrimaryAttackState.SetWeapon(Inventory.Weapons[0]);
 		StateMachine.Initialize(IdleState);
+		gravityAtStart = RB.gravityScale;
 	}
 	
 	private void Update()
@@ -105,11 +94,16 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		StateMachine.CurrentState.LogicUpdate();
 	}
 	
+	public bool CheckIfTouchingLadder()
+	{
+		if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) return true;
+		return false;
+	}
+	
 	private void FixedUpdate()
 	{
 		if (!isAlive) return;
 		StateMachine.CurrentState.PhysicsUpdate();
-		Die();
 	}
 	
 	public void SetVelocity(float velocity, Vector2 direction)
@@ -133,18 +127,18 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		CurrentVelocity = workspace;
 	}
 	
-	void Die()
-	{
-		if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
-		{
-			isAlive = false;
-			Anim.SetTrigger("death");
-			RB.AddForce(Vector2.up * playerData.deathKick, ForceMode2D.Impulse);
-			impulseCamera.GenerateImpulse(playerData.deathImpulse);
-			ApplyFriction();
-			Invoke(nameof(RemovePhysics), 1f);
-		}
-	}
+	//void Die()
+	//{
+	//	if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
+	//	{
+	//		isAlive = false;
+	//		Anim.SetTrigger("death");
+	//		RB.AddForce(Vector2.up * playerData.deathKick, ForceMode2D.Impulse);
+	//		impulseCamera.GenerateImpulse(playerData.deathImpulse);
+	//		ApplyFriction();
+	//		Invoke(nameof(RemovePhysics), 1f);
+	//	}
+	//}
 	
 	public void RemovePhysics()
 	{
@@ -194,6 +188,25 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	{
 		impulseCamera.GenerateImpulse(impulse);
 	}
+	
+	bool isAlive = true;
+	
+	public void Damage(DamageData damageData)
+	{
+		if (!isAlive) return;
+		if (IsInvincibile) 	return;
+		if (CurrentHealth <= 0)
+		{
+			isAlive = false;
+			StateMachine.ChangeState(DeathState);
+			return;
+		}
+		if (StateMachine.CurrentState == HitState) return;	
+		CurrentHealth -= damageData.Amount;
+		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
+		StateMachine.ChangeState(HitState);
+	}
+
 }
 
 

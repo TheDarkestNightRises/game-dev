@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2281365ff4a80df4290a1dce04de3b8d, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 256
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 512
   movementVelocity: 10
   runAccell: 9
   decAccell: 24
@@ -35,6 +44,8 @@ MonoBehaviour:
   deathImpulse: 1
   deathKickDirection: {x: 10, y: 10}
   stunTime: 0.5
-  invincibilityTime: 1
+  invincibilityTime: 1.5
+  numberOfFlashes: 5
   maxHealth: 300
   speedWhileAttacking: 3.8
+  climbSpeed: 7

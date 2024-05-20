@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 160591706356332262}
   - component: {fileID: 3241719737110652333}
   - component: {fileID: 4178480503296321854}
+  - component: {fileID: 4706146520858824696}
   m_Layer: 9
   m_Name: Archer
   m_TagString: Untagged
@@ -132,6 +133,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.37874007, y: 0.99347186}
   m_EdgeRadius: 0
+--- !u!114 &4706146520858824696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593555015883776174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e336ae5e2bc3b5d4590d3997e95efaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityData: {fileID: 11400000, guid: e62debffe1298694ab33795b0262002f, type: 2}
+  wallcheck: {fileID: 4231502448998963710}
+  ledgeCheck: {fileID: 4693776478528277925}
+  playerCheck: {fileID: 7020054667907545387}
+  currentHealth: 200
+  moveStateData: {fileID: 11400000, guid: 798b8b195ed6dee4cac7a107313a89ed, type: 2}
+  idleStateData: {fileID: 11400000, guid: ecd456b0935476c479a42fa4a4ae99fa, type: 2}
+  playerDetectedStateData: {fileID: 11400000, guid: cd4860709d3543b438bf0f720f15ab86, type: 2}
+  investigateData: {fileID: 11400000, guid: 5c97678c84da80640931fb5f3ea36e89, type: 2}
+  hitStateData: {fileID: 11400000, guid: d2fcb23676ea2344ca7266da190a1109, type: 2}
+  deathStateData: {fileID: 0}
+  rangedAttackStateData: {fileID: 11400000, guid: b24f6da411a250649808605027b7319e, type: 2}
+  rangedAttackPosition: {fileID: 8644493629106170899}
 --- !u!1 &1484044194907808885
 GameObject:
   m_ObjectHideFlags: 0

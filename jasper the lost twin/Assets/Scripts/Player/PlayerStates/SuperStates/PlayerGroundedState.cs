@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerGroundedState : PlayerState
 {
 	protected int xInput;
+	protected int yInput;
 	private bool jumpInput;
 	private bool dashInput;
 	
@@ -25,6 +26,7 @@ public class PlayerGroundedState : PlayerState
 		base.LogicUpdate();
 
 		xInput = player.InputHandler.InputX;
+		yInput = player.InputHandler.InputY;		
 		jumpInput = player.InputHandler.JumpInput;
 		dashInput = player.InputHandler.DashInput;
 		
@@ -41,7 +43,7 @@ public class PlayerGroundedState : PlayerState
 			player.InputHandler.UseJumpInput();
 			stateMachine.ChangeState(player.JumpState);
 		}
-		else if(!player.CheckIfTouchingGround())
+		else if(!player.CheckIfTouchingGround() && !player.CheckIfTouchingLadder())
 		{
 			player.InAirState.StartCoyote();
 			stateMachine.ChangeState(player.InAirState);
@@ -50,5 +52,10 @@ public class PlayerGroundedState : PlayerState
 		{
 			stateMachine.ChangeState(player.DashState);
 		}
+		else if(yInput != 0 && player.CheckIfTouchingLadder())
+		{
+			stateMachine.ChangeState(player.ClimbState);
+		}
+		
 	}
 }
