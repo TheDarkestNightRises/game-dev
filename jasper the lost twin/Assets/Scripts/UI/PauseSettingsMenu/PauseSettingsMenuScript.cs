@@ -5,7 +5,8 @@ using UnityEngine;
 public class PauseSettingsMenuScript : MonoBehaviour
 {
 	public static PauseSettingsMenuScript Instance { get; private set; }
-	public GameObject pauseSettingsMenuCanvas;
+	public GameObject pauseSettingsCanvas;
+	public GameObject pauseMenuCanvas;
 
 	private void Awake()
 	{
@@ -22,27 +23,21 @@ public class PauseSettingsMenuScript : MonoBehaviour
 
 	private void Start()
 	{
-		if (pauseSettingsMenuCanvas != null)
+		if (pauseSettingsCanvas != null)
 		{
-			pauseSettingsMenuCanvas.SetActive(false);
+			pauseSettingsCanvas.SetActive(false);
 		}
 	}
 
 	public void TogglePauseSettingsMenu()
 	{
-		if (pauseSettingsMenuCanvas != null)
+		if (pauseMenuCanvas != null)
 		{
-			bool isPaused = !pauseSettingsMenuCanvas.activeSelf;
-			pauseSettingsMenuCanvas.SetActive(isPaused);
+			Debug.Log("imsdasdiamasiamd");
+			pauseSettingsCanvas.SetActive(false);
+			pauseMenuCanvas.SetActive(true);
 		}
 	}
 	
-	//public void Resume() {
-	//	pauseMenuCanvas.SetActive(false);
-	//}
-	
-	//public void Exit() {
-	//	SceneManager.LoadSceneAsync(_mainMenu);
-	//	Destroy(gameObject);
-	//}
+
 }

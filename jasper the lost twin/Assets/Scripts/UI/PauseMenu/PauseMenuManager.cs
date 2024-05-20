@@ -55,6 +55,7 @@ public class PauseMenuManager : MonoBehaviour
 		if (pauseSettingsMenuCanvas != null)
 		{
 			pauseSettingsMenuCanvas.SetActive(true);
+			pauseMenuCanvas.SetActive(false);
 		}
 	}
 	
