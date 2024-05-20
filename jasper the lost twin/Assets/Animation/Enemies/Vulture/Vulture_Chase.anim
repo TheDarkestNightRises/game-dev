@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vulture_Idle
+  m_Name: Vulture_Chase
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 576996242, guid: 19fabd27f46788b408c99547113ecf75, type: 3}
+      value: {fileID: -1257588967, guid: fb093d5b104a06d4682a0449bbca7138, type: 3}
     - time: 0.1
-      value: {fileID: 1402603136, guid: 19fabd27f46788b408c99547113ecf75, type: 3}
+      value: {fileID: 1012303351, guid: fb093d5b104a06d4682a0449bbca7138, type: 3}
     - time: 0.2
-      value: {fileID: 1720334514, guid: 19fabd27f46788b408c99547113ecf75, type: 3}
+      value: {fileID: 1447985485, guid: fb093d5b104a06d4682a0449bbca7138, type: 3}
     - time: 0.3
-      value: {fileID: -94286217, guid: 19fabd27f46788b408c99547113ecf75, type: 3}
+      value: {fileID: 155730833, guid: fb093d5b104a06d4682a0449bbca7138, type: 3}
     attribute: m_Sprite
     path: Sprite
     classID: 212
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 576996242, guid: 19fabd27f46788b408c99547113ecf75, type: 3}
-    - {fileID: 1402603136, guid: 19fabd27f46788b408c99547113ecf75, type: 3}
-    - {fileID: 1720334514, guid: 19fabd27f46788b408c99547113ecf75, type: 3}
-    - {fileID: -94286217, guid: 19fabd27f46788b408c99547113ecf75, type: 3}
+    - {fileID: -1257588967, guid: fb093d5b104a06d4682a0449bbca7138, type: 3}
+    - {fileID: 1012303351, guid: fb093d5b104a06d4682a0449bbca7138, type: 3}
+    - {fileID: 1447985485, guid: fb093d5b104a06d4682a0449bbca7138, type: 3}
+    - {fileID: 155730833, guid: fb093d5b104a06d4682a0449bbca7138, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

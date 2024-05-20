@@ -13,7 +13,7 @@ public class FlyingChaseTrigger : MonoBehaviour
 		{
 			foreach(FlyingEnemy enemy in enemyArray)
 			{
-				enemy.chase = true;
+				enemy.Chase = true;
 			}
 		}
 	}
@@ -24,7 +24,8 @@ public class FlyingChaseTrigger : MonoBehaviour
 		{
 			foreach(FlyingEnemy enemy in enemyArray)
 			{
-				enemy.StartReturning();
+				enemy.Returning = true;
+				enemy.Chase = false;
 			}
 		}
 	}
