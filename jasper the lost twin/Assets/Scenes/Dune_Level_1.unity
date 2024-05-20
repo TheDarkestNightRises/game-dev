@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000004, guid: 327bcea185f5bf643b2581a63b3bf8f2, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -4716,7 +4716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyArray:
-  - {fileID: 7757608901428867356}
+  - {fileID: 7757608901428867360}
 --- !u!4 &2124633656
 Transform:
   m_ObjectHideFlags: 0
@@ -4726,7 +4726,7 @@ Transform:
   m_GameObject: {fileID: 2124633654}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.09, y: 3.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4899,10 +4899,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2140669384503899847, guid: 7897b1729386c9d4c948a7b2a2597f97, type: 3}
-      propertyPath: startingPoint
-      value: 
-      objectReference: {fileID: 2124633656}
     - target: {fileID: 2817672543846717674, guid: 7897b1729386c9d4c948a7b2a2597f97, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.18
@@ -4948,22 +4944,32 @@ PrefabInstance:
       value: Flying
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5038610226171773697, guid: 7897b1729386c9d4c948a7b2a2597f97, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8546157998165569258, guid: 7897b1729386c9d4c948a7b2a2597f97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7757608901428867360}
   m_SourcePrefab: {fileID: 100100000, guid: 7897b1729386c9d4c948a7b2a2597f97, type: 3}
---- !u!114 &7757608901428867356 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2140669384503899847, guid: 7897b1729386c9d4c948a7b2a2597f97, type: 3}
+--- !u!1 &7038741781555062611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8546157998165569258, guid: 7897b1729386c9d4c948a7b2a2597f97, type: 3}
   m_PrefabInstance: {fileID: 5549041899227755538}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &7757608901428867360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038741781555062611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65d413c457f5c546ae6106d9ec4b7a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 09587366862c1b54a92b968f22f45fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingPoint: {fileID: 2124633656}
+  stateData: {fileID: 11400000, guid: 374784b4f64051d43ad83390550ca6bf, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -2,80 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingEnemy : MonoBehaviour, IDamageable
+public class FlyingEnemy : MonoBehaviour
 {
-	public float speed = 5f;
-	public float health = 100f;
-	public float damage = 10f;
-	public float range = 1f;
-	private GameObject player;
-	public bool chase = false;
-	public bool isAlive = true;
+	public bool Chase { get; set; }
+	public bool Returning { get; set; }
+	public GameObject Player { get; set; }
 	public Transform startingPoint;
-	private bool returning = false;
-	private Animator anim;
+	public Animator Anim { get; set; }
+	
+	private FlyingStateMachine stateMachine;
+	public FlyingIdleState IdleState { get; set; }
+	public FlyingChaseState ChaseState { get; set; }
+	public FlyingHitState HitState { get; set; }
+	public FlyingReturnState ReturnState { get; set; }
+	public FlyingAttackState AttackState { get; set; }
+	public FlyingDeathState DeathState { get; set; }
+	[SerializeField]	
+	public D_FlyingEnemy stateData;
 
-	// Start is called before the first frame update
-	void Start()
+	
+	public void Awake()
 	{
-		player = GameObject.FindGameObjectWithTag("Player");
-		anim = GetComponent<Animator>();
+		Anim = GetComponent<Animator>();
+		stateMachine = new FlyingStateMachine();
+		IdleState = new FlyingIdleState(this, stateMachine, "idle", stateData);
+		ChaseState = new FlyingChaseState(this, stateMachine, "chase", stateData);
+		HitState = new FlyingHitState(this, stateMachine, "hit", stateData);
+		DeathState = new FlyingDeathState(this, stateMachine, "death", stateData);
+		ReturnState = new FlyingReturnState(this, stateMachine, "chase", stateData);
+		AttackState = new FlyingAttackState(this, stateMachine, "attack", stateData);
 	}
-
-	// Update is called once per frame
-	void Update()
+	
+	// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
+	protected void Start()
 	{
-		if (!isAlive) return;
-		if (player == null)
-		{
-			return;
-		}
-		if (chase)
-		{
-			Chase();
-		}
-		else if (returning)
-		{
-			ReturnToStart();
-		}
-		Flip();
+		stateMachine.Initialize(IdleState);
+		Player = GameObject.FindGameObjectWithTag("Player");
 	}
-
-	private void Chase()
+	
+	protected void Update()
 	{
-		transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-		if (Vector2.Distance(transform.position, player.transform.position) <= range)
-		{
-			anim.SetTrigger("Attack");
-		}
+		stateMachine.CurrentState.LogicUpdate();
 	}
-
-	private void ReturnToStart()
+	
+	protected void FixedUpdate()
 	{
-		transform.position = Vector2.MoveTowards(transform.position, startingPoint.position, speed * Time.deltaTime);
-		if (Vector2.Distance(transform.position, startingPoint.position) <= 0.1f)
-		{
-			returning = false;
-			Debug.Log("Returned to starting point");
-		}
+		stateMachine.CurrentState.PhysicsUpdate();
 	}
-
-	private void Flip()
+	
+	public void Flip(Vector3 targetPosition)
 	{
-		Vector3 targetPosition;
-		if (chase)
-		{
-			targetPosition = player.transform.position;
-		}
-		else if (returning)
-		{
-			targetPosition = startingPoint.position;
-		}
-		else
-		{
-			return;
-		}
-
 		if (transform.position.x > targetPosition.x)
 		{
 			transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -85,30 +61,21 @@ public class FlyingEnemy : MonoBehaviour, IDamageable
 			transform.rotation = Quaternion.Euler(0, 180, 0);
 		}
 	}
+	
+	public bool isPlayerInMinRange()
+	{
+		// Assuming stateData contains the minimum attack range value
+		float minRange = stateData.range;
 
-	public void StartReturning()
-	{
-		chase = false;
-		returning = true;
+		// Calculate the distance between the enemy and the player
+		float distanceToPlayer = Vector2.Distance(transform.position, Player.transform.position);
+
+		// Check if the player is within the minimum attack range
+		return distanceToPlayer <= minRange;
 	}
 	
-	public void PerformAttack()
+	public void TriggerAttack()
 	{
-		if (Vector2.Distance(transform.position, player.transform.position) <= range)
-		{
-			var damageable = player.GetComponent<IDamageable>();
-			damageable.Damage(new DamageData(damage, this.gameObject));
-		}
-	}
-	
-	public void Damage(DamageData damageData)
-	{
-		health -= damageData.Amount;
-		anim.SetTrigger("Hit");
-		if (health <= 0) 
-		{
-			isAlive = false;
-			anim.SetTrigger("Death");
-		}
+		AttackState.PerformAttack();
 	}
 }

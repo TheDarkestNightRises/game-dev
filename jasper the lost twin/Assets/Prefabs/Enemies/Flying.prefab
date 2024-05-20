@@ -115,37 +115,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2817672543846717674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5038610226171773697
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2334219736836670526}
-  m_Layer: 9
-  m_Name: Starting position
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2334219736836670526
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038610226171773697}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2817672543846717674}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8546157998165569258
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +127,6 @@ GameObject:
   - component: {fileID: 6597038428656366618}
   - component: {fileID: 8743303314275331650}
   - component: {fileID: 7117492784106133660}
-  - component: {fileID: 2140669384503899847}
   m_Layer: 9
   m_Name: Flying
   m_TagString: Untagged
@@ -181,7 +149,6 @@ Transform:
   m_Children:
   - {fileID: 250080728546997388}
   - {fileID: 8776323355122916022}
-  - {fileID: 2334219736836670526}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6597038428656366618
@@ -277,18 +244,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8846823, y: 0.91648036}
   m_EdgeRadius: 0
---- !u!114 &2140669384503899847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8546157998165569258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65d413c457f5c546ae6106d9ec4b7a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  chase: 0
-  startingPoint: {fileID: 2334219736836670526}
