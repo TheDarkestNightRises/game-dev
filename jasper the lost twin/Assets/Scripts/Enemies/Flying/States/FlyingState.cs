@@ -21,7 +21,6 @@ public class FlyingState
 	{
 		startTime = Time.time;
 		enemy.Anim.SetBool(animBoolName, true);
-		Debug.Log($"FLying state: {animBoolName}");
 		DoChecks();
 	}
 
