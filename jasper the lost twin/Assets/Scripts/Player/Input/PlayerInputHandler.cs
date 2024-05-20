@@ -22,12 +22,15 @@ public class PlayerInputHandler : MonoBehaviour
 	public bool SecondaryAttackInput { get; set; }
 	public bool DashInput {get; set;}
 	public bool DashInputStop {get; set;}
+
 	
 	public void Start()
 	{
 		playerInput = GetComponent<PlayerInput>();
 		cam = Camera.main;
+		
 	}
+	
 	
 	public void OnPrimaryAttackInput(InputAction.CallbackContext context)
 	{
@@ -54,6 +57,16 @@ public class PlayerInputHandler : MonoBehaviour
 			SecondaryAttackInput = false;
 		}
 	}
+
+	public void OnEscapeInput(InputAction.CallbackContext context)
+	{
+		if (context.started)
+		{
+			PauseMenuManager.Instance?.TogglePauseMenu();
+		}
+	}
+
+
 
 	public void OnDashInput(InputAction.CallbackContext context)
 	{
