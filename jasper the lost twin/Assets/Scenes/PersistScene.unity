@@ -4683,7 +4683,7 @@ GameObject:
   - component: {fileID: 285954043}
   - component: {fileID: 285954042}
   m_Layer: 5
-  m_Name: QuitIcon
+  m_Name: ExitIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5546,7 +5546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 930136242}
   m_Layer: 5
-  m_Name: QuitSection
+  m_Name: ExitSection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11131,7 +11131,7 @@ GameObject:
   - component: {fileID: 1959632012}
   - component: {fileID: 1959632011}
   m_Layer: 5
-  m_Name: Quit Button
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11613,7 +11613,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quit
+  m_text: 'Exit
 
 '
   m_isRightToLeft: 0
