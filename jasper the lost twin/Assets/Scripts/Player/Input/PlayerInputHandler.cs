@@ -22,8 +22,6 @@ public class PlayerInputHandler : MonoBehaviour
 	public bool SecondaryAttackInput { get; set; }
 	public bool DashInput {get; set;}
 	public bool DashInputStop {get; set;}
-	public delegate void PauseEvent();
-	public static event PauseEvent OnPause;
 
 	
 	public void Start()
@@ -59,24 +57,12 @@ public class PlayerInputHandler : MonoBehaviour
 			SecondaryAttackInput = false;
 		}
 	}
-	
+
 	public void OnEscapeInput(InputAction.CallbackContext context)
 	{
 		if (context.started)
 		{
-			InvokeOnPauseEvent();
-		}
-	}
-	
-	private void InvokeOnPauseEvent()
-	{
-		if (OnPause != null)
-		{
-			OnPause(); 
-		}
-		else
-		{
-			Debug.LogWarning("no subscribers");
+			PauseMenuManager.Instance?.TogglePauseMenu();
 		}
 	}
 

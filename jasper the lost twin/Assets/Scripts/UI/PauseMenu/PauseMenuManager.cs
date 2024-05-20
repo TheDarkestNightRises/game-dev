@@ -6,7 +6,21 @@ using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
 {
+	public static PauseMenuManager Instance { get; private set; }
 	public GameObject pauseMenuCanvas;
+
+	private void Awake()
+	{
+		if (Instance == null)
+		{
+			Instance = this;
+			DontDestroyOnLoad(gameObject); 
+		}
+		else
+		{
+			Destroy(gameObject);
+		}
+	}
 
 	private void Start()
 	{
@@ -14,28 +28,14 @@ public class PauseMenuManager : MonoBehaviour
 		{
 			pauseMenuCanvas.SetActive(false);
 		}
-
-		Debug.Log("Subscribing to OnPause event...");
-		PlayerInputHandler.OnPause += OpenPauseMenu;
 	}
 
-	private void OnDestroy()
+	public void TogglePauseMenu()
 	{
-		Debug.Log("Unsubscribing from OnPause event...");
-		PlayerInputHandler.OnPause -= OpenPauseMenu;
-	}
-
-	private void OpenPauseMenu()
-	{
-		Debug.Log("Pause menu opened.");
 		if (pauseMenuCanvas != null)
 		{
 			bool isPaused = !pauseMenuCanvas.activeSelf;
 			pauseMenuCanvas.SetActive(isPaused);
-		}
-		else
-		{
-			Debug.LogWarning("Pause menu canvas is not assigned in the inspector.");
 		}
 	}
 }
