@@ -8,6 +8,7 @@ public class PauseMenuManager : MonoBehaviour
 {
 	public static PauseMenuManager Instance { get; private set; }
 	public GameObject pauseMenuCanvas;
+	[SerializeField] private SceneField _mainMenu;
 
 	private void Awake()
 	{
@@ -42,4 +43,10 @@ public class PauseMenuManager : MonoBehaviour
 	public void Resume() {
 		pauseMenuCanvas.SetActive(false);
 	}
+	
+	public void Exit() {
+		SceneManager.LoadSceneAsync(_mainMenu);
+	}
+	
+	
 }
