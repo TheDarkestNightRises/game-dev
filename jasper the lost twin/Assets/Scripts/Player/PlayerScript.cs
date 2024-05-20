@@ -94,18 +94,6 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		StateMachine.CurrentState.LogicUpdate();
 	}
 	
-	public void ClimbLadder()
-	{
-		if(!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) 
-		{
-			RB.gravityScale = gravityAtStart;
-			return;
-		}
-		Vector2 climbVelocity = new Vector2(RB.velocity.x, InputHandler.InputY * climbSpeed);
-		RB.velocity = climbVelocity;
-		RB.gravityScale = 0;
-	}
-	
 	public bool CheckIfTouchingLadder()
 	{
 		if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) return true;
@@ -116,7 +104,6 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	{
 		if (!isAlive) return;
 		StateMachine.CurrentState.PhysicsUpdate();
-		Die();
 	}
 	
 	public void SetVelocity(float velocity, Vector2 direction)
@@ -140,18 +127,18 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		CurrentVelocity = workspace;
 	}
 	
-	void Die()
-	{
-		if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
-		{
-			isAlive = false;
-			Anim.SetTrigger("death");
-			RB.AddForce(Vector2.up * playerData.deathKick, ForceMode2D.Impulse);
-			impulseCamera.GenerateImpulse(playerData.deathImpulse);
-			ApplyFriction();
-			Invoke(nameof(RemovePhysics), 1f);
-		}
-	}
+	//void Die()
+	//{
+	//	if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
+	//	{
+	//		isAlive = false;
+	//		Anim.SetTrigger("death");
+	//		RB.AddForce(Vector2.up * playerData.deathKick, ForceMode2D.Impulse);
+	//		impulseCamera.GenerateImpulse(playerData.deathImpulse);
+	//		ApplyFriction();
+	//		Invoke(nameof(RemovePhysics), 1f);
+	//	}
+	//}
 	
 	public void RemovePhysics()
 	{
