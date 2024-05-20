@@ -25,7 +25,6 @@ public class PlayerState
 	{
 		DoChecks();
 		player.Anim.SetBool(animBoolName, true);
-		Debug.Log($"Player state: {animBoolName}");
 		startTime = Time.time;
 		isAnimationFinished = false;
 	}
