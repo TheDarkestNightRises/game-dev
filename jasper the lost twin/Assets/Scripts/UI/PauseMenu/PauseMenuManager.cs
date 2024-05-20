@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿	using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,6 +8,7 @@ public class PauseMenuManager : MonoBehaviour
 {
 	public static PauseMenuManager Instance { get; private set; }
 	public GameObject pauseMenuCanvas;
+	public GameObject pauseSettingsMenuCanvas;
 	[SerializeField] private SceneField _mainMenu;
 
 	private void Awake()
@@ -47,6 +48,14 @@ public class PauseMenuManager : MonoBehaviour
 	public void Exit() {
 		SceneManager.LoadSceneAsync(_mainMenu);
 		Destroy(gameObject);
+	}
+	
+	public void TogglePauseSettingsMenu()
+	{
+		if (pauseSettingsMenuCanvas != null)
+		{
+			pauseSettingsMenuCanvas.SetActive(true);
+		}
 	}
 	
 	
