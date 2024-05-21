@@ -7,7 +7,6 @@ public class Damageable : MonoBehaviour, IDamageable
 {
 	[SerializeField]
 	private float _maxHealth;
-	public UnityEvent<float, float> healthChanged;
 	
 	public float MaxHealth	
 	{	
@@ -30,7 +29,6 @@ public class Damageable : MonoBehaviour, IDamageable
 		get
 		{
 			return _health;
-			healthChanged?.Invoke(_health, MaxHealth);
 		}
 		set
 		{

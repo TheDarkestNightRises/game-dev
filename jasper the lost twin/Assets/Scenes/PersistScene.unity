@@ -9759,6 +9759,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6496498690081166411, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2131927325}
+    - targetCorrespondingSourceObject: {fileID: 6496498690081166411, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2131927342}
     - targetCorrespondingSourceObject: {fileID: 7583056364566669499, guid: d172d68c6998c7d48857a216a144aa24, type: 3}
       insertIndex: -1
       addedObject: {fileID: 158240487}
@@ -10321,6 +10324,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1eef6cb7e20084191ab492adcd27d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2131927342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79977217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174b1df0d5c73de449ecb60d831c9cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  _health: 100
+  isAlive: 1
+  isInvincible: 0
+  invicibilityTime: 0.25
 --- !u!1001 &610100060916347641
 PrefabInstance:
   m_ObjectHideFlags: 0
