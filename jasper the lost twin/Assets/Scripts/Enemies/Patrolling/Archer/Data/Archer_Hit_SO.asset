@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Archer_Hit_SO
   m_EditorClassIdentifier: 
   stunTime: 0.25
+  bloodVFX: {fileID: 439858041109348839, guid: 3365623743d65c3458d4aa0addcfad47, type: 3}

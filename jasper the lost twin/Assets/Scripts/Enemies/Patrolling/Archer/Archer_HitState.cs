@@ -10,6 +10,12 @@ public class Archer_HitState : HitState
     {
         this.enemy = enemy;
     }
+    
+	public override void Enter()
+	{
+		base.Enter();
+		GameObject.Instantiate(stateData.bloodVFX, enemy.transform.position, stateData.bloodVFX.transform.rotation);
+	}
 
     public override void LogicUpdate()
     {

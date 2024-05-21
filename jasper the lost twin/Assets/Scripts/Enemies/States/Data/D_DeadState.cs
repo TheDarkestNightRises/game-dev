@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class D_DeadState : MonoBehaviour
 {
-	
+	public GameObject bloodVFX;
 }

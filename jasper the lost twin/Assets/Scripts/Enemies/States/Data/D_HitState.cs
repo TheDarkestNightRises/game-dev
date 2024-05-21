@@ -6,4 +6,5 @@ using UnityEngine;
 public class D_HitState : ScriptableObject
 {
 	public float stunTime;
+	public GameObject bloodVFX;
 }

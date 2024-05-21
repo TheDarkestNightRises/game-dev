@@ -12,9 +12,10 @@ public class FlyingHitState : FlyingState
 		this.stateData = stateData;	
 	}
 	
-	public override void Enter() {
+	public override void Enter()
+	{
 		base.Enter();
-
+		GameObject.Instantiate(stateData.bloodVFX, enemy.transform.position, stateData.bloodVFX.transform.rotation);
 		isStunTimeOver = false;
 	}
 
