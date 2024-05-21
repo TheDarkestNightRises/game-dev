@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour, IDamageable
 {
@@ -23,7 +24,7 @@ public class Damageable : MonoBehaviour, IDamageable
 	private float _health = 100;
 	
 	[SerializeField]
-	private float Health
+	public float Health
 	{
 		get
 		{

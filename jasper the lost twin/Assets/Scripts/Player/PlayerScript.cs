@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Events;
 
 public class PlayerScript : MonoBehaviour, IDamageable
 {
@@ -44,10 +45,13 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public bool IsInvincibile { get; set; }
 	[SerializeField]
 	private float currentHealth;
+
 	public float CurrentHealth
+	
 	{
 		get { return currentHealth; }
-		set { currentHealth = value; }
+		set { currentHealth = value; 
+		CharacterEvents.OnHealthChanged?.Invoke(currentHealth, playerData.maxHealth);}
 	}
 
 	private float climbSpeed = 10f;
