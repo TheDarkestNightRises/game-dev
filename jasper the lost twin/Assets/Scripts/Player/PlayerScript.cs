@@ -45,14 +45,13 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public bool IsInvincibile { get; set; }
 	[SerializeField]
 	private float currentHealth;
-	public event UnityAction<float, float> OnHealthChanged;
 
 	public float CurrentHealth
 	
 	{
 		get { return currentHealth; }
 		set { currentHealth = value; 
-		OnHealthChanged?.Invoke(currentHealth, playerData.maxHealth);}
+		CharacterEvents.OnHealthChanged?.Invoke(currentHealth, playerData.maxHealth);}
 	}
 
 	private float climbSpeed = 10f;

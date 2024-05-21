@@ -40,7 +40,7 @@ public class HealthBarScript : MonoBehaviour
 	{
 		if (playerScript != null)
 		{
-			playerScript.OnHealthChanged += OnPlayerHealthChanged;
+			CharacterEvents.OnHealthChanged += OnPlayerHealthChanged;
 		}
 	}
 
@@ -48,7 +48,7 @@ public class HealthBarScript : MonoBehaviour
 	{
 		if (playerScript != null)
 		{
-			playerScript.OnHealthChanged -= OnPlayerHealthChanged;
+			CharacterEvents.OnHealthChanged -= OnPlayerHealthChanged;
 		}
 	}
 
