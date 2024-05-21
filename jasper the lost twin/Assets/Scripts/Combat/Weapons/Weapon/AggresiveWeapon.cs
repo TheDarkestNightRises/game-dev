@@ -8,7 +8,7 @@ public class AggresiveWeapon : Weapon
 	[SerializeField]
 	protected SO_AggresiveWeapon aggresiveWeaponData;
 	private List<IDamageable> detectedEnemies = new List<IDamageable>();
-	
+
 	public override void AnimationActionTrigger()
 	{
 		base.AnimationActionTrigger();
@@ -18,6 +18,7 @@ public class AggresiveWeapon : Weapon
 			Debug.Log($"Someone should take {aggresiveWeaponData.damageAmmount}");
 			var damageData = new DamageData(aggresiveWeaponData.damageAmmount, this.gameObject);
 			entity.Damage(damageData);
+			GenerateImpulse(0.1f);
 		}
 	}
 	

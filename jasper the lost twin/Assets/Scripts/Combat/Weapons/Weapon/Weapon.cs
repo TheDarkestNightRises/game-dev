@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Weapon : MonoBehaviour
 {
 	protected Animator baseAnimator;
 	protected Animator weaponAnimator;
+	private CinemachineImpulseSource impulseCamera;
 	
 	protected PlayerAttackState attackState;
 	protected int attackCounter;
@@ -14,6 +16,7 @@ public class Weapon : MonoBehaviour
 	{
 		baseAnimator = transform.Find("Base").GetComponent<Animator>();
 		weaponAnimator = transform.Find("Weapon").GetComponent<Animator>();
+		impulseCamera = GetComponent<CinemachineImpulseSource>();
 	}
 	
 	public virtual void EnterWeapon()
@@ -48,5 +51,10 @@ public class Weapon : MonoBehaviour
 	public void InitWeapon(PlayerAttackState attackState)
 	{
 		this.attackState = attackState;
+	}
+	
+	public void GenerateImpulse(float power)
+	{
+		impulseCamera.GenerateImpulse(power);
 	}
 }
