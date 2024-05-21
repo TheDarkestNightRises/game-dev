@@ -54,6 +54,9 @@ TagManager:
   - name: Platform
     uniqueID: 2735986521
     locked: 0
+  - name: Effects
+    uniqueID: 782466665
+    locked: 0
   - name: Climbing
     uniqueID: 2475078569
     locked: 0
@@ -68,7 +71,4 @@ TagManager:
     locked: 0
   - name: Hazards
     uniqueID: 2846115457
-    locked: 0
-  - name: Effects
-    uniqueID: 782466665
     locked: 0
