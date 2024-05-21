@@ -85,15 +85,14 @@ public class FlyingEnemy : MonoBehaviour, IDamageable
 	}
 	
 	public void Damage(DamageData damageData)
-	{
-		if (stateMachine.CurrentState == HitState)
+	{	
+		if (!isAlive)
 		{
 			return;
 		}
 		
-		if (!isAlive)
+		if (stateMachine.CurrentState == HitState)
 		{
-			stateMachine.ChangeState(DeathState);
 			return;
 		}
 		
@@ -106,6 +105,7 @@ public class FlyingEnemy : MonoBehaviour, IDamageable
 		if (currentHealth <= 0)
 		{
 			isAlive = false;
+			stateMachine.ChangeState(DeathState);
 		}
 	}
 }

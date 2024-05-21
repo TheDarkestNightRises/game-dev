@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class D_DeadState : MonoBehaviour
+[CreateAssetMenu(fileName = "newEntityData", menuName = "Data/Enemy/Dead state")]
+public class D_DeadState : ScriptableObject
 {
-	public GameObject bloodVFX;
+	public GameObject deathVFX;
 }

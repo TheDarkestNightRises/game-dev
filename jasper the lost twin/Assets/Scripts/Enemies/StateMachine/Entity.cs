@@ -18,7 +18,7 @@ public class Entity : MonoBehaviour, IDamageable
 	[SerializeField]
 	private Transform playerCheck;
 	[SerializeField]
-	private float currentHealth;
+	protected float currentHealth;
 	protected bool isAlive = true;
 	
 	protected virtual void Awake()
@@ -83,11 +83,6 @@ public class Entity : MonoBehaviour, IDamageable
 		currentHealth -= damageData.Amount;
 		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
 		DamageHop(entityData.damageHopVelocity);
-		
-		if (currentHealth <= 0)
-		{
-			isAlive = false;
-		}
 	}
 	
 	public virtual void DamageHop(float velocity)

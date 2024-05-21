@@ -4829,6 +4829,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5775430499306437701, guid: 378558cb911456145aed5d4846bb925b, type: 3}
+      propertyPath: deathStateData
+      value: 
+      objectReference: {fileID: 11400000, guid: b83fc3158852e7b4a9ae07fb25967f28, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4846,6 +4850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archer
       objectReference: {fileID: 0}
+    - target: {fileID: 4706146520858824696, guid: e5e6ed5e1f9bf3c4784448456387f8da, type: 3}
+      propertyPath: deathStateData
+      value: 
+      objectReference: {fileID: 11400000, guid: da9bf523469f7b74d8e7d600ca9bae11, type: 2}
     - target: {fileID: 8415588544672275101, guid: e5e6ed5e1f9bf3c4784448456387f8da, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.32

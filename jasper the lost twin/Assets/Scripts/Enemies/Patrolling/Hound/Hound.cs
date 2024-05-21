@@ -76,12 +76,17 @@ public class Hound : Entity
 		
 		if (!isAlive)
 		{
+			return;
+		}
+		
+		if (currentHealth <= 0)
+		{
+			isAlive = false;
 			stateMachine.ChangeState(DeathState);
 			return;
 		}
 		
 		base.Damage(damageData);
 		stateMachine.ChangeState(HitState);
-
 	}
 }

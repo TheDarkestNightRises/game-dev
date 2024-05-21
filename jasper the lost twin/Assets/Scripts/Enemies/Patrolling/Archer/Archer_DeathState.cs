@@ -10,5 +10,11 @@ public class Archer_DeathState : DeadState
     {
         this.enemy = enemy;
     }
+    
+	public override void Enter()
+	{
+		base.Enter();
+		GameObject.Instantiate(stateData.deathVFX, enemy.transform.position, stateData.deathVFX.transform.rotation);
+	}
 }
     

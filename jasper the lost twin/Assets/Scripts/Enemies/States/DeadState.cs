@@ -14,6 +14,6 @@ public class DeadState : State
 	public override void Enter()
 	{
 		base.Enter();
-		Debug.Log("Im dead");
+		GameObject.Instantiate(stateData.deathVFX, entity.transform.position, stateData.deathVFX.transform.rotation);
 	}
 }
