@@ -8,53 +8,55 @@ public class HealthBarScript : MonoBehaviour
 {
 	public TMP_Text healthBarText;
 	public Slider healthSlider;
-	Damageable playerDamageable;
-	public PlayerData playerData;
-	
+	private PlayerScript playerScript;
+
 	private void Awake()
 	{
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		if (player == null)
 		{
+			Debug.LogError("Player not found");
 			return;
 		}
-		playerDamageable = player.GetComponent<Damageable>();
-		if (playerDamageable == null)
+
+		playerScript = player.GetComponent<PlayerScript>();
+		if (playerScript == null)
 		{
-			Debug.LogError("Player does not have a Damageable component");
-		}
-	}
-    
-	void Start()
-	{
-		if (playerDamageable != null)
-		{
-			healthSlider.value = CalculateSliderPercentage(playerDamageable.Health, playerDamageable.MaxHealth);
-			healthBarText.text = "HP: " + playerDamageable.Health + " / " + playerDamageable.MaxHealth;
-		}
-	}
-    
-	private void OnEnable()
-	{
-		if (playerDamageable != null)
-		{
-			playerDamageable.healthChanged.AddListener(OnPlayerHealthChanged);
-		}
-	}
-    
-	private void OnDisable()
-	{
-		if (playerDamageable != null)
-		{
-			playerDamageable.healthChanged.RemoveListener(OnPlayerHealthChanged);
+			Debug.LogError("Player does not have PlayerScript ");
+			return;
 		}
 	}
 
-	private float CalculateSliderPercentage(float currentHealth, float maxHealth) 
+	private void Start()
 	{
-		return currentHealth / maxHealth; 
-	}   
-    
+		if (playerScript != null)
+		{
+			healthSlider.value = CalculateSliderPercentage(playerScript.CurrentHealth, playerScript.playerData.maxHealth);
+			healthBarText.text = "HP: " + playerScript.CurrentHealth + " / " + playerScript.playerData.maxHealth;
+		}
+	}
+
+	private void OnEnable()
+	{
+		if (playerScript != null)
+		{
+			playerScript.OnHealthChanged += OnPlayerHealthChanged;
+		}
+	}
+
+	private void OnDisable()
+	{
+		if (playerScript != null)
+		{
+			playerScript.OnHealthChanged -= OnPlayerHealthChanged;
+		}
+	}
+
+	private float CalculateSliderPercentage(float currentHealth, float maxHealth)
+	{
+		return currentHealth / maxHealth;
+	}
+
 	private void OnPlayerHealthChanged(float newHealth, float maxHealth)
 	{
 		healthSlider.value = CalculateSliderPercentage(newHealth, maxHealth);
