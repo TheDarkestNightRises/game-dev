@@ -210,7 +210,14 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
 		StateMachine.ChangeState(HitState);
 	}
-
+	
+	public void Health(int healthRestore)
+	{
+		if(isAlive)
+		{
+			Health += healthRestore;
+		}
+	}
 }
 
 
