@@ -19,6 +19,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public PlayerHitState HitState { get; set; }
 	public PlayerDeathState DeathState { get; set; }
 	public PlayerClimbState ClimbState { get; set; }
+	
 
 	#endregion
 
@@ -207,15 +208,19 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		}
 		if (StateMachine.CurrentState == HitState) return;	
 		CurrentHealth -= damageData.Amount;
+		CurrentHealth = Mathf.Min(CurrentHealth, playerData.maxHealth);
 		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
 		StateMachine.ChangeState(HitState);
 	}
 	
-	public void Health(int healthRestore)
+	public void Heal(int healthRestore)
 	{
 		if(isAlive)
 		{
-			Health += healthRestore;
+			CurrentHealth += healthRestore;
+			CurrentHealth = Mathf.Min(CurrentHealth, playerData.maxHealth);
+	
+			CharacterEvents.characterHealed(gameObject, healthRestore);
 		}
 	}
 }
