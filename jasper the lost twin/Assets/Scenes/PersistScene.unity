@@ -13632,7 +13632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageText: {fileID: 6988755813419534615, guid: 0551dc0b70b91a442b90828937413c6c, type: 3}
-  healthText: {fileID: 0}
+  healthText: {fileID: 6988755813419534615, guid: 845bf01a206f8994eb50d062fbf1e025, type: 3}
   gameCanvas: {fileID: 862942014}
 --- !u!1 &1998003226
 GameObject:
