@@ -5081,10 +5081,6 @@ PrefabInstance:
       propertyPath: startingPoint
       value: 
       objectReference: {fileID: 1447057601}
-    - target: {fileID: 6597038428656366618, guid: 403ba6d7f6e966440888c697ccf71e60, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 2ce38918d39de2145b0f7f6d5c074a58, type: 2}
     - target: {fileID: 8546157998165569258, guid: 403ba6d7f6e966440888c697ccf71e60, type: 3}
       propertyPath: m_Name
       value: Bat
