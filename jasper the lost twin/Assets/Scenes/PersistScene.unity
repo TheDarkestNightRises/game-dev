@@ -12084,6 +12084,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207180782}
   m_CullTransparentMesh: 1
+--- !u!1 &1265889465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5497389198780452702, guid: 1a163f824564ddc4fa4d957bbeb4d675, type: 3}
+  m_PrefabInstance: {fileID: 335639730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1289083604
 GameObject:
   m_ObjectHideFlags: 0
@@ -14586,6 +14591,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathPanel: {fileID: 1104499959}
+  timer: {fileID: 1334797679}
+  hpBar: {fileID: 1265889465}
 --- !u!1 &1959632009
 GameObject:
   m_ObjectHideFlags: 0
