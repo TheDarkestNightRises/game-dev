@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 432501503}
   - component: {fileID: 432501502}
   - component: {fileID: 432501501}
+  - component: {fileID: 432501504}
   m_Layer: 14
   m_Name: MeatHealtPickup
   m_TagString: Untagged
@@ -252,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4f5594a1f96d049bd89118f1730693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthRestore: 20
 --- !u!212 &432501502
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -319,6 +321,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &432501504
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432501500}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0064092875, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.698686
 --- !u!1 &459659265
 GameObject:
   m_ObjectHideFlags: 0

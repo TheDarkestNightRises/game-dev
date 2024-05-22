@@ -5,20 +5,14 @@ using UnityEngine;
 public class HealthPickup : MonoBehaviour
 {
 	public int healthRestore = 20;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    
+
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		Damageable damageable = collision.GetComponent<Damageable>();
-		
-		if(damageable)
+		if(collision.CompareTag("Player"))
 		{
-			damageable
+			PlayerScript playerscript = collision.GetComponent<PlayerScript>();
+			playerscript.Heal(healthRestore);
+			Destroy(gameObject);
 		}
 	}
-    
 }
