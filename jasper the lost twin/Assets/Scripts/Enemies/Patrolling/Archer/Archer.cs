@@ -13,6 +13,8 @@ public class Archer : Entity
 	public Archer_DeathState DeathState { get; private set; }
 	public Archer_RangedAttackState RangedAttackState { get; private set; }
 
+	public GameObject[] itemDrops;
+
     [SerializeField]
     private D_MoveState moveStateData;
     [SerializeField]
@@ -58,6 +60,14 @@ public class Archer : Entity
 	{
 		RangedAttackState.FinishAttack();
 	}
+	
+	private void  ItemDrop()
+	{
+		for(int i = 0; i < itemDrops.Length; i++)
+		{
+			Instantiate(itemDrops[i], transform.position + new Vector3(0,1,0), Quaternion.identity);
+		}
+	}
 
 	
 	public override void Damage(DamageData damageData)
@@ -75,6 +85,7 @@ public class Archer : Entity
 		if (currentHealth <= 0)
 		{
 			isAlive = false;
+			ItemDrop();
 			stateMachine.ChangeState(DeathState);
 			return;
 		}
