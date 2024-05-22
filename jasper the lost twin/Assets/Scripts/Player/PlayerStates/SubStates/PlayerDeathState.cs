@@ -17,6 +17,7 @@ public class PlayerDeathState : PlayerState
 		player.GenerateImpulse(playerData.deathImpulse);
 		player.ApplyFriction();
 		player.StartCoroutine(RemovePhysicsAfterDelay(1f));
+		LevelManager.instance.Gameover();
 	}
 	
 	private IEnumerator RemovePhysicsAfterDelay(float delay)
