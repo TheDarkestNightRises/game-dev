@@ -95,6 +95,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	private void Update()
 	{
 		if (!isAlive) return;
+		CheckIfTouchingHazard();
 		CurrentVelocity = RB.velocity;
 		StateMachine.CurrentState.LogicUpdate();
 	}
@@ -138,18 +139,14 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		StateMachine.ChangeState(DeathState);
 	}
 	
-	//void Die()
-	//{
-	//	if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
-	//	{
-	//		isAlive = false;
-	//		Anim.SetTrigger("death");
-	//		RB.AddForce(Vector2.up * playerData.deathKick, ForceMode2D.Impulse);
-	//		impulseCamera.GenerateImpulse(playerData.deathImpulse);
-	//		ApplyFriction();
-	//		Invoke(nameof(RemovePhysics), 1f);
-	//	}
-	//}
+	void CheckIfTouchingHazard()
+	{
+		if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
+		{
+			var damageData = new DamageData(30f, this.gameObject);
+			Damage(damageData);
+		}
+	}
 	
 	public void RemovePhysics()
 	{
