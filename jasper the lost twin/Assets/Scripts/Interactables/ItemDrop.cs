@@ -6,10 +6,11 @@ public class ItemDrop : MonoBehaviour
 {
 	private Rigidbody2D itemRB;
 	public float dropForce = 5;
+	[SerializeField] int pointsForCoinPickup = 1;
 	bool isCollected = false;
-	
-    // Start is called before the first frame update
-    void Start()
+	bool wasCollected = false;
+
+	void Start()
     {
 	    itemRB = GetComponent<Rigidbody2D>();
 	    itemRB.AddForce(Vector2.up * dropForce, ForceMode2D.Impulse);
@@ -19,6 +20,8 @@ public class ItemDrop : MonoBehaviour
 	{
 		if(other.gameObject.tag == "Player" && !isCollected)
 		{
+			wasCollected = true;
+			FindObjectOfType<GameSession>().AddToScore(pointsForCoinPickup);
 			isCollected = true;
 			gameObject.SetActive(false);
 			Destroy(gameObject);
