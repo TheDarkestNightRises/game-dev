@@ -20,6 +20,9 @@ public class Entity : MonoBehaviour, IDamageable
 	[SerializeField]
 	protected float currentHealth;
 	protected bool isAlive = true;
+	[SerializeField]
+	public GameObject[] itemDrops;
+
 	
 	protected virtual void Awake()
 	{
@@ -44,6 +47,14 @@ public class Entity : MonoBehaviour, IDamageable
 	protected void FixedUpdate()
 	{
 		stateMachine.CurrentState.PhysicsUpdate();
+	}
+	
+	public void  ItemDrop()
+	{
+		for(int i = 0; i < itemDrops.Length; i++)
+		{
+			Instantiate(itemDrops[i], transform.position + new Vector3(0,1,0), Quaternion.identity);
+		}
 	}
 	
 	public void SetVelocityX(float velocity)
