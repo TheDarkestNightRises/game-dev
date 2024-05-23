@@ -17,6 +17,7 @@ public class PlayerData : ScriptableObject
 	public float friction = 0.2f;
 	
 	[Header("JumpStats")]
+	public float rangeFromGround = 1f;
 	public float jumpVelocity = 17f;
 	public int amountOfJumps = 2;
 	public float coyoteTime = 0.2f;
