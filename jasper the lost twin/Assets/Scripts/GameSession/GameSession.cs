@@ -24,19 +24,18 @@ public class GameSession : MonoBehaviour
 	}
 	private void Start()
 	{
-		goldText.text = gold.ToString();
+		goldText.text =  gold.ToString();
 	}
 
 	public void ProcessPlayerDeath()
 	{
+		//subscribe to onHealthChange Event and reset game session when hp drops below 0
 		ResetGameSession();
 	}
 
 	public void AddToScore(int pointsToAdd)
 	{
 		gold += pointsToAdd;
-		Debug.Log(gold);
-		Debug.Log("gold has increased");
 		goldText.text = gold.ToString();
 	}
 
