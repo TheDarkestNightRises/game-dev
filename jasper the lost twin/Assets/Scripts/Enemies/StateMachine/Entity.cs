@@ -20,6 +20,7 @@ public class Entity : MonoBehaviour, IDamageable
 	[SerializeField]
 	protected float currentHealth;
 	protected bool isAlive = true;
+	[SerializeField]
 	public GameObject[] itemDrops;
 
 	

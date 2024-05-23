@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7474784809466042397}
   - component: {fileID: 5600985291074200957}
   m_Layer: 14
-  m_Name: Drops
+  m_Name: CoinDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
