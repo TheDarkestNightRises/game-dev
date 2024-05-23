@@ -1028,8 +1028,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _firstLevel:
-    m_SceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
-    m_SceneName: Level_1
+    m_SceneAsset: {fileID: 102900000, guid: b664330b50b07014eaf6addcbc8d64e1, type: 3}
+    m_SceneName: Dune_Level_1
   _persistentScene:
     m_SceneAsset: {fileID: 102900000, guid: f4e07dd197de82e44b1ebc00d8bf1bec, type: 3}
     m_SceneName: PersistScene

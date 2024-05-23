@@ -29,8 +29,9 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public Transform DashDirectionIndicator {get; set;}
 	[SerializeField]
 	public PlayerData playerData;
+	[SerializeField]
+	public GameObject groundCheck;
 	public Rigidbody2D RB { get; set; }
-	private BoxCollider2D myFeetCollider;
 	private CapsuleCollider2D myBodyCollider;	
 	#endregion
 	
@@ -77,7 +78,6 @@ public class PlayerScript : MonoBehaviour, IDamageable
 
 	private void Start()
 	{
-		myFeetCollider = GetComponent<BoxCollider2D>();
 		myBodyCollider = GetComponent<CapsuleCollider2D>();
 		Anim = GetComponent<Animator>();
 		InputHandler = GetComponent<PlayerInputHandler>();
@@ -132,6 +132,12 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		CurrentVelocity = workspace;
 	}
 	
+	public void Die()
+	{
+		isAlive = false;
+		StateMachine.ChangeState(DeathState);
+	}
+	
 	//void Die()
 	//{
 	//	if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
@@ -182,7 +188,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	
 	public bool CheckIfTouchingGround()
 	{
-		return myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")); 
+		return Physics2D.Raycast(groundCheck.transform.position, Vector2.down, playerData.rangeFromGround, playerData.whatIsGround);
 	}
 	
 	private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
