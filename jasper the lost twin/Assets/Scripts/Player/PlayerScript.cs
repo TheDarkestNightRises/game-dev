@@ -132,6 +132,12 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		CurrentVelocity = workspace;
 	}
 	
+	public void Die()
+	{
+		isAlive = false;
+		StateMachine.ChangeState(DeathState);
+	}
+	
 	//void Die()
 	//{
 	//	if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))

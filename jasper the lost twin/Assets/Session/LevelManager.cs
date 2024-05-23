@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
 	public void Gameover()
 	{
 		UIManager ui = GetComponent<UIManager>();
-		ui.ShowDeathUi();
+		StartCoroutine(ui.ShowDeathUiAfterDelay(1f)); 
 	}
 	
 }

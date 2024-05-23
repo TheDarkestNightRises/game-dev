@@ -8,6 +8,12 @@ public class UIManager : MonoBehaviour
 	[SerializeField] GameObject timer;
 	[SerializeField] GameObject hpBar;
 
+	public IEnumerator ShowDeathUiAfterDelay(float delay)
+	{
+		yield return new WaitForSeconds(delay);  
+		ShowDeathUi();
+	}
+	
 	public void ShowDeathUi()
 	{
 		deathPanel.SetActive(true);
