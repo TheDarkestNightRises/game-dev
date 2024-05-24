@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7b00778287cbc4fa7ae06540645944, type: 3}
   m_Name: Archer_Entity_SO
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 10
   damageHopVelocity: 10
   wallCheckRange: 0.2
   ledgeCheckRange: 0.4

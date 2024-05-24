@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Hound_Dead_SO
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 1962614393226834858, guid: 42dcdc8ce527aa2409f86772cd74a497, type: 3}
+  highScoreWorth: 10

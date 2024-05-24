@@ -6,4 +6,5 @@ using UnityEngine;
 public class D_DeadState : ScriptableObject
 {
 	public GameObject deathVFX;
+	public float highScoreWorth;
 }
