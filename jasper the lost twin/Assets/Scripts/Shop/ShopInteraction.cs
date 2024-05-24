@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class ShopInteraction : MonoBehaviour
 {
-	public Canvas shopCanvas; // Assign the Canvas in the Inspector
+	public Canvas shopCanvas; 
+	public Canvas pressButtonCanvas; 
+
 	private bool playerInRange = false;
 
 	void Start()
@@ -15,17 +17,22 @@ public class ShopInteraction : MonoBehaviour
 		}
 		else
 		{
-			shopCanvas.gameObject.SetActive(false); // Ensure the shop Canvas is initially inactive
+			shopCanvas.gameObject.SetActive(false);
+		}
+
+		if (pressButtonCanvas != null)
+		{
+			pressButtonCanvas.gameObject.SetActive(false); 
 		}
 	}
 
 	void Update()
 	{
-		// Check if the player is in range and presses the "b" key
+
 		if (playerInRange && Input.GetKeyDown(KeyCode.B))
 		{
-			// Toggle the shop Canvas
 			shopCanvas.gameObject.SetActive(!shopCanvas.gameObject.activeSelf);
+			pressButtonCanvas.gameObject.SetActive(shopCanvas.gameObject.activeSelf); 
 		}
 	}
 
@@ -33,8 +40,11 @@ public class ShopInteraction : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			Debug.Log("Player entered shop trigger.");
 			playerInRange = true;
+			if (pressButtonCanvas != null)
+			{
+				pressButtonCanvas.gameObject.SetActive(true);
+			}
 		}
 	}
 
@@ -42,9 +52,11 @@ public class ShopInteraction : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			Debug.Log("Player exited shop trigger.");
 			playerInRange = false;
-			// Optionally close the shop Canvas when the player leaves the range
+			if (pressButtonCanvas != null)
+			{
+				pressButtonCanvas.gameObject.SetActive(false);
+			}
 			shopCanvas.gameObject.SetActive(false);
 		}
 	}
