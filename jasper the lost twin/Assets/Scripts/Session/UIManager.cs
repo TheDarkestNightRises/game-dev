@@ -5,8 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
 	[SerializeField] GameObject deathPanel;
-	[SerializeField] GameObject timer;
-	[SerializeField] GameObject hpBar;
+	[SerializeField] GameObject GameUI;
 
 	public IEnumerator ShowDeathUiAfterDelay(float delay)
 	{
@@ -17,7 +16,6 @@ public class UIManager : MonoBehaviour
 	public void ShowDeathUi()
 	{
 		deathPanel.SetActive(true);
-		timer.SetActive(false);
-		hpBar.SetActive(false);
+		GameUI.SetActive(false);
 	}
 }

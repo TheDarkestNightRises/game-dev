@@ -21,7 +21,7 @@ public class ItemDrop : MonoBehaviour
 		if(other.gameObject.tag == "Player" && !isCollected)
 		{
 			wasCollected = true;
-			FindObjectOfType<GameSession>().AddToScore(pointsForCoinPickup);
+			GameSession.instance.AddToGold(pointsForCoinPickup);
 			isCollected = true;
 			gameObject.SetActive(false);
 			Destroy(gameObject);

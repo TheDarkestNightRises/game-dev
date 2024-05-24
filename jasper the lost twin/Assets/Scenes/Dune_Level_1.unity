@@ -17926,6 +17926,10 @@ PrefabInstance:
       value: Archer
       objectReference: {fileID: 0}
     - target: {fileID: 4706146520858824696, guid: e5e6ed5e1f9bf3c4784448456387f8da, type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706146520858824696, guid: e5e6ed5e1f9bf3c4784448456387f8da, type: 3}
       propertyPath: deathStateData
       value: 
       objectReference: {fileID: 11400000, guid: da9bf523469f7b74d8e7d600ca9bae11, type: 2}

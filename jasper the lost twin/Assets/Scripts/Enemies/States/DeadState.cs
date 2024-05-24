@@ -17,6 +17,7 @@ public class DeadState : State
 	{
 		base.Enter();
 		entity.ItemDrop();
+		GameSession.instance.AddToScore(stateData.highScoreWorth);
 		GameObject.Instantiate(stateData.deathVFX, entity.transform.position, stateData.deathVFX.transform.rotation);
 	}
 }
