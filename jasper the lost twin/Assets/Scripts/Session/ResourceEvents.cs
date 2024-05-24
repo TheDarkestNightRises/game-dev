@@ -6,4 +6,5 @@ using UnityEngine.Events;
 public static class ResourceEvents 
 {
 	public static UnityAction<GameObject, float> highScoreIncreased;
+	public static UnityAction<GameObject, float> goldIncreased;
 }
