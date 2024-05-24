@@ -4,10 +4,11 @@ using UnityEngine;
 using TMPro;
 public class ShopInteraction : MonoBehaviour
 {
-	public Canvas shopCanvas; 
-	public Canvas pressButtonCanvas; 
+	public Canvas shopCanvas;
+	public Canvas pressButtonCanvas;
 
 	private bool playerInRange = false;
+	private bool shopOpen = false;
 
 	void Start()
 	{
@@ -22,17 +23,7 @@ public class ShopInteraction : MonoBehaviour
 
 		if (pressButtonCanvas != null)
 		{
-			pressButtonCanvas.gameObject.SetActive(false); 
-		}
-	}
-
-	void Update()
-	{
-
-		if (playerInRange && Input.GetKeyDown(KeyCode.B))
-		{
-			shopCanvas.gameObject.SetActive(!shopCanvas.gameObject.activeSelf);
-			pressButtonCanvas.gameObject.SetActive(shopCanvas.gameObject.activeSelf); 
+			pressButtonCanvas.gameObject.SetActive(false);
 		}
 	}
 
@@ -41,7 +32,7 @@ public class ShopInteraction : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			playerInRange = true;
-			if (pressButtonCanvas != null)
+			if (!shopOpen)
 			{
 				pressButtonCanvas.gameObject.SetActive(true);
 			}
@@ -53,11 +44,21 @@ public class ShopInteraction : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			playerInRange = false;
-			if (pressButtonCanvas != null)
+			if (!shopOpen)
 			{
 				pressButtonCanvas.gameObject.SetActive(false);
 			}
-			shopCanvas.gameObject.SetActive(false);
+		}
+	}
+
+	void Update()
+	{
+		if (playerInRange && Input.GetKeyDown(KeyCode.B))
+		{
+			shopOpen = !shopOpen;
+			shopCanvas.gameObject.SetActive(shopOpen);
+			pressButtonCanvas.gameObject.SetActive(false);
+			Time.timeScale = shopOpen ? 0f : 1f;
 		}
 	}
 	
