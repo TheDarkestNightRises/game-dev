@@ -149,13 +149,19 @@ MonoBehaviour:
   wallcheck: {fileID: 4231502448998963710}
   ledgeCheck: {fileID: 4693776478528277925}
   playerCheck: {fileID: 7020054667907545387}
-  currentHealth: 200
+  currentHealth: 5
+  itemDrops:
+  - {fileID: 681863625418149837, guid: c9333cace09ecdf4ba674c098287aa44, type: 3}
+  - {fileID: 681863625418149837, guid: c9333cace09ecdf4ba674c098287aa44, type: 3}
+  - {fileID: 681863625418149837, guid: c9333cace09ecdf4ba674c098287aa44, type: 3}
+  - {fileID: 681863625418149837, guid: c9333cace09ecdf4ba674c098287aa44, type: 3}
+  - {fileID: 681863625418149837, guid: c9333cace09ecdf4ba674c098287aa44, type: 3}
   moveStateData: {fileID: 11400000, guid: 798b8b195ed6dee4cac7a107313a89ed, type: 2}
   idleStateData: {fileID: 11400000, guid: ecd456b0935476c479a42fa4a4ae99fa, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: cd4860709d3543b438bf0f720f15ab86, type: 2}
   investigateData: {fileID: 11400000, guid: 5c97678c84da80640931fb5f3ea36e89, type: 2}
   hitStateData: {fileID: 11400000, guid: d2fcb23676ea2344ca7266da190a1109, type: 2}
-  deathStateData: {fileID: 0}
+  deathStateData: {fileID: 11400000, guid: da9bf523469f7b74d8e7d600ca9bae11, type: 2}
   rangedAttackStateData: {fileID: 11400000, guid: b24f6da411a250649808605027b7319e, type: 2}
   rangedAttackPosition: {fileID: 8644493629106170899}
 --- !u!1 &1484044194907808885
@@ -229,7 +235,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1422739263
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -862505032, guid: 9401ec31abd9cf846a3db6946d219c3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
