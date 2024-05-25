@@ -15,27 +15,34 @@ public class ShopBuyScript : MonoBehaviour
 	public TextMeshProUGUI priceText3;
 
 	private GameSession gameSession;
+	private PlayerScript playerScript;
 
 	void Start()
 	{
 		gameSession = GameSession.instance;
-
+		playerScript = FindObjectOfType<PlayerScript>();
 		if (gameSession == null)
 		{
-			Debug.LogError("GameSession not found");
+			Debug.LogError("GameSession instance not found");
+			return;
+		}
+
+		if (playerScript == null)
+		{
+			Debug.LogError("PlayerScript instance not found");
 			return;
 		}
 
 		UpdateButtonColors();
 	}
 
-	void Update()
+	public void Update()
 	{
 		UpdateButtonColors();
 		HandlePurchaseInput();
 	}
 
-	void UpdateButtonColors()
+	public void UpdateButtonColors()
 	{
 		float currentGold = gameSession.gold;
 
@@ -48,7 +55,7 @@ public class ShopBuyScript : MonoBehaviour
 		UpdateButtonColor(button3, currentGold >= cost3);
 	}
     
-	int GetPriceFromText(TextMeshProUGUI priceText)
+	public int GetPriceFromText(TextMeshProUGUI priceText)
 	{
 		if (int.TryParse(priceText.text, out int price))
 		{
@@ -61,40 +68,50 @@ public class ShopBuyScript : MonoBehaviour
 		}
 	}
 
-	void UpdateButtonColor(Button button, bool canAfford)
+	public void UpdateButtonColor(Button button, bool canAfford)
 	{
 		ColorBlock colors = button.colors;
 		colors.normalColor = canAfford ? Color.green : Color.red;
 		button.colors = colors;
 	}
 
-	void HandlePurchaseInput()
+	public void HandlePurchaseInput()
 	{
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
-			TryPurchase(button1, priceText1);
+			if (TryPurchase(button1, priceText1))
+			{
+				IncreasePlayerMaxHealth();
+			}
 		}
+		
 		else if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
-			TryPurchase(button2, priceText2);
+			if (TryPurchase(button2, priceText2))
+			{
+				IncreasePlayerHealth();
+			}
 		}
+		
 		else if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
 			TryPurchase(button3, priceText3);
 		}
 	}
 	
-	void TryPurchase(Button button, TextMeshProUGUI priceText)
+	public bool TryPurchase(Button button, TextMeshProUGUI priceText)
 	{
 		int cost = GetPriceFromText(priceText);
 		if (gameSession.gold >= cost)
 		{
 			SpendGold(cost);
 			UpdateButtonColors();
+			return true;
 		}
 		else
 		{
 			Debug.Log("Not enough gold to purchase item.");
+			return false;
 		}
 	}
 	
@@ -102,6 +119,18 @@ public class ShopBuyScript : MonoBehaviour
 	{
 	    gameSession.gold -= goldToSpend;
 		ResourceEvents.goldIncreased.Invoke(gameSession.gameObject, gameSession.gold);
+	}
+	
+	public void IncreasePlayerHealth()
+	{
+		int healthRestore = GetPriceFromText(priceText2); 
+		playerScript.Heal(healthRestore);
+	}
+	
+	public void IncreasePlayerMaxHealth()
+	{
+		playerScript.playerData.maxHealth += 50;
+		CharacterEvents.OnHealthChanged?.Invoke(playerScript.CurrentHealth, playerScript.playerData.maxHealth);
 	}
 
 }
