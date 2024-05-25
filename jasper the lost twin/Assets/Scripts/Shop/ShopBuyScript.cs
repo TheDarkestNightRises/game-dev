@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ButtonColorUpdater : MonoBehaviour
+public class ShopBuyScript : MonoBehaviour
 {
 	public Button button1;
 	public Button button2;
 	public Button button3;
-	
+    
 	public TextMeshProUGUI priceText1;
 	public TextMeshProUGUI priceText2;
 	public TextMeshProUGUI priceText3;
@@ -22,7 +22,7 @@ public class ButtonColorUpdater : MonoBehaviour
 
 		if (gameSession == null)
 		{
-			Debug.LogError("GameSession instance not found");
+			Debug.LogError("GameSession not found");
 			return;
 		}
 
@@ -32,6 +32,7 @@ public class ButtonColorUpdater : MonoBehaviour
 	void Update()
 	{
 		UpdateButtonColors();
+		HandlePurchaseInput();
 	}
 
 	void UpdateButtonColors()
@@ -65,6 +66,42 @@ public class ButtonColorUpdater : MonoBehaviour
 		ColorBlock colors = button.colors;
 		colors.normalColor = canAfford ? Color.green : Color.red;
 		button.colors = colors;
+	}
+
+	void HandlePurchaseInput()
+	{
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+		{
+			TryPurchase(button1, priceText1);
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha2))
+		{
+			TryPurchase(button2, priceText2);
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha3))
+		{
+			TryPurchase(button3, priceText3);
+		}
+	}
+	
+	void TryPurchase(Button button, TextMeshProUGUI priceText)
+	{
+		int cost = GetPriceFromText(priceText);
+		if (gameSession.gold >= cost)
+		{
+			SpendGold(cost);
+			UpdateButtonColors();
+		}
+		else
+		{
+			Debug.Log("Not enough gold to purchase item.");
+		}
+	}
+	
+	public void SpendGold(int goldToSpend)
+	{
+	    gameSession.gold -= goldToSpend;
+		ResourceEvents.goldIncreased.Invoke(gameSession.gameObject, gameSession.gold);
 	}
 
 }
