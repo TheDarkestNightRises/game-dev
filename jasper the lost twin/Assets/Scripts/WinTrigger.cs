@@ -12,12 +12,19 @@ public class WinTrigger : MonoBehaviour
 	{
 		SceneManager.LoadScene(winCutscene);
 	}
-
+	
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Player"))
 		{
-			ChangeToWinCutscene();
+			StartCoroutine(DelayWinCutscene());
 		}
 	}
+
+	private IEnumerator DelayWinCutscene()
+	{
+		yield return new WaitForSeconds(0.5f);
+		ChangeToWinCutscene();
+	}
+
 }
