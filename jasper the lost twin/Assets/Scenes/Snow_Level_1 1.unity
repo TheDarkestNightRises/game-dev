@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4037776}
   - component: {fileID: 4037775}
   m_Layer: 14
-  m_Name: BuyButton
+  m_Name: BuyButton3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 535443656}
   - component: {fileID: 535443655}
   m_Layer: 14
-  m_Name: Price
+  m_Name: Price2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1338,6 +1338,7 @@ GameObject:
   - component: {fileID: 774971503}
   - component: {fileID: 774971504}
   - component: {fileID: 774971505}
+  - component: {fileID: 774971506}
   m_Layer: 14
   m_Name: Shop
   m_TagString: Untagged
@@ -1500,6 +1501,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &774971506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774971500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9026f0b06e94cc74eb4b64fddd322f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button1: {fileID: 1356901514}
+  button2: {fileID: 1062678786}
+  button3: {fileID: 4037775}
+  priceText1: {fileID: 1533681515}
+  priceText2: {fileID: 535443655}
+  priceText3: {fileID: 1862180481}
 --- !u!1 &786042325
 GameObject:
   m_ObjectHideFlags: 0
@@ -4935,7 +4954,7 @@ GameObject:
   - component: {fileID: 1062678787}
   - component: {fileID: 1062678786}
   m_Layer: 14
-  m_Name: BuyButton
+  m_Name: BuyButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5254,7 +5273,7 @@ GameObject:
   - component: {fileID: 1356901515}
   - component: {fileID: 1356901514}
   m_Layer: 14
-  m_Name: BuyButton
+  m_Name: BuyButton1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5648,7 +5667,7 @@ GameObject:
   - component: {fileID: 1533681516}
   - component: {fileID: 1533681515}
   m_Layer: 14
-  m_Name: Price
+  m_Name: Price1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5814,7 +5833,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618143862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -6428,7 +6447,7 @@ GameObject:
   - component: {fileID: 1862180482}
   - component: {fileID: 1862180481}
   m_Layer: 14
-  m_Name: Price
+  m_Name: Price3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
