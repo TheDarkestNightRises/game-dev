@@ -95,7 +95,10 @@ public class ShopBuyScript : MonoBehaviour
 		
 		else if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
-			TryPurchase(button3, priceText3);
+			if(TryPurchase(button3, priceText3))
+			{
+				IncreasePlayerAttack();
+			}
 		}
 	}
 	
@@ -123,14 +126,18 @@ public class ShopBuyScript : MonoBehaviour
 	
 	public void IncreasePlayerHealth()
 	{
-		int healthRestore = GetPriceFromText(priceText2); 
-		playerScript.Heal(healthRestore);
+		playerScript.Heal(30);
 	}
 	
 	public void IncreasePlayerMaxHealth()
 	{
-		playerScript.playerData.maxHealth += 50;
+		playerScript.playerData.maxHealth += 30;
 		CharacterEvents.OnHealthChanged?.Invoke(playerScript.CurrentHealth, playerScript.playerData.maxHealth);
+	}
+	
+	public void IncreasePlayerAttack()
+	{
+		//playerScript.playerData.
 	}
 
 }
