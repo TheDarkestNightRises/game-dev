@@ -137,7 +137,7 @@ public class ShopBuyScript : MonoBehaviour
 	
 	public void IncreasePlayerAttack()
 	{
-		//playerScript.playerData.
+		playerScript.playerData.attackDamage += 2f;
 	}
 
 }

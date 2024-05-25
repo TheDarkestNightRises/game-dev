@@ -53,6 +53,7 @@ public class PlayerData : ScriptableObject
 	
 	[Header("Attack")]
 	public float speedWhileAttacking = 4f;
+	public float attackDamage = 10f;
 	
 	[Header("Climb")]
 	public float climbSpeed = 10f;
