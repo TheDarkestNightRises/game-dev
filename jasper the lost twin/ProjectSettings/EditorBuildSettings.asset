@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dunes/Dune_Level_3.unity
     guid: ccf06fe3f15e9034d8579bb3fc754c71
+  - enabled: 1
+    path: Assets/Scenes/Dunes/FinalCutscene.unity
+    guid: 2224acbee25ef3248934e1c62eb5f090
   m_configObjects: {}
