@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour, IDamageable
 	public int FacingDirection { get; set; }
 	private Vector2 velocityWorkspace;
 	public FiniteStateMachine stateMachine;
-	protected Rigidbody2D RB { get; set; }
+	public Rigidbody2D RB { get; set; }
 	public Animator Anim { get; set; }
 	public GameObject GO { get; set; }
 	[SerializeField]

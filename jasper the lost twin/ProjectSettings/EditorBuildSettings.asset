@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/PauseMainMenu.unity
     guid: 68dcea4a0b3cb48459b6bc00e835d27f
   - enabled: 1
-    path: Assets/Scenes/Dune_Level_1.unity
+    path: Assets/Scenes/Dunes/Dune_Level_1.unity
     guid: b664330b50b07014eaf6addcbc8d64e1
+  - enabled: 1
+    path: Assets/Scenes/Dunes/Dune_Level_2.unity
+    guid: 439dc828e20e2264293539a67d14e01d
+  - enabled: 1
+    path: Assets/Scenes/Dunes/Dune_Level_3.unity
+    guid: ccf06fe3f15e9034d8579bb3fc754c71
   m_configObjects: {}

@@ -148,6 +148,11 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		}
 	}
 	
+	public bool IsMaxHealth()
+	{
+		return currentHealth == playerData.maxHealth;
+	}
+	
 	public void RemovePhysics()
 	{
 		RB.simulated = false;

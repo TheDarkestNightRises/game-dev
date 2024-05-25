@@ -13443,7 +13443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8409794063578127687, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_DeadZoneHeight
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8409794063578127687, guid: 1e5e5e6a1221a6845ae5e23f26708c39, type: 3}
       propertyPath: m_TrackedObjectOffset.y
