@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a74e4884dbb8943aee1926769b378f, type: 3}
   m_Name: Archer_Idle_SO
   m_EditorClassIdentifier: 
-  minIdleTime: 1
-  maxIdleTime: 2
+  minIdleTime: 0
+  maxIdleTime: 1

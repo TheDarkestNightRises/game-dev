@@ -5,14 +5,11 @@ using UnityEngine;
 public class Hound_DeathState : DeadState
 {
 	private Hound enemy;
+	private D_DeadState stateData;
+	
 	public Hound_DeathState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_DeadState stateData, Hound enemy) : base(entity, stateMachine, animBoolName, stateData)
 	{
 		this.enemy = enemy;
-	}
-	
-	public override void Enter()
-	{
-		base.Enter();
-		GameObject.Instantiate(stateData.deathVFX, enemy.transform.position, stateData.deathVFX.transform.rotation);
+		this.stateData = stateData;
 	}
 }

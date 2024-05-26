@@ -909,6 +909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 290806797}
+  pauseSettingsMenuCanvas: {fileID: 0}
   _mainMenu:
     m_SceneAsset: {fileID: 0}
     m_SceneName: 
@@ -1817,7 +1818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 504952098}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1945525307

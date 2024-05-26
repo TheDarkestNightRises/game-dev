@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 public class PauseSettingsMenuScript : MonoBehaviour
 {
 	public static PauseSettingsMenuScript Instance { get; private set; }
 	public GameObject pauseSettingsCanvas;
 	public GameObject pauseMenuCanvas;
+	public GameObject firstPauseMenuButton; 
 
 	private void Awake()
 	{
@@ -36,6 +39,8 @@ public class PauseSettingsMenuScript : MonoBehaviour
 			pauseSettingsCanvas.SetActive(false);
 			pauseMenuCanvas.SetActive(true);
 		}
+		EventSystem.current.SetSelectedGameObject(firstPauseMenuButton);
+
 	}
 	
 

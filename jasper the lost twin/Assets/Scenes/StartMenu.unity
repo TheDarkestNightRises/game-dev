@@ -1028,8 +1028,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _firstLevel:
-    m_SceneAsset: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
-    m_SceneName: Level_1
+    m_SceneAsset: {fileID: 102900000, guid: b664330b50b07014eaf6addcbc8d64e1, type: 3}
+    m_SceneName: Dune_Level_1
   _persistentScene:
     m_SceneAsset: {fileID: 102900000, guid: f4e07dd197de82e44b1ebc00d8bf1bec, type: 3}
     m_SceneName: PersistScene
@@ -2088,7 +2088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 504952098}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1945525307

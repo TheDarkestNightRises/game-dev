@@ -58,7 +58,6 @@ public class Archer : Entity
 	{
 		RangedAttackState.FinishAttack();
 	}
-
 	
 	public override void Damage(DamageData damageData)
 	{

@@ -9,6 +9,5 @@ public class CharacterEvents
 	
 	public static UnityAction<GameObject, float> characterHealed;
 	
-	public static UnityAction<float, float> OnHealthChanged;
-
+	public static UnityAction<float, float> OnHealthChanged;	
 }

@@ -29,8 +29,9 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public Transform DashDirectionIndicator {get; set;}
 	[SerializeField]
 	public PlayerData playerData;
+	[SerializeField]
+	public GameObject groundCheck;
 	public Rigidbody2D RB { get; set; }
-	private BoxCollider2D myFeetCollider;
 	private CapsuleCollider2D myBodyCollider;	
 	#endregion
 	
@@ -77,7 +78,6 @@ public class PlayerScript : MonoBehaviour, IDamageable
 
 	private void Start()
 	{
-		myFeetCollider = GetComponent<BoxCollider2D>();
 		myBodyCollider = GetComponent<CapsuleCollider2D>();
 		Anim = GetComponent<Animator>();
 		InputHandler = GetComponent<PlayerInputHandler>();
@@ -95,6 +95,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	private void Update()
 	{
 		if (!isAlive) return;
+		CheckIfTouchingHazard();
 		CurrentVelocity = RB.velocity;
 		StateMachine.CurrentState.LogicUpdate();
 	}
@@ -132,18 +133,25 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		CurrentVelocity = workspace;
 	}
 	
-	//void Die()
-	//{
-	//	if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
-	//	{
-	//		isAlive = false;
-	//		Anim.SetTrigger("death");
-	//		RB.AddForce(Vector2.up * playerData.deathKick, ForceMode2D.Impulse);
-	//		impulseCamera.GenerateImpulse(playerData.deathImpulse);
-	//		ApplyFriction();
-	//		Invoke(nameof(RemovePhysics), 1f);
-	//	}
-	//}
+	public void Die()
+	{
+		isAlive = false;
+		StateMachine.ChangeState(DeathState);
+	}
+	
+	void CheckIfTouchingHazard()
+	{
+		if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
+		{
+			var damageData = new DamageData(30f, this.gameObject);
+			Damage(damageData);
+		}
+	}
+	
+	public bool IsMaxHealth()
+	{
+		return currentHealth == playerData.maxHealth;
+	}
 	
 	public void RemovePhysics()
 	{
@@ -182,7 +190,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	
 	public bool CheckIfTouchingGround()
 	{
-		return myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")); 
+		return Physics2D.Raycast(groundCheck.transform.position, Vector2.down, playerData.rangeFromGround, playerData.whatIsGround);
 	}
 	
 	private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
