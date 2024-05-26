@@ -47,6 +47,7 @@ MonoBehaviour:
   stunTime: 0.5
   invincibilityTime: 1.5
   numberOfFlashes: 5
-  maxHealth: 100
+  maxHealth: 800
   speedWhileAttacking: 3.4
+  attackDamage: 10
   climbSpeed: 7
