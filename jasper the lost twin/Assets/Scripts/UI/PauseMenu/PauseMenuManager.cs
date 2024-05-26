@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PauseMenuManager : MonoBehaviour
 {
@@ -11,9 +12,10 @@ public class PauseMenuManager : MonoBehaviour
 	public GameObject pauseSettingsMenuCanvas;
 	[SerializeField] private SceneField _mainMenu;
 	private List<Animator> _animators;
-
+	
 	private void Awake()
 	{
+		
 		if (Instance == null)
 		{
 			Instance = this;
