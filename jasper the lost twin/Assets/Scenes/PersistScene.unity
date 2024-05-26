@@ -4807,6 +4807,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 687510767}
     m_Modifications:
+    - target: {fileID: 4284472827634561881, guid: 1a163f824564ddc4fa4d957bbeb4d675, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284472827634561881, guid: 1a163f824564ddc4fa4d957bbeb4d675, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5497389198780452702, guid: 1a163f824564ddc4fa4d957bbeb4d675, type: 3}
       propertyPath: m_Name
       value: HpBar
@@ -6633,6 +6641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseSettingsCanvas: {fileID: 1115348028}
   pauseMenuCanvas: {fileID: 1649967272}
+  firstPauseMenuButton: {fileID: 1796498188}
 --- !u!1 &947129014
 GameObject:
   m_ObjectHideFlags: 0
@@ -12560,6 +12569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathPanel: {fileID: 1104499959}
   GameUI: {fileID: 687510766}
+  firstDeathMenuButton: {fileID: 8894918609687875067}
 --- !u!1 &1959632009
 GameObject:
   m_ObjectHideFlags: 0
@@ -12745,6 +12755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 1649967272}
+  firstPauseMenuButton: {fileID: 1480276460}
   pauseSettingsMenuCanvas: {fileID: 1115348028}
   _mainMenu:
     m_SceneAsset: {fileID: 102900000, guid: 7c017872fc5aecc40a699c4b3dab8b76, type: 3}
@@ -13987,6 +13998,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23bca6da54e3bfb48b24a0a78eb2bf2e, type: 3}
+--- !u!1 &8894918609687875067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3211779274269839797, guid: 23bca6da54e3bfb48b24a0a78eb2bf2e, type: 3}
+  m_PrefabInstance: {fileID: 8894918609687875066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

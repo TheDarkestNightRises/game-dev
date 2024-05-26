@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
 	[SerializeField] GameObject deathPanel;
 	[SerializeField] GameObject GameUI;
+	public GameObject firstDeathMenuButton; 
 
 	public IEnumerator ShowDeathUiAfterDelay(float delay)
 	{
@@ -17,5 +19,6 @@ public class UIManager : MonoBehaviour
 	{
 		deathPanel.SetActive(true);
 		GameUI.SetActive(false);
+		EventSystem.current.SetSelectedGameObject(firstDeathMenuButton);
 	}
 }
