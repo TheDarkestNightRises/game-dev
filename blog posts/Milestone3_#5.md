@@ -27,3 +27,17 @@ game session's current gold. After that, the coin object is destroyed. For the c
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/cfdc176a-c85d-446b-99fe-4ab11731a333)
 
 ## Shop
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/edbfaef3-c4e9-4fc8-a247-44018fb88b39)
+
+The shop is a game object that has two scripts. The first script "Shop interactions" is used to track the position of the player in relation to the shop. Once the player
+is in the range of the shop, the shop becomes interactable and by pressing the "open shop" button, the player would be able to buy from the 3 displayed options.
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/18b9bf6b-719e-45b6-a266-7fba09d327ac)
+
+The second script which is the buying script has a reference to the game session and one to the player. Each time a purchase is made the game session gold is decreased. Since the
+options of the shops are: increase damage, increase max health, or heal, a reference to the player was made to change those variables from the player data.
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/e9561ed7-54fa-42d5-be4a-53d447e1ad27)
+
+## UI Menus
