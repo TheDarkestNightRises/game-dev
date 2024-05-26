@@ -9,6 +9,7 @@ public class PauseMenuManager : MonoBehaviour
 {
 	public static PauseMenuManager Instance { get; private set; }
 	public GameObject pauseMenuCanvas;
+	public GameObject firstPauseMenuButton; 
 	public GameObject pauseSettingsMenuCanvas;
 	[SerializeField] private SceneField _mainMenu;
 	private List<Animator> _animators;
@@ -50,7 +51,7 @@ public class PauseMenuManager : MonoBehaviour
 		{
 			bool isPaused = !pauseMenuCanvas.activeSelf;
 			pauseMenuCanvas.SetActive(isPaused);
-			Time.timeScale = isPaused ? 0 : 1;
+			Time.timeScale = isPaused ? 0 : 1;			
 		}
 	}
 	
@@ -72,6 +73,7 @@ public class PauseMenuManager : MonoBehaviour
 			pauseSettingsMenuCanvas.SetActive(true);
 			pauseMenuCanvas.SetActive(false);
 		}
+		EventSystem.current.SetSelectedGameObject(firstPauseMenuButton);
 	}
 	
 	
