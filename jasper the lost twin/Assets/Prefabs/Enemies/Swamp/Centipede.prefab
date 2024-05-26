@@ -64,7 +64,7 @@ MonoBehaviour:
   pursueData: {fileID: 11400000, guid: 9915f3ffe7f4c0749b34ec1b1ea04c17, type: 2}
   investigateData: {fileID: 11400000, guid: cc371cb8c3b00114db18a678bbbcd180, type: 2}
   meleeAttackData: {fileID: 11400000, guid: 3fbb8ff938b94d541b9488d566fd8b77, type: 2}
-  deathStateData: {fileID: 0}
+  deathStateData: {fileID: 11400000, guid: b83fc3158852e7b4a9ae07fb25967f28, type: 2}
   hitStateData: {fileID: 11400000, guid: 0881cfd0449e516499bc6660289d205a, type: 2}
   meleeAttackPosition: {fileID: 8901507217850195844}
 --- !u!95 &1737843919973585945
