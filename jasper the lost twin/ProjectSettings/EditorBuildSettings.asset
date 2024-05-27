@@ -35,4 +35,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dunes/FinalCutscene.unity
     guid: 2224acbee25ef3248934e1c62eb5f090
+  - enabled: 1
+    path: Assets/Scenes/Snow/Snow_Level_1.unity
+    guid: 8e49cac84df5e1f49a25ba2fbf9827fc
+  - enabled: 1
+    path: Assets/Scenes/Snow/Snow_Level_2.unity
+    guid: 6829baeb3feb44a4ca87e5a1e1ec921d
+  - enabled: 1
+    path: Assets/Scenes/Snow/Snow_Level_3.unity
+    guid: caa363b849ecb2947bc53016db160f3f
   m_configObjects: {}
