@@ -13961,6 +13961,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5855722960764704034, guid: eead3b65d01588d4ab138b869eca7ab8, type: 3}
+      propertyPath: m_text
+      value: "Alright, Jacob! You're searching for your twin, but first, beat this
+        level by finding keys. Keep an eye on the centipede or snail-like creature\u2014it
+        might hold the key to your success. Stay sharp, and you'll find your way
+        through!"
+      objectReference: {fileID: 0}
     - target: {fileID: 8109717782012302368, guid: eead3b65d01588d4ab138b869eca7ab8, type: 3}
       propertyPath: m_Name
       value: Dialogue
