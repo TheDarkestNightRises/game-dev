@@ -41,3 +41,17 @@ options of the shops are: increase damage, increase max health, or heal, a refer
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/e9561ed7-54fa-42d5-be4a-53d447e1ad27)
 
 ## UI Menus
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/474585e1-0d60-41c4-ab16-ff452bf76650)
+
+Each menu was created using canvas elements. To assign functionality to the buttons each menu comes with a MenuManager from where the transition between the menus is made
+with the help of the scene manager. The sliders have their slide handler for a separate implementation. 
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/9037af17-de51-4121-9155-620c60fc2522)
+
+## Snow biome
+
+The snow biome was added to the game consisting of icy platforms, snow mountains parallax background, frost enemies, and a brand-new thematic!
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/0aed04bb-5973-45f1-b0a6-9001b4b5665a)
+
