@@ -26,7 +26,7 @@ public class Key : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
-        {d
+        {
             if(!isFollowing)
             {
                 PlayerScript thePlayer = FindObjectOfType<PlayerScript>();
