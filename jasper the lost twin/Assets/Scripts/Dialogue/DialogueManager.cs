@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool isDialogueActive = false;
 
-    public float typingSpeed = 0.2f;
+    public float typingSpeed = 20f;
 
     public Animator animator;
 
@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in dialogueLine.line)
         {
             dialogueArea.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
