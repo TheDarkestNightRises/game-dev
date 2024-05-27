@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b656eaa509b29d049b3471dd0747179e
+guid: ebb08637e2775384e9944833f233d346
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Snowy_walk_0
+      name: Snowy_idle_0
       rect:
         serializedVersion: 2
         x: 21
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca124717e6b63674196851424cc0cd00
-      internalID: 302770875
+      spriteID: 8bdb03b3c31ea3c4791cb75dec57334e
+      internalID: 390140905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snowy_walk_1
+      name: Snowy_idle_1
       rect:
         serializedVersion: 2
         x: 69
         y: 0
-        width: 23
-        height: 31
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,19 +158,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b2c010ca0180b8438306873d3fda42c
-      internalID: 476296218
+      spriteID: 349cc79c7caa08d4b9f06d481dc29f9e
+      internalID: -273410130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snowy_walk_2
+      name: Snowy_idle_2
       rect:
         serializedVersion: 2
         x: 117
         y: 0
-        width: 24
+        width: 25
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,19 +179,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fb518df8853d524fa03135497d5f818
-      internalID: -1453778738
+      spriteID: 9e85b5510e54d6a468a0dbde9e34aee5
+      internalID: -522338142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snowy_walk_3
+      name: Snowy_idle_3
       rect:
         serializedVersion: 2
         x: 165
         y: 0
-        width: 24
+        width: 25
         height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,50 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73744c65d3d3ff442ba5db5011cf8556
-      internalID: -2095084851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Snowy_walk_4
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 0
-        width: 23
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a07d7077a2a536a41b45fc7c590a57a9
-      internalID: -971036432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Snowy_walk_5
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 158bb55ea3303d14589eda5158dfbd77
-      internalID: 632505827
+      spriteID: d800502e7863fcd44b25be8d253181f2
+      internalID: 1594271784
       vertices: []
       indices: 
       edges: []
@@ -259,12 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Snowy_walk_0: 302770875
-      Snowy_walk_1: 476296218
-      Snowy_walk_2: -1453778738
-      Snowy_walk_3: -2095084851
-      Snowy_walk_4: -971036432
-      Snowy_walk_5: 632505827
+      Snowy_idle_0: 390140905
+      Snowy_idle_1: -273410130
+      Snowy_idle_2: -522338142
+      Snowy_idle_3: 1594271784
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
