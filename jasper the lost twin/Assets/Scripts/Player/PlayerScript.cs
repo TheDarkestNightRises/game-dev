@@ -48,6 +48,10 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	[SerializeField]
 	private float currentHealth;
 
+	public Transform keyFollowPoint;
+
+	public Key followingKey;
+
 	public float CurrentHealth
 	
 	{
