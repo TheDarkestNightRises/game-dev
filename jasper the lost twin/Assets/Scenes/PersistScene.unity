@@ -13965,6 +13965,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Lorem ipsum
       objectReference: {fileID: 0}
+    - target: {fileID: 6722665927818683946, guid: eead3b65d01588d4ab138b869eca7ab8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 399
+      objectReference: {fileID: 0}
     - target: {fileID: 8109717782012302368, guid: eead3b65d01588d4ab138b869eca7ab8, type: 3}
       propertyPath: m_Name
       value: Dialogue
