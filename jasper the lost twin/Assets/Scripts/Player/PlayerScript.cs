@@ -50,6 +50,8 @@ public class PlayerScript : MonoBehaviour, IDamageable
 
 	public Transform keyFollowPoint;
 
+	public Key followingKey;
+
 	public float CurrentHealth
 	
 	{

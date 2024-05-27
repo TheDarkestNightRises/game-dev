@@ -34,6 +34,7 @@ public class Key : MonoBehaviour
                 followTarget = thePlayer.keyFollowPoint;
 
                 isFollowing = true;
+                thePlayer.followingKey = this;
             }
         }
     }
