@@ -11,7 +11,7 @@ public class Key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isFollowing = true;
+
     }
 
     // Update is called once per frame
@@ -20,6 +20,21 @@ public class Key : MonoBehaviour
         if(isFollowing)
         {
             transform.position = Vector3.Lerp(transform.position, followTarget.position, followSpeed * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {d
+            if(!isFollowing)
+            {
+                PlayerScript thePlayer = FindObjectOfType<PlayerScript>();
+
+                followTarget = thePlayer.keyFollowPoint;
+
+                isFollowing = true;
+            }
         }
     }
 }
