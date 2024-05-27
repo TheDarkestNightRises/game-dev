@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1a74e4884dbb8943aee1926769b378f, type: 3}
-  m_Name: Hound_Idle_SO
+  m_Script: {fileID: 11500000, guid: fe20c3e86f71f16468fbd1445c044a88, type: 3}
+  m_Name: Swordsman_HitTime
   m_EditorClassIdentifier: 
-  minIdleTime: 1
-  maxIdleTime: 2
+  stunTime: 0.25
+  bloodVFX: {fileID: 439858041109348839, guid: 3365623743d65c3458d4aa0addcfad47, type: 3}

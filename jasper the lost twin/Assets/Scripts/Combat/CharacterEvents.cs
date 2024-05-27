@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;	
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class CharacterEvents 
+public abstract class CharacterEvents
 {
-	public static UnityAction<GameObject, float> characterDamaged;
-	
-	public static UnityAction<GameObject, float> characterHealed;
-	
-	public static UnityAction<float, float> OnHealthChanged;	
+    public static UnityAction<GameObject, float> CharacterDamaged;
+
+    public static UnityAction<GameObject, float> CharacterHealed;
+
+    public static UnityAction<float, float> OnHealthChanged;
 }

@@ -6,7 +6,7 @@ public class Archer_HitState : HitState
 {
 	private Archer enemy;
 
-    public Archer_HitState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_HitState stateData, Archer enemy) : base(etity, stateMachine, animBoolName, stateData)
+    public Archer_HitState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_HitState stateData, Archer enemy) : base(entity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
     }

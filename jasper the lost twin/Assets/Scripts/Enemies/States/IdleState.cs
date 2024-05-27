@@ -12,7 +12,7 @@ public class IdleState : State
 
 	protected float idleTime;
 
-	public IdleState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData) : base(etity, stateMachine, animBoolName)
+	public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData) : base(entity, stateMachine, animBoolName)
 	{
 		this.stateData = stateData;
 	}

@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerGroundedState : PlayerState
+﻿public class PlayerGroundedState : PlayerState
 {
 	protected int xInput;
 	protected int yInput;

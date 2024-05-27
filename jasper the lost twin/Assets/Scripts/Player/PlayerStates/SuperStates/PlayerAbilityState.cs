@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerAbilityState : PlayerState
+﻿public class PlayerAbilityState : PlayerState
 {
 	public bool isAbilityDone;
 	private bool isGrounded;

@@ -1,37 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     private float speed;
     private float travelDistance;
     private float xStartPos;
-	private float damage; 
-	
-    [SerializeField]
-    private float gravity;
-    [SerializeField]
-    private float damageRadius;
+    private float damage;
+
+    [SerializeField] private float gravity;
+    [SerializeField] private float damageRadius;
 
     private Rigidbody2D rb;
 
-	private bool isGravityOn = false;
+    private bool isGravityOn = false;
     private bool hasHitGround;
 
-    [SerializeField]
-    private LayerMask whatIsGround;
-    [SerializeField]
-    private LayerMask whatIsPlayer;
-    [SerializeField]
-    private Transform damagePosition;
+    [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private LayerMask whatIsPlayer;
+    [SerializeField] private Transform damagePosition;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
         rb.gravityScale = 0.0f;
-	    rb.velocity = -transform.right * speed;
+        rb.velocity = -transform.right * speed;
 
         isGravityOn = false;
 
@@ -59,21 +52,21 @@ public class Projectile : MonoBehaviour
 
             if (damageHit)
             {
-	            var damageable = damageHit.GetComponent<IDamageable>();
-	            if (damageable != null)
-	            {
-		            var damageData = new DamageData(damage, this.gameObject);
-		            damageable.Damage(damageData);
-		            Destroy(gameObject); 
-	            }
+                var damageable = damageHit.GetComponent<IDamageable>();
+                if (damageable != null)
+                {
+                    var damageData = new DamageData(damage, this.gameObject);
+                    damageable.Damage(damageData);
+                    Destroy(gameObject);
+                }
             }
 
             if (groundHit)
             {
                 hasHitGround = true;
                 rb.gravityScale = 0f;
-	            rb.velocity = Vector2.zero;
-	            Destroy(gameObject); 
+                rb.velocity = Vector2.zero;
+                Destroy(gameObject);
             }
 
 
@@ -89,13 +82,11 @@ public class Projectile : MonoBehaviour
     {
         this.speed = speed;
         this.travelDistance = travelDistance;
-	    this.damage = damage;
+        this.damage = damage;
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(damagePosition.position, damageRadius);
     }
-    
 }
-

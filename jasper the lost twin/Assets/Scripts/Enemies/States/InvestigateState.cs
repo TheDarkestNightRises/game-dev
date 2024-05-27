@@ -13,7 +13,7 @@ public class InvestigateState : State
 	protected float lastFlipTime;
 	protected float ammountOfFlipsDone;
 	
-	public InvestigateState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_InvestigateState stateData) : base(etity, stateMachine, animBoolName)
+	public InvestigateState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_InvestigateState stateData) : base(entity, stateMachine, animBoolName)
 	{
 		this.stateData = stateData;
 	}

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class HighScoreUI : MonoBehaviour
@@ -20,12 +18,12 @@ public class HighScoreUI : MonoBehaviour
 	
 	private void OnEnable()
 	{
-		ResourceEvents.highScoreIncreased += OnHighScoreIncreased;
+		ResourceEvents.HighScoreIncreased += OnHighScoreIncreased;
 	}
 
 	private void OnDisable()
 	{
-		ResourceEvents.highScoreIncreased -= OnHighScoreIncreased;
+		ResourceEvents.HighScoreIncreased -= OnHighScoreIncreased;
 	}
 
 	private void OnHighScoreIncreased(GameObject player, float newHighScore)

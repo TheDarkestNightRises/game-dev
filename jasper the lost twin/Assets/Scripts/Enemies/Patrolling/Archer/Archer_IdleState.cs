@@ -6,7 +6,7 @@ public class Archer_IdleState : IdleState
 {
 	private Archer enemy;
 
-    public Archer_IdleState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData, Archer enemy) : base(etity, stateMachine, animBoolName, stateData)
+    public Archer_IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData, Archer enemy) : base(entity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
     }

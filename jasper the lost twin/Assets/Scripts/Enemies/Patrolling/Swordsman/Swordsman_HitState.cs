@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Hound_HitState : HitState
+public class Swordsman_HitState : HitState
 {
-	private Hound enemy;
+	private Swordsman enemy;
 	
-	public Hound_HitState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_HitState stateData, Hound enemy) : base(entity, stateMachine, animBoolName, stateData)
+	public Swordsman_HitState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_HitState stateData, Swordsman enemy) : base(entity, stateMachine, animBoolName, stateData)
 	{
 		this.enemy = enemy;
 	}

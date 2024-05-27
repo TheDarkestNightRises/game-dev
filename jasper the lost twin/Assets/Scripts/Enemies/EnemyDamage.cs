@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
@@ -9,9 +7,9 @@ public class EnemyDamage : MonoBehaviour
 	// Sent when another object enters a trigger collider attached to this object (2D physics only).
 	protected void OnTriggerEnter2D(Collider2D other)
 	{
-		if(other.tag == "Player")			
+		if(other.CompareTag("Player"))			
 		{
-			var damageData = new DamageData(damage, this.gameObject);
+			var damageData = new DamageData(damage, gameObject);
 			other.GetComponent<IDamageable>().Damage(damageData);
 		}
 	}

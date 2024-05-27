@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
@@ -25,13 +23,13 @@ public class GameSession : MonoBehaviour
 	public void AddToScore(float pointsToAdd)
 	{
 		highScore += pointsToAdd;
-		ResourceEvents.highScoreIncreased.Invoke(gameObject, highScore);
+		ResourceEvents.HighScoreIncreased.Invoke(gameObject, highScore);
 	}
 	
 	public void AddToGold(int goldToAdd)
 	{
 		gold += goldToAdd;
-		ResourceEvents.goldIncreased.Invoke(gameObject, gold);
+		ResourceEvents.GoldIncreased.Invoke(gameObject, gold);
 	}
 
 	private void ResetGameSession()

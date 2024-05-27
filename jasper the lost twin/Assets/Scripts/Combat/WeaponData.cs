@@ -1,14 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 [System.Serializable]
 public class WeaponData : MonoBehaviour
 {
-	[SerializeField]
-	public string attackName;
-	[SerializeField]
-	public float movementSpeed;
-	[SerializeField]
-	public float damageAmmount;
+    [SerializeField] public string attackName;
+    [SerializeField] public float movementSpeed;
+    [SerializeField] public float damageAmount;
 }

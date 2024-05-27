@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
@@ -9,7 +7,7 @@ public class LevelManager : MonoBehaviour
 	// Awake is called when the script instance is being loaded.
 	protected void Awake()
 	{
-		if(LevelManager.instance == null) instance = this;
+		if(instance == null) instance = this;
 		else Destroy(gameObject);
 	}
 	

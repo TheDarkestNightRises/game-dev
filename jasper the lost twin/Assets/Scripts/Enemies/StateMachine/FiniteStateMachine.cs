@@ -1,12 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class FiniteStateMachine
+﻿public class FiniteStateMachine
 {
-	public State CurrentState { get; private set; }
+    public State CurrentState { get; private set; }
 
-	public void Initialize(State startState)
+    public void Initialize(State startState)
     {
         CurrentState = startState;
         CurrentState.Enter();

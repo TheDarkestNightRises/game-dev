@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerAttackState : PlayerAbilityState
+﻿public class PlayerAttackState : PlayerAbilityState
 {
 	private Weapon weapon;
 	

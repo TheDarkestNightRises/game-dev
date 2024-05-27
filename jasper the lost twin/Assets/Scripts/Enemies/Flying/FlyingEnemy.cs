@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FlyingEnemy : MonoBehaviour, IDamageable
 {
@@ -100,7 +98,7 @@ public class FlyingEnemy : MonoBehaviour, IDamageable
 		
 		Debug.Log("Took damage lol {damageData.Amount}");
 		currentHealth -= damageData.Amount;
-		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
+		CharacterEvents.CharacterDamaged.Invoke(gameObject, damageData.Amount);
 		
 		if (currentHealth <= 0)
 		{

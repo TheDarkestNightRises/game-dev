@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public static class ResourceEvents 
 {
-	public static UnityAction<GameObject, float> highScoreIncreased;
-	public static UnityAction<GameObject, float> goldIncreased;
+	public static UnityAction<GameObject, float> HighScoreIncreased;
+	public static UnityAction<GameObject, float> GoldIncreased;
 }

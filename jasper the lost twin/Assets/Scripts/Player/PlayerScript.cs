@@ -217,7 +217,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		if (StateMachine.CurrentState == HitState) return;	
 		CurrentHealth -= damageData.Amount;
 		CurrentHealth = Mathf.Max(0, CurrentHealth);
-		CharacterEvents.characterDamaged.Invoke(gameObject, damageData.Amount);
+		CharacterEvents.CharacterDamaged.Invoke(gameObject, damageData.Amount);
 		StateMachine.ChangeState(HitState);
 	}
 	
@@ -228,7 +228,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 			CurrentHealth += healthRestore;
 			CurrentHealth = Mathf.Min(CurrentHealth, playerData.maxHealth);
 	
-			CharacterEvents.characterHealed(gameObject, healthRestore);
+			CharacterEvents.CharacterHealed(gameObject, healthRestore);
 		}
 	}
 }

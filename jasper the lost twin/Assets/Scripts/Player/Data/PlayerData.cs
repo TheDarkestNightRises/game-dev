@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "newPlayerStats", menuName = "Data/Player Data/Base Data")]
 public class PlayerData : ScriptableObject

@@ -19,15 +19,15 @@ public class HealthManagerUI : MonoBehaviour
 	// This function is called when the object becomes enabled and active.
 	protected void OnEnable()
 	{
-		CharacterEvents.characterDamaged += ShowDamage;
-		CharacterEvents.characterHealed += ShowHeal;
+		CharacterEvents.CharacterDamaged += ShowDamage;
+		CharacterEvents.CharacterHealed += ShowHeal;
 	}
 	
 	// This function is called when the behaviour becomes disabled () or inactive.
 	protected void OnDisable()
 	{
-		CharacterEvents.characterDamaged -= ShowDamage;
-		CharacterEvents.characterHealed -= ShowHeal;
+		CharacterEvents.CharacterDamaged -= ShowDamage;
+		CharacterEvents.CharacterHealed -= ShowHeal;
 	}
 	
 	public void ShowDamage(GameObject character, float ammount)

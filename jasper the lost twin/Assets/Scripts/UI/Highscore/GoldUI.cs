@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class GoldUI : MonoBehaviour
@@ -20,12 +18,12 @@ public class GoldUI : MonoBehaviour
 	
 	private void OnEnable()
 	{
-		ResourceEvents.goldIncreased += OnGoldIncreased;
+		ResourceEvents.GoldIncreased += OnGoldIncreased;
 	}
 
 	private void OnDisable()
 	{
-		ResourceEvents.goldIncreased -= OnGoldIncreased;
+		ResourceEvents.GoldIncreased -= OnGoldIncreased;
 	}
 
 	private void OnGoldIncreased(GameObject player, float newGold)
