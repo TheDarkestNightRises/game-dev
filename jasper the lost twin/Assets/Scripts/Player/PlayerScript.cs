@@ -14,7 +14,6 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public PlayerInAirState InAirState { get; set; }	
 	public PlayerLandState LandState { get; set; }
 	public PlayerAttackState PrimaryAttackState { get; set; }
-	public PlayerAttackState SecondaryAttackState { get; set; }
 	public PlayerDashState DashState { get; set; }
 	public PlayerHitState HitState { get; set; }
 	public PlayerDeathState DeathState { get; set; }
@@ -72,7 +71,6 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
 		LandState = new PlayerLandState(this, StateMachine, playerData, "land");
 		PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
-		SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 		DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
 		HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
 		DeathState = new PlayerDeathState(this, StateMachine, playerData, "death");

@@ -10,6 +10,6 @@ public class GoToMainMenu : MonoBehaviour
 	
 	public void LoadMainMenu()
 	{
-		SceneManager.LoadScene(mainMenu);
+		GameSession.instance.ResetGameSession();
 	}
 }

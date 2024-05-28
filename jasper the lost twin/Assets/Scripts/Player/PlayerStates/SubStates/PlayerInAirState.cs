@@ -42,10 +42,6 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.PrimaryAttackState);
         }
-        else if (player.InputHandler.SecondaryAttackInput)
-        {
-            stateMachine.ChangeState(player.SecondaryAttackState);
-        }
         else if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
             HandleLanding();

@@ -20,7 +20,8 @@ public class WinTrigger : MonoBehaviour
     }
 
     private IEnumerator DelayWinCutscene()
-    {
+	{
+		GameSession.instance.WinGame();
         yield return new WaitForSeconds(0.5f);
         ChangeToWinCutscene();
     }

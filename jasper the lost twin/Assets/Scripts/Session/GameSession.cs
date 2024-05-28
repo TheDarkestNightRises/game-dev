@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameSession : MonoBehaviour
 {
 	public static GameSession instance;
+	private const string HighScoreKey = "HighScore";
 	[SerializeField] public float highScore = 0f;
 	[SerializeField] public float gold = 0f;
 
@@ -31,11 +32,27 @@ public class GameSession : MonoBehaviour
 		gold += goldToAdd;
 		ResourceEvents.GoldIncreased.Invoke(gameObject, gold);
 	}
-
-	private void ResetGameSession()
+	
+	public void WinGame()
+	{
+		SaveScore();
+	}
+	
+	public void ResetGameSession()
 	{
 		SceneManager.LoadScene(0);
-		FindObjectOfType<DontDestroyOnLoad>().ResetScenePersist();
 		Destroy(gameObject);
+	}
+	
+	private void SaveScore()
+	{
+		var previousHighscore = PlayerPrefs.GetFloat(HighScoreKey, 0f);
+		Debug.Log(previousHighscore);
+		if (highScore > previousHighscore)
+		{
+			PlayerPrefs.SetFloat(HighScoreKey, highScore);
+		}
+		
+		PlayerPrefs.Save();
 	}
 }

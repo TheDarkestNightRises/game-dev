@@ -3,7 +3,6 @@
 public class FlyingDeathState : FlyingState
 {
     private Rigidbody2D rb;
-    private bool isFalling = false;
     private D_FlyingEnemy stateData;
 
     public FlyingDeathState(FlyingEnemy enemy, FlyingStateMachine stateMachine, string animBoolName,
@@ -26,7 +25,6 @@ public class FlyingDeathState : FlyingState
         {
             rb.gravityScale = 1f;
             rb.bodyType = RigidbodyType2D.Dynamic;
-            isFalling = true;
         }
     }
 }

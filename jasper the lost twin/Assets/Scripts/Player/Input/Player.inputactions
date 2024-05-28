@@ -33,15 +33,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SecondaryAttack",
-                    "type": "Button",
-                    "id": "3edfcb4d-e802-4036-aa8e-35af9899cb78",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Dash",
                     "type": "Button",
                     "id": "d7a12669-ed8e-46dc-9540-0b4e71d5ef86",
@@ -199,17 +190,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "PrimaryAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "071db930-d6bb-4212-b61e-18ac1a589f9c",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "SecondaryAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

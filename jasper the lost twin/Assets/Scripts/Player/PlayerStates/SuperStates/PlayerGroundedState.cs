@@ -30,10 +30,6 @@
 		{
 			stateMachine.ChangeState(player.PrimaryAttackState);
 		}
-		else if (player.InputHandler.SecondaryAttackInput)
-		{
-			stateMachine.ChangeState(player.SecondaryAttackState);
-		}
 		else if (jumpInput && player.JumpState.CanJump())
 		{
 			player.InputHandler.UseJumpInput();

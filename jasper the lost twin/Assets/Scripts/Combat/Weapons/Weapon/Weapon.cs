@@ -4,7 +4,6 @@ using Cinemachine;
 public class Weapon : MonoBehaviour
 {
     protected Animator baseAnimator;
-    protected Animator weaponAnimator;
     private CinemachineImpulseSource impulseCamera;
 
     protected PlayerAttackState attackState;
@@ -13,25 +12,21 @@ public class Weapon : MonoBehaviour
     protected virtual void Start()
     {
         baseAnimator = transform.Find("Base").GetComponent<Animator>();
-        weaponAnimator = transform.Find("Weapon").GetComponent<Animator>();
         impulseCamera = GetComponent<CinemachineImpulseSource>();
     }
 
     public virtual void EnterWeapon()
     {
         baseAnimator.SetBool("attack", true);
-        weaponAnimator.SetBool("attack", true);
 
         if (attackCounter >= 3) attackCounter = 0;
 
         baseAnimator.SetInteger("attackCounter", attackCounter);
-        weaponAnimator.SetInteger("attackCounter", attackCounter);
     }
 
     public virtual void ExitWeapon()
     {
         baseAnimator.SetBool("attack", false);
-        weaponAnimator.SetBool("attack", false);
 
         attackCounter++;
     }

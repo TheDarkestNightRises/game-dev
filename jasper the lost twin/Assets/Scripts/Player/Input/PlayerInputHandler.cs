@@ -16,7 +16,6 @@ public class PlayerInputHandler : MonoBehaviour
     public bool JumpInput { get; set; }
     public bool JumpInputStop { get; set; }
     public bool PrimaryAttackInput { get; set; }
-    public bool SecondaryAttackInput { get; set; }
     public bool DashInput { get; set; }
     public bool DashInputStop { get; set; }
 
@@ -38,19 +37,6 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.canceled)
         {
             PrimaryAttackInput = false;
-        }
-    }
-
-    public void OnSecondaryAttackInput(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            SecondaryAttackInput = true;
-        }
-
-        if (context.canceled)
-        {
-            SecondaryAttackInput = false;
         }
     }
 
