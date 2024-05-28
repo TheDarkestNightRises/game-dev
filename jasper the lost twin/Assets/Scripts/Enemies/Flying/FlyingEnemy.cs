@@ -7,6 +7,7 @@ public class FlyingEnemy : MonoBehaviour, IDamageable
 	public bool Returning { get; set; }
 	[SerializeField]
 	private float currentHealth;
+	[SerializeField] public GameObject[] itemDrops;
 	public GameObject Player { get; set; }
 	public Transform startingPoint;
 	public Animator Anim { get; set; }
@@ -104,6 +105,15 @@ public class FlyingEnemy : MonoBehaviour, IDamageable
 		{
 			isAlive = false;
 			stateMachine.ChangeState(DeathState);
+		}
+	}
+	
+	
+	public void ItemDrop()
+	{
+		for (int i = 0; i < itemDrops.Length; i++)
+		{
+			Instantiate(itemDrops[i], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
 		}
 	}
 }

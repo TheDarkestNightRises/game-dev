@@ -258,5 +258,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+  itemDrops:
+  - {fileID: 681863625418149837, guid: c9333cace09ecdf4ba674c098287aa44, type: 3}
+  - {fileID: 681863625418149837, guid: c9333cace09ecdf4ba674c098287aa44, type: 3}
+  - {fileID: 681863625418149837, guid: c9333cace09ecdf4ba674c098287aa44, type: 3}
+  - {fileID: 681863625418149837, guid: c9333cace09ecdf4ba674c098287aa44, type: 3}
   startingPoint: {fileID: 0}
   stateData: {fileID: 11400000, guid: 374784b4f64051d43ad83390550ca6bf, type: 2}
