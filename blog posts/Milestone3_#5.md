@@ -3,6 +3,18 @@
 ## Description
 N/A
 
+## Enemy AI
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/91905169/89553ce8-2e9f-4d72-9b9d-69988f99f62f)
+
+Similar to the player, the enemy AI is made using a state machine. The enemy first starts in the move phase where they wander around the platform before a ledge is detected, making them turn arround so that they don't fall. At certain intervals they change their transition to idle. If an enemy spots the character then they go into the pursue state, while they move faster towards the enemy. If somehow the player jumps over the enemy or if the enemy loses track of its target then they go into investigate mode, where they try to turn arround and find the player. The enemies have a certain attack range and if they are close to the player they start attacking. The attack state is invoked by playing the attack animation which contains triggers for when the attack has finished. If the attack has finished and the player is in the radius of the attack(represented by a circle) then they will take damage. If their health bar is depleted, the enemy drops the coins as well as dissabling their rigidbody so that the player cannot attack anymore. For a nice touch, the sprite of the enemy sits on the ground for a few seconds, after which is destroyed. If there are a lot of enemies on the map an object pool could be used , but on each level there are arround 2-3 enemies.
+Separating the enemy into multiple states made a lot of the code easier to handle because the logic of the states are isolated. Many of the enemies in the game behave in the same way, so inheritance was used by creating a base entity class as well as base states. Adding animations or vfx was easy since the animator can invoke different animations for the enemy current state. This approach can also be more performant since the enemy is only in one state at a time , and doesn't have to check the conditions for other states. 
+
+## Shader Graph
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/91905169/04ce6ade-6413-4f5c-ad47-f9e4e01646ae)
+Shader graph is a tool that enables developers to build shaders using a visual scripting languange. As a simple example , a wind shader graph was built, one that sways the sprite in a certain direction. We can change the position of the sprite in a random position using a noise gradient. This noise gradient is added on the x position of the sprite by spliting the position of the sprite and combining it back later with the original values. For the bottom of the sprite be grounded in the world, a UV map was used and multiplied with the random noise created by the random noise. Paramaters where also added for the wind strength and the wind speed to change how the sprite looks for different materials. The wind speed controls the scale of the gradient noise , while the wind strength multiplies the output of the noise.By combining all of this a nice effect is created where the sprites move back and forth making the world a bit more dynamic.
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/91905169/40ca2d9c-4ad0-4556-a3fe-a2719c969f42)
+
 ## Hp bar
 
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/1beb22d7-8334-41dd-a348-ac1110afac6e) 
@@ -54,4 +66,3 @@ with the help of the scene manager. The sliders have their slide handler for a s
 The snow biome was added to the game consisting of icy platforms, snow mountains parallax background, frost enemies, and a brand-new thematic!
 
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/0aed04bb-5973-45f1-b0a6-9001b4b5665a)
-
