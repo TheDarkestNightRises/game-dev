@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 32232022}
   - component: {fileID: 32232021}
   - component: {fileID: 32232020}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Bouncing Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1164,49 +1164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
-  data:
-    dataString: UEsDBBQAAAgIAAAIIez95PEXawIAACUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWxoXGgt9YhpIckTGknF1+EtMYaZMkjyQGS4b93JdvYdU+I9/bjvdXKn0QoWwFz2myM4M+aA/k2If5Mvkx68gnO9KDVTnxAF/MmuCt8EA0xv6gTGvHYp1ldgjOCfVcH6YMjBGslcm3KNT9Aqq2zCOdUWkDKaOezFUKfE3LGn+nKp1zwNL/3pw88raLJFY8MlAPTh85nd21oFxjP4kWyTJaL5XoaL0JSrZikZQXcOxjkJl2XprZCb22E98G0lMK2woi7VMF4Sitboy0M4IKi0aAmni0QKEAcCucLDtNf89yCaxUaenkQBifW1CU/dDPGktpjo+ydyjpISKJGVlP1+b+AaRzo3OjyqWscR76JKwQ7/qIXRq0bDHoIPwy0hwmdqDzSvYS3AtSL3hhdK46kM7VPrS3MH/q/N29pAezY443UEVhX/cij0WV5D9dg/5xKUe49NfvaADupw8jDMoDBy/mJgsOq2LYEol7FHwu/6WG4Uy3xKIx1SLUulZe317XxoWQdZubd1C7VRkGAW9EVKCrdZYtl3PgOR9yg7Yh5pP71tM1brnsUo5QA9/FRNKK2+nS7LFvo0zPY4rV2UijoRXviBeeUaqWaFRvOpEvb1SanbJB2qAX/d7UIi+6TebKM6XJFl5zF04RS4PsFW0WLPEnu70jYPaHQJ5XbRmg7Hrw11RdXuGfdR2WyMbQK684NPW3ER6mHAoXK9Y4ZAPXalLgpB4Nd8GXyNRc4oR04J1S4cPKZEanZEXh265kFq+uzMzTrq2SkEu/aeSQjafiMZMTDt2XeGngXcPLNu2JXcv0LUEsDBBQAAAgIAAAIIexHx8W7bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSsoG5mZGZhWGihWWiRUqyoa5ZYmJqSpJxsqWBcZqZmbmpUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIez95PEXawIAACUFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIexHx8W7bQAAAHgAAAAJACQAAAAAAAAAAAAAALgCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAcAMAAAAA
-    upgradeData: 
-    file_cachedStartup: {fileID: 0}
-    data_cachedStartup: 
-    cacheStartup: 0
-  showNavGraphs: 1
-  showUnwalkableNodes: 1
-  debugMode: 0
-  debugFloor: 0
-  debugRoof: 1
-  manualDebugFloorRoof: 0
-  showSearchTree: 0
-  unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
-  maxNearestNodeDistance: 100
-  scanOnStartup: 1
-  fullGetNearestSearch: 0
-  prioritizeGraphs: 0
-  prioritizeGraphsLimit: 1
-  colorSettings:
-    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
-    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
-    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
-    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
-    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
-    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
-    _AreaColors:
-    - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
-  heuristic: 2
-  heuristicScale: 1
-  threadCount: 1
-  maxFrameTime: 1
-  batchGraphUpdates: 0
-  graphUpdateBatchingInterval: 0.2
-  euclideanEmbedding:
-    mode: 0
-    seed: 0
-    pivotPointRoot: {fileID: 0}
-    spreadOutCount: 1
-  showGraphs: 1
 --- !u!1001 &1274876593
 PrefabInstance:
   m_ObjectHideFlags: 0
