@@ -5571,10 +5571,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1227603192}
     m_Modifications:
-    - target: {fileID: 703619583787239622, guid: 7411b8dab0059494e974a3e66948aa79, type: 3}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
     - target: {fileID: 1819594958549542231, guid: 7411b8dab0059494e974a3e66948aa79, type: 3}
       propertyPath: m_Name
       value: GunTrap
