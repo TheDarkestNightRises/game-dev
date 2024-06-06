@@ -56,7 +56,7 @@ public class ShopInteraction : MonoBehaviour
             shopOpen = !shopOpen;
             shopCanvas.gameObject.SetActive(shopOpen);
             pressButtonCanvas.gameObject.SetActive(false);
-            Time.timeScale = shopOpen ? 0f : 1f;
+            //Time.timeScale = shopOpen ? 0f : 1f;
         }
     }
 }
