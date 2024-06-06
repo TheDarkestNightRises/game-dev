@@ -264,14 +264,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShop
       objectReference: {fileID: 0}
-    - target: {fileID: 3145959957156851089, guid: 13f9ad750a98ab5488438d29373b2223, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3783994968230867815, guid: 13f9ad750a98ab5488438d29373b2223, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8562363706940508946, guid: 13f9ad750a98ab5488438d29373b2223, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.87885
@@ -679,7 +671,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1448851839
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}

@@ -970,6 +970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopCanvas: {fileID: 7445894841979030518}
   pressButtonCanvas: {fileID: 67578506460512825}
+  button1: {fileID: 1774423197449017520}
 --- !u!61 &911505482787090348
 BoxCollider2D:
   m_ObjectHideFlags: 0
