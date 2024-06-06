@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
+
 
 public class ShopBuyScript : MonoBehaviour
 {
@@ -30,7 +32,7 @@ public class ShopBuyScript : MonoBehaviour
             Debug.LogError("PlayerScript instance not found");
             return;
         }
-
+	    
         UpdateButtonColors();
     }
 

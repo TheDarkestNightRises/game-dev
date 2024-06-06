@@ -18,6 +18,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool PrimaryAttackInput { get; set; }
     public bool DashInput { get; set; }
     public bool DashInputStop { get; set; }
+	public bool InteractInput { get; set; }
 
 
     public void Start()
@@ -47,6 +48,19 @@ public class PlayerInputHandler : MonoBehaviour
             PauseMenuManager.Instance?.TogglePauseMenu();
         }
     }
+    
+    
+	public void OnInteractInput(InputAction.CallbackContext context)
+	{
+		if (context.started)
+		{
+			InteractInput = true;
+		}
+		else if (context.canceled)
+		{
+			InteractInput = false;
+		}
+	}
 
 
     public void OnDashInput(InputAction.CallbackContext context)

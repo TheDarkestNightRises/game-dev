@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ShopInteraction : MonoBehaviour
 {
     public Canvas shopCanvas;
     public Canvas pressButtonCanvas;
-
+	private PlayerInputHandler input { get; set; }
     private bool playerInRange = false;
-    private bool shopOpen = false;
+	private bool shopOpen = false;
+	public GameObject button1;
+	private GameObject pauseMenu;
 
     void Start()
-    {
+	{
+		pauseMenu = EventSystem.current.currentSelectedGameObject;
+		input = GameObject.FindObjectOfType<PlayerInputHandler>();
         if (shopCanvas == null)
         {
             Debug.LogError("Shop Canvas is not assigned.");
@@ -51,9 +56,11 @@ public class ShopInteraction : MonoBehaviour
 
     void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.B))
-        {
-            shopOpen = !shopOpen;
+	    if (playerInRange && input.InteractInput)
+	    {
+		    if (shopOpen is true) EventSystem.current.SetSelectedGameObject(button1);
+
+	        shopOpen = !shopOpen;
             shopCanvas.gameObject.SetActive(shopOpen);
             pressButtonCanvas.gameObject.SetActive(false);
             //Time.timeScale = shopOpen ? 0f : 1f;
