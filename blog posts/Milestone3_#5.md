@@ -137,9 +137,7 @@ The rest of the code consists of serializable classes (DialogueCharacter, Dialog
 
 ## Doors
 
-
-  <img src="![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/2f380a19-0939-4ce5-9f19-3fcd1eae0bd8)" width="45%" />
-  <img src="![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/668a8755-8fe2-4e6f-aaa1-cc0cf87ba372)" width="45%" />
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/a1c9f333-bfdf-4fcc-80b1-327ec7ae8bef)
 
 The incorporation of doors in the game serves as a vital component in enhancing both user experience and gameplay. These doors are not just static objects; they play a dynamic role in facilitating smooth transitions between levels. Defeating monsters and collecting the floating keys adds a layer of challenge and accomplishment to the gameplay, making the unlocking of doors an exhilarating experience for players. The moment a key approaches the door, it unlocks and opens, signifying progress and achievement. This innovative gameplay mechanic not only encourages exploration but also contributes to a heightened sense of immersion and engagement for players, highlighting the importance of well-designed and unique elements in elevating the overall user experience.
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/e19e9271-728e-43ac-a83f-2e2c8f21e3bf)
