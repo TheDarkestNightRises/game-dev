@@ -44,4 +44,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Snow/Snow_Level_3.unity
     guid: caa363b849ecb2947bc53016db160f3f
+  - enabled: 1
+    path: Assets/Scenes/Swamps/Swamp_Level_1.unity
+    guid: b5a650b3581f5ed4fa7796aa0e20b43a
+  - enabled: 1
+    path: Assets/Scenes/Swamps/Swamp_Level_2.unity
+    guid: cdc68c31bc85ed641a737b7fd8a4c428
+  - enabled: 1
+    path: Assets/Scenes/Swamps/Swamp_Level_3.unity
+    guid: c0e99117958dbe04387f9bf2449b37d2
   m_configObjects: {}

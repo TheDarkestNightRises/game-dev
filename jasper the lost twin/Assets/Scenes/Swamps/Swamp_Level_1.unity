@@ -13943,6 +13943,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 348405114}
     m_Modifications:
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: targetPosition.x
+      value: 63.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: targetPosition.y
+      value: 2.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: sceneToLoad.m_SceneName
+      value: Swamp_Level_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: sceneToLoad.m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: cdc68c31bc85ed641a737b7fd8a4c428, type: 3}
     - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.27

@@ -1,6 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
@@ -9,9 +10,14 @@ public class Door : MonoBehaviour
 
     public SpriteRenderer theSR;
 
-    public Sprite doorOpenSprite;
+	public Sprite doorOpenSprite;
 
-    public bool doorOpen, waitingToOpen;
+	public bool doorOpen, waitingToOpen;
+    
+	[SerializeField]
+	public SceneField sceneToLoad;
+	[SerializeField]
+	public Vector3 targetPosition; 
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +40,9 @@ public class Door : MonoBehaviour
 
                 thePlayer.followingKey.gameObject.SetActive(false);
 
-                thePlayer.followingKey = null;
+	            thePlayer.followingKey = null;
+                
+	            StartCoroutine(TransitionToNewScene());	            
             }
         }
     }
@@ -50,4 +58,21 @@ public class Door : MonoBehaviour
             }
         }
     }
+    
+	private IEnumerator TransitionToNewScene()
+	{
+		yield return StartCoroutine(SceneTransition.instance.FadeOut());
+		// Load the new scene
+		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
+
+		// Wait until the new scene is fully loaded
+		while (!asyncLoad.isDone)
+		{
+			yield return null;
+		}
+
+		thePlayer.transform.position = targetPosition;
+		yield return StartCoroutine(SceneTransition.instance.FadeIn());
+	}
+
 }
