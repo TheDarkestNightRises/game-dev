@@ -84,6 +84,7 @@ Lastly, I implemented a color over lifetime setting to introduce subtle variatio
 
 
 ## Pendulum
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/033da140-390e-49dd-be5d-bfc38a2a09c5)
 
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/254947c2-0cec-4bff-8222-0c0f5a3c1914)
 
