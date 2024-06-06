@@ -60,7 +60,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680144557013950172}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.6905684, y: 0.69930434, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08, y: 0.01}
+  m_Offset: {x: -0.009906054, y: -0.0084421635}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -163,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37874007, y: 0.99347186}
+  m_Size: {x: 0.6230998, y: 1.0949042}
   m_EdgeRadius: 0
 --- !u!114 &4138267754272676859
 MonoBehaviour:
@@ -194,7 +194,7 @@ MonoBehaviour:
   investigateData: {fileID: 11400000, guid: 5c97678c84da80640931fb5f3ea36e89, type: 2}
   hitStateData: {fileID: 11400000, guid: d2fcb23676ea2344ca7266da190a1109, type: 2}
   deathStateData: {fileID: 11400000, guid: da9bf523469f7b74d8e7d600ca9bae11, type: 2}
-  rangedAttackStateData: {fileID: 11400000, guid: b24f6da411a250649808605027b7319e, type: 2}
+  rangedAttackStateData: {fileID: 11400000, guid: cf2dfc32d80ef714b907613d57f34357, type: 2}
   rangedAttackPosition: {fileID: 546099363692779938}
 --- !u!212 &160835249132195549
 SpriteRenderer:
