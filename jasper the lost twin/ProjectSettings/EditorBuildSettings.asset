@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Swamps/Swamp_Level_3.unity
     guid: c0e99117958dbe04387f9bf2449b37d2
+  - enabled: 1
+    path: Assets/Scenes/ControlsMenu.unity
+    guid: 36a345faf03bc154da16c2b57d71660f
   m_configObjects: {}

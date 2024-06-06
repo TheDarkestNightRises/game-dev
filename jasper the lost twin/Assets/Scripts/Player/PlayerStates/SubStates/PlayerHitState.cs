@@ -38,13 +38,13 @@ public class PlayerHitState : PlayerState
 	{
 		player.IsInvincibile = true; 
 		for (int i = 0; i < playerData.numberOfFlashes; i++) {
-			player.spriteRender.color = new Color(1, 0, 0, 0.55f); 
+			player.SpriteRenderer.color = new Color(1, 0, 0, 0.55f); 
 			yield return new WaitForSeconds(playerData.invincibilityTime / (playerData.numberOfFlashes * 2));
-			player.spriteRender.color = Color.white; 
+			player.SpriteRenderer.color = Color.white; 
 			yield return new WaitForSeconds(playerData.invincibilityTime / (playerData.numberOfFlashes * 2));
 		}
 
 		player.IsInvincibile = false;
-		player.spriteRender.color = Color.white; 
+		player.SpriteRenderer.color = Color.white; 
 	}
 }

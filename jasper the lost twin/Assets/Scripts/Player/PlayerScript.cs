@@ -32,7 +32,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public GameObject groundCheck;
 	public Rigidbody2D RB { get; set; }
 	private CapsuleCollider2D myBodyCollider;	
-	public SpriteRenderer spriteRender;
+	public SpriteRenderer SpriteRenderer { get; set; }
 	#endregion
 	
 	#region Particles
@@ -86,7 +86,8 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		RB = GetComponent<Rigidbody2D>();
 		impulseCamera = GetComponent<CinemachineImpulseSource>();
 		Inventory = GetComponent<PlayerInventory>();
-		spriteRender = GetComponent<SpriteRenderer>();
+		SpriteRenderer = GetComponent<SpriteRenderer>();
+		SpriteRenderer.color = Color.blue;
 		DashDirectionIndicator = transform.Find("DashDirectionIndicator");
 		FacingDirection = 1;
 		CurrentHealth = playerData.maxHealth;
