@@ -62,14 +62,20 @@ Alongside the existing challenges, the swamp level features three bats that intr
 These bats exhibit coordinated behavior, following the player's movements throughout the level. Players must adapt their navigation strategies to keep track of the bats' location while managing other environmental obstacles.
 Engaging with the bats requires precise timing and planning, as they may attempt to evade or outmaneuver the player, adding complexity and interest to the gameplay experience.
 
-## Slime 
+## Snail
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/2e48a42c-12e3-4d0b-9385-3abf4fa7c97b)
-
+In addition to other challenges, the swamp level incorporates snails that contribute to the overall gameplay.
+These snails move at a slow and steady pace, forcing players to adjust their timing and movement strategies accordingly.
+Some snails may leave slippery trails, introducing additional hazards that players must navigate around to maintain traction and progress through the level.
+Engaging with the snails and their trails requires careful observation and planning, encouraging players to adapt their approach based on the unique characteristics of these creatures.
 
 ## Bloat
 
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/db85cfdb-6975-4c63-bc10-dfb4fd98b51f)
-
+The swamp level includes green monsters that resemble cold bloats, adding another layer of challenge.
+These monsters can shoot acid at players, necessitating quick reactions and strategic movement to avoid damage.
+Players must maintain distance and use cover to protect themselves from acid attacks while engaging and defeating the green monsters.
+The monsters' unique abilities encourage players to adapt their combat strategies and develop new tactics to overcome the threat.
 
 
 ### Birds
