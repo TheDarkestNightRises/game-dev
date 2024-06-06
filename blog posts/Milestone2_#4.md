@@ -37,7 +37,7 @@ With this new milestone, we have introduced a proper background to our levels, c
 To create this effect we calculate the horizontal distance between the camera and the background layer, adjusting the background position accordingly based on 
 a specific parallax speed strength. By updating the background-position in relation to the camera movement, the script creates the illusion of parallax.
 
-![1](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/a6f75388-c6ca-4667-84de-45251ee3c2cb)
+
 
 ## Combat
 
