@@ -87,7 +87,6 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		impulseCamera = GetComponent<CinemachineImpulseSource>();
 		Inventory = GetComponent<PlayerInventory>();
 		SpriteRenderer = GetComponent<SpriteRenderer>();
-		SpriteRenderer.color = Color.blue;
 		DashDirectionIndicator = transform.Find("DashDirectionIndicator");
 		FacingDirection = 1;
 		CurrentHealth = playerData.maxHealth;

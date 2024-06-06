@@ -45,8 +45,8 @@ MonoBehaviour:
   deathImpulse: 1
   deathKickDirection: {x: 10, y: 10}
   stunTime: 0.5
-  invincibilityTime: 2
-  numberOfFlashes: 10
+  invincibilityTime: 1.5
+  numberOfFlashes: 5
   maxHealth: 800
   speedWhileAttacking: 3.4
   attackDamage: 10
