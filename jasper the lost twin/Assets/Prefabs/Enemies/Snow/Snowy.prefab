@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 9138597216350810052}
   - component: {fileID: 5036077843114714936}
   m_Layer: 9
-  m_Name: Snowy 1
+  m_Name: Snowy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
