@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropForce: 5
   pointsForCoinPickup: 1
+  coinSFX: {fileID: 8300000, guid: 910cb028b83248e48a699bda510f9d06, type: 3}
 --- !u!61 &7474784809466042397
 BoxCollider2D:
   m_ObjectHideFlags: 0

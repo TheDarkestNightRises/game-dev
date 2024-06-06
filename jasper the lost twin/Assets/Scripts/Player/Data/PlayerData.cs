@@ -44,7 +44,7 @@ public class PlayerData : ScriptableObject
 	[Header("Hit")]
 	public float stunTime = 0.5f;
 	public float invincibilityTime = 2f; 
-	public float numberOfFlashes = 5f; 
+	public int numberOfFlashes = 5; 
 
 	[Header("Health")]
 	public float maxHealth = 300f;

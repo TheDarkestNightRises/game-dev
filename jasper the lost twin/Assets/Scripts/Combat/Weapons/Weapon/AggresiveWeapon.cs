@@ -5,7 +5,14 @@ using UnityEngine;
 public class AggresiveWeapon : Weapon
 {
     [SerializeField] protected SO_AggresiveWeapon aggresiveWeaponData;
-    private List<IDamageable> detectedEnemies = new();
+	private List<IDamageable> detectedEnemies = new();
+	private AudioRandomiser audioRandomiser;
+
+	private void Awake()
+	{
+		// Get the AudioRandomiser component from the same GameObject
+		audioRandomiser = GetComponent<AudioRandomiser>();
+	}
 
     public override void AnimationActionTrigger()
     {
@@ -16,7 +23,8 @@ public class AggresiveWeapon : Weapon
             Debug.Log($"Someone should take {aggresiveWeaponData.damageAmmount}");
             var damageData = new DamageData(aggresiveWeaponData.damageAmmount, this.gameObject);
             entity.Damage(damageData);
-            GenerateImpulse(0.1f);
+	        GenerateImpulse(0.1f);
+	        audioRandomiser.Play();
         }
     }
 

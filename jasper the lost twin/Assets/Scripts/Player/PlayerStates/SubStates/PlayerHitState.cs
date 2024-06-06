@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerHitState : PlayerState
 {	
-	protected SpriteRenderer spriteRender;
 	public PlayerHitState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
 	{
 		
@@ -12,7 +11,6 @@ public class PlayerHitState : PlayerState
 	public override void Enter() {
 		base.Enter();
 		player.SetVelocityX(0f);
-		spriteRender = player.GetComponent<SpriteRenderer>();
 	}
 
 	public override void LogicUpdate() {
@@ -40,13 +38,13 @@ public class PlayerHitState : PlayerState
 	{
 		player.IsInvincibile = true; 
 		for (int i = 0; i < playerData.numberOfFlashes; i++) {
-			spriteRender.color = new Color(1, 0, 0, 0.55f); 
+			player.spriteRender.color = new Color(1, 0, 0, 0.55f); 
 			yield return new WaitForSeconds(playerData.invincibilityTime / (playerData.numberOfFlashes * 2));
-			spriteRender.color = Color.white; 
+			player.spriteRender.color = Color.white; 
 			yield return new WaitForSeconds(playerData.invincibilityTime / (playerData.numberOfFlashes * 2));
 		}
 
 		player.IsInvincibile = false;
-		spriteRender.color = Color.white; 
+		player.spriteRender.color = Color.white; 
 	}
 }

@@ -32,6 +32,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public GameObject groundCheck;
 	public Rigidbody2D RB { get; set; }
 	private CapsuleCollider2D myBodyCollider;	
+	public SpriteRenderer spriteRender;
 	#endregion
 	
 	#region Particles
@@ -52,7 +53,6 @@ public class PlayerScript : MonoBehaviour, IDamageable
 	public Key followingKey;
 
 	public float CurrentHealth
-	
 	{
 		get { return currentHealth; }
 		set { currentHealth = value; 
@@ -86,6 +86,7 @@ public class PlayerScript : MonoBehaviour, IDamageable
 		RB = GetComponent<Rigidbody2D>();
 		impulseCamera = GetComponent<CinemachineImpulseSource>();
 		Inventory = GetComponent<PlayerInventory>();
+		spriteRender = GetComponent<SpriteRenderer>();
 		DashDirectionIndicator = transform.Find("DashDirectionIndicator");
 		FacingDirection = 1;
 		CurrentHealth = playerData.maxHealth;
