@@ -1452,7 +1452,7 @@ PrefabInstance:
     - target: {fileID: 2886236003687865502, guid: 1966f9e23ec65fa43b3608039c58aeda, type: 3}
       propertyPath: _sceneToLoad.Array.data[0].m_SceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: 7b68aa59d48244f48985bfd001e8a2c8, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3088560577830956986, guid: 1966f9e23ec65fa43b3608039c58aeda, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.01

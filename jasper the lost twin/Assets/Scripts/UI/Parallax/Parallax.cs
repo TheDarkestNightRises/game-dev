@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Parallax : MonoBehaviour
 {
@@ -8,12 +9,12 @@ public class Parallax : MonoBehaviour
 	private float startPos;
 	private string cameraTag = "MainCamera";
 	public float parallaxEffect;
-	private Camera camera;
+	private CinemachineStateDrivenCamera camera;
 	
     void Start()
     {
 	    GameObject cameraObject = GameObject.FindWithTag(cameraTag);
-	    camera = cameraObject.GetComponent<Camera>();
+	    camera = FindObjectOfType<CinemachineStateDrivenCamera>();
 	    startPos =	transform.position.x;
 	    length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
