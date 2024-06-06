@@ -1,8 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-    public int healthRestore = 20;
+	public int healthRestore = 20;
+	[SerializeField] AudioClip healthSVX;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,7 +12,8 @@ public class HealthPickup : MonoBehaviour
             PlayerScript playerscript = collision.GetComponent<PlayerScript>();
             if (!playerscript.IsMaxHealth())
             {
-                playerscript.Heal(healthRestore);
+	            playerscript.Heal(healthRestore);
+	            AudioSource.PlayClipAtPoint(healthSVX, Camera.main.transform.position);
                 Destroy(gameObject);
             }
         }

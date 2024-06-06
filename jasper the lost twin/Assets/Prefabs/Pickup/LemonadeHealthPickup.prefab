@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthRestore: 15
+  healthSVX: {fileID: 8300000, guid: 9afac513ca787dc43a651baafa2e71df, type: 3}
 --- !u!58 &8802602596693051608
 CircleCollider2D:
   m_ObjectHideFlags: 0

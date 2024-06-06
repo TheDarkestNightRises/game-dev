@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 5
+  coinSVX: {fileID: 8300000, guid: 0958490bd76770749b946bd007281494, type: 3}
 --- !u!82 &3510952312272098514
 AudioSource:
   m_ObjectHideFlags: 0

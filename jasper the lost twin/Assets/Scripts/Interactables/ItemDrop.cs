@@ -5,7 +5,8 @@ public class ItemDrop : MonoBehaviour
     private Rigidbody2D itemRB;
     public float dropForce = 5;
 	[SerializeField] int pointsForCoinPickup = 1;
-    bool isCollected = false;
+	[SerializeField] AudioClip healthSVX;
+	bool isCollected = false;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class ItemDrop : MonoBehaviour
         {
 	        GameSession.instance.AddToGold(pointsForCoinPickup);
 	        isCollected = true;
+	        AudioSource.PlayClipAtPoint(healthSVX, Camera.main.transform.position);
 	        Destroy(gameObject);
         }
     }
