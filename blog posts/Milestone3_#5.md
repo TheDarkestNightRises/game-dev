@@ -86,7 +86,6 @@ Lastly, I implemented a color over lifetime setting to introduce subtle variatio
 ## Pendulum
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/033da140-390e-49dd-be5d-bfc38a2a09c5)
 
-![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/254947c2-0cec-4bff-8222-0c0f5a3c1914)
 
 Incorporating a pendulum in game design can have a profound impact on user experience, as I've seen firsthand. It can create interactive and engaging gameplay mechanics while enhancing the visual appeal of the game. In my experience, players appreciate innovative elements that add excitement and immersion to their gaming experience. Ultimately, integrating a pendulum into a game can offer a unique and memorable experience for players while also inspiring designers to push boundaries in their creations.
 
