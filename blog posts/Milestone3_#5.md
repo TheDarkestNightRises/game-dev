@@ -69,10 +69,10 @@ The snow biome was added to the game consisting of icy platforms, snow mountains
 
 
 ## Rain
-![aeb27acf7e182a3b61d77ec335ab1395.png](:/1bde1bd37f614828b1aecb255fc62a0d)
+![Unity_c4Lf6BTgrg](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/13b6b219-9c11-41b5-9a53-7583b0125345)
 Rain effects can also serve as a narrative tool to set the mood of a scene, amplifying the emotional weight of a moment or emphasizing a sense of urgency or tension. Additionally, rain can contribute to a tranquil and calming atmosphere in a peaceful setting.
 Finally, to really bring the game world to life, we added dynamic rain effects. By combining Unity's particle system with C# scripting, I created a realistic weather system that reacts to player actions and provides an additional layer of depth to the game. 
-![5449dc83acd6dfb3c1a814b0f03496f9.png](:/f69ad208b79e43aa86d9e9af2cbfe8ee)
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/5f480fa3-b35d-4c96-8e7b-1453921c6c46)
 First, I set the duration of the rain effect to 5, ensuring a continuous rainfall throughout the scene. I enabled looping to maintain this consistent rain effect and utilized the pre-warm feature to gradually introduce the rain, creating a natural progression in intensity.
 I chose a light blue, semi-transparent color for the raindrops to mimic the appearance of real-world rain while maintaining a visually appealing aesthetic. To further enhance the rain effect, I adjusted the emission settings to control the rate and volume of raindrops, creating a more dense or sparse rainfall as desired.
 For the shape of the raindrops, I selected an elongated, tapered form to accurately represent the appearance of falling rain. To create a more dynamic effect, I applied a velocity over lifetime setting, which causes the raindrops to accelerate as they fall, simulating the effect of gravity.
@@ -81,9 +81,9 @@ Lastly, I implemented a color over lifetime setting to introduce subtle variatio
 
 
 ## Pendulum
-![Unity_QdphsrxGlV.png](:/ab20c64549534a50beac027596ee9182)
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/254947c2-0cec-4bff-8222-0c0f5a3c1914)
 Incorporating a pendulum in game design can have a profound impact on user experience, as I've seen firsthand. It can create interactive and engaging gameplay mechanics while enhancing the visual appeal of the game. In my experience, players appreciate innovative elements that add excitement and immersion to their gaming experience. Ultimately, integrating a pendulum into a game can offer a unique and memorable experience for players while also inspiring designers to push boundaries in their creations.
-![ac63957bf9ee4eda3659b0f72c798d06.png](:/258268ce23854f33867e4482c42e8c4d)
+![ac63957bf9ee4eda3659b0f72c798d06](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/bcd97ab9-9163-4919-9faf-71e7bc38d514)
 ChangeMoveDir: This method updates the movingClockwise flag by checking the pendulum's current rotation against the specified leftAngle and rightAngle values. It ensures that the pendulum swings back and forth between these angles by toggling the movingClockwise flag when the pendulum reaches either angle limit. This enables the swinging motion of the pendulum by alternating its direction of rotation.
 If the pendulum's rotation (transform.rotation.z) is greater than the rightAngle, the pendulum should swing counter-clockwise, so the method sets movingClockwise to false.
 If the pendulum's rotation is less than the leftAngle, the pendulum should swing clockwise, so the method sets movingClockwise to true.
@@ -95,23 +95,23 @@ Together, these methods create the swinging motion of the pendulum by alternatin
 
 
 ## Canon
-![4feb8de3c0d0b83439439581f45f9aaa.png](:/5b5ad4900118446da85bd610694529e0)
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/99625460-4692-4f41-aa2f-c9f6272e1ac2)
 Implementing a cannon in game design can significantly impact the user experience.It adds a dynamic and interactive element to the gameplay, inviting players to experiment with different strategies and engage more deeply with the game environment. Players often appreciate the excitement and challenge that powerful elements like cannons bring.
-![c2e26b890d1eea69e2f86859aa15d533.png](:/8fe9aaeb7f6b4ab1942820789f866237)
+![c2e26b890d1eea69e2f86859aa15d533](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/f8aeec3f-b202-4f1a-a026-1ca011aa306b)
 Attack: This method executes the gun trap's attack sequence. It first resets the cooldownTimer to 0, allowing a new attack cycle to begin. Then, it retrieves an available fireball object from the fireballs array using the FindFireball method and sets its position to the firePoint location. After positioning the fireball, it activates the fireball's EnemyBullet component by calling its ActivateBullet method, effectively launching the projectile. Lastly, it triggers the "Fire" animation in the gun trap's Animator by calling Anim.SetTrigger("Fire"), providing visual feedback for the attack.
 FindFireball: This method searches the fireballs array for an inactive fireball object that can be used in the attack. It iterates through the array using a for loop and checks if each fireball object is inactive in the game's hierarchy (!fireballs[i].activeInHierarchy). If an inactive fireball is found, the method returns its index. If no inactive fireballs are found, the method returns 0, which corresponds to the first fireball object in the array, ensuring there's always a projectile available for the attack.
 
 
 ## Dialogue UI 
-![8534f2e2ff50d2475c5e7020f45d432a.png](:/f5700e6b1d32402c8ad9f371783b8a8b)
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/22fd2c3a-aff7-4fc7-ba72-946af437608e)
 Dialog UI is an important aspect of game design, as it impacts players' experience by influencing how they perceive and interact with the game. It's important to design a dialog UI that is intuitive, visually appealing, and supports the game's narrative and overall theme. In the game, the dialogue UI is a crucial element for guiding players towards their ultimate objective of finding keys to advance to subsequent levels. Dialogues have been strategically integrated into the gameplay to convey essential hints and information about key locations, thus supporting the player's progression through the game. In doing so, the dialogue UI enhances the user experience by ensuring players are well-informed and engaged while providing a sense of direction and accomplishment as they navigate through different levels.
-![00396c7e6711324ec5311810e4c62502.png](:/bf950e1d8edf41f8a16543e5a9579829)
+![00396c7e6711324ec5311810e4c62502](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/9f48e6d1-c702-47f8-bb4b-958dd2fe483a)
 the DisplayNextDialogueLine method, handles the display of dialogue lines in the game.
 The method first checks if there are any remaining lines in the dialogue queue (lines.Count == 0). If not, it ends the dialogue by calling the EndDialogue method and returns. Otherwise, it retrieves the next DialogueLine object from the queue (lines.Dequeue()) and stores it in the currentLine variable.
 The method then updates the characterIcon sprite and characterName text to reflect the current speaking character. It stops any existing coroutines (StopAllCoroutines()) to prevent any conflicts with the typing animation.
 Finally, it calls StartCoroutine(TypeSentence(currentLine)) to initiate the typing effect for the current dialogue line, gradually displaying the text character by character.
 The rest of the script manages the overall dialogue system, including setting up the singleton instance, starting a new dialogue, and ending the dialogue when there are no more lines to display.
-![ec58afe02b17a6e51896efcd6b859544.png](:/33a7f6e441484530a22a38b5b8523fdf)
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/20ce1de5-6ec5-4ea0-973d-8170587df2f8)
 the DialogueTrigger class, which handles initiating dialogue when the player enters a trigger area.
 The DialogueTrigger script contains a public Dialogue variable (dialogue) that can be assigned in the Unity editor.
 The TriggerDialogue method calls the StartDialogue method of the DialogueManager singleton (DialogueManager.Instance.StartDialogue(dialogue)) to start displaying the dialogue lines from the assigned dialogue variable.
@@ -120,17 +120,20 @@ The rest of the code consists of serializable classes (DialogueCharacter, Dialog
 
 
 ## Doors
-![Unity_YaWwxBupgb.png](:/3a7b3317fd2f46e6bf502e4dfbbc7664)
-![62d8ef279f4a4bcdb9788d32a7d8fa06.png](:/61e9de12b1604adf9fdbf5e9acd4d1a1)
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/2f380a19-0939-4ce5-9f19-3fcd1eae0bd8)
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/668a8755-8fe2-4e6f-aaa1-cc0cf87ba372)
+
 The incorporation of doors in the game serves as a vital component in enhancing both user experience and gameplay. These doors are not just static objects; they play a dynamic role in facilitating smooth transitions between levels. Defeating monsters and collecting the floating keys adds a layer of challenge and accomplishment to the gameplay, making the unlocking of doors an exhilarating experience for players. The moment a key approaches the door, it unlocks and opens, signifying progress and achievement. This innovative gameplay mechanic not only encourages exploration but also contributes to a heightened sense of immersion and engagement for players, highlighting the importance of well-designed and unique elements in elevating the overall user experience.
-![50b261d1c8f825e23244d0cdb75f1d8d.png](:/e2e6bcb390d94f89a9cd87fed41e23f8)
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/e19e9271-728e-43ac-a83f-2e2c8f21e3bf)
 The OnTriggerEnter2D method listens for any 2D collider entering the area defined by this script's collider. If the collider that enters has the "Player" tag...
 It checks whether the player is already following a key. If so...
 It updates the followTarget of the key that the player is following to be the door's transform (essentially, it tells the key that it should follow the door now).
 It sets the waitingToOpen boolean to true, which is then used in the Update method to wait until the player is close enough to the door before opening it.
 
 ## Key
-![2a1b3b28c4d16978e2a4f8213666649f.png](:/1af095ac30c6401a8cd73e9aa9f21ac6)
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/d367bd73-9b67-4f64-bb64-8529fcd994ef)
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/c1789d83-326e-4b72-97f9-7c6546b5251a)
 Inside the Update method, the script checks if the key is currently following a target (isFollowing). If it is, the script updates the position of the key object using Vector3.Lerp to interpolate between its current position and the target's position. The followSpeed variable determines how quickly the key moves toward the target, and Time.deltaTime ensures the movement is based on real-time.
 The OnTriggerEnter2D method is also significant, as it sets up the following behavior when the player enters the key's trigger area. It finds the PlayerScript component on the player object and assigns the key's followTarget to the player's keyFollowPoint. Then, it sets isFollowing to true and assigns the current key object to the player's followingKey variable, establishing the connection between the key and the player.
 
