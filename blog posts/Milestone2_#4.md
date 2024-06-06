@@ -7,7 +7,18 @@ In this milestone, our main focus was on creating a coherent level design that c
 For the level design, we made four biomes in total. Each biome represents a different location related to nature with its own unique identity. The desert represents an arid area with dunes and sand as well as mummies and pyramids. The Swamp biome has some platforms, and a parallax showing a background of old trees and roots. Moreover, on the scene there are some hazards like water and enemy slimes. The ice zones contain ice slides as well as snow polar bears and other Nordic creatures.
 While designing the levels we added different platforming sections that should challenge the player.
 
-![slime](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/c0f6819c-b5cc-458f-8469-5f12aed300a0)
+## Swamp Platform
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/1a6c6676-234e-4100-9b95-150d4abe8873)
+
+The swamp level features an immersive environment with trees playing a prominent role in its design.
+Ladders serve as the primary means of vertical navigation, allowing players to traverse the various levels within the swamp.
+Moving platforms present a dynamic challenge, requiring precise timing and coordination. Some platforms break upon player contact, adding another layer of strategy and difficulty.
+Collectible coins are scattered throughout the level, providing players with additional objectives to pursue.
+Players will encounter enemies such as Tartars and green monsters, each necessitating unique strategies to defeat.
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/17dbf4b5-b3ed-43bc-9486-5f1c5ef0cbfa)
+
+
 
 ### Icy / Slippery Platforms
 
@@ -45,14 +56,21 @@ In the game, the dash mechanic looks something like this:
 
 ![2](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/6da1d67d-71b4-4cc6-a8ce-b24e2959321f)
 
-### Slimes
-The slime moves horizontally in both directions and is also capable of jumping. It adjusts its movement direction when colliding with objects such as walls. This directional change occurs when another collider exits the boundary of the slime's collider.
+## Bats
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/4ecf29ee-34ea-4bb0-af25-b942cb5a0955)
+Alongside the existing challenges, the swamp level features three bats that introduce an additional element of gameplay.
+These bats exhibit coordinated behavior, following the player's movements throughout the level. Players must adapt their navigation strategies to keep track of the bats' location while managing other environmental obstacles.
+Engaging with the bats requires precise timing and planning, as they may attempt to evade or outmaneuver the player, adding complexity and interest to the gameplay experience.
 
-![dff380a79fc68a96d2a0a7e6f33de551](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/b6c67e31-d5f4-4f85-bc20-64baa39d81c9)
+## Slime 
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/2e48a42c-12e3-4d0b-9385-3abf4fa7c97b)
 
-The FlipSprite() method adjusts the slime sprite's orientation based on the direction of its movement. It analyzes the sign of the slime's horizontal velocity to determine whether to flip the sprite left or right. 
 
-![870f24a5699550a3f7754c8ca863f3ce](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/8da68067-3af7-4e85-8686-8d7943bbcfca)
+## Bloat
+
+![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/db85cfdb-6975-4c63-bc10-dfb4fd98b51f)
+
+
 
 ### Birds
 When designing birds in the game, we aimed for the unnatural movement of flight. Birds should be able to avoid obstacles as well as fly upwards towards the player, creating the illusion of the player being hunted down. To achieve this uncanny movement, we used the A* pathfinding library that can create paths based on 2d layers, similar to how NavMesh works. By setting the velocity of the bird as well as how much a bird should stay idle in one position, the bird keeps flying from one point to another but not reaching it instantly. The target is the player and the bird doesn't automatically know where the player is, but after a few seconds, the bird becomes aware of the location of the player. Overall this method of creating enemy pathfinding can help with different animals in our game, creating different patterns for grounded enemies as well.
