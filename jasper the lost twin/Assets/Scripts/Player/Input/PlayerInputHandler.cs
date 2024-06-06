@@ -13,7 +13,8 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField] private float inputHoldTime = 0.2f;
     private float jumpInputStartTime;
     private float dashInputStartTime;
-    public bool JumpInput { get; set; }
+	public bool JumpInput { get; set; }
+	public bool InteractInput { get; set; }
     public bool JumpInputStop { get; set; }
     public bool PrimaryAttackInput { get; set; }
     public bool DashInput { get; set; }
@@ -80,6 +81,19 @@ public class PlayerInputHandler : MonoBehaviour
         InputX = (int)MovementInput.x;
         InputY = (int)MovementInput.y;
     }
+    
+	public void OnInteractButton(InputAction.CallbackContext context)
+	{
+		if (context.started)
+		{
+			InteractInput = true;
+		}
+		else if (context.canceled)
+		{
+			InteractInput = false;
+		}	
+	}
+
 
     protected void Update()
     {
