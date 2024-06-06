@@ -54,7 +54,6 @@ The logic of dashing is that if the player is holding the dash input, it updates
 
 In the game, the dash mechanic looks something like this:
 
-![2](https://github.com/TheDarkestNightRises/game-dev/assets/93666980/6da1d67d-71b4-4cc6-a8ce-b24e2959321f)
 
 ## Bats
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/85575367/4ecf29ee-34ea-4bb0-af25-b942cb5a0955)
