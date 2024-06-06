@@ -543,6 +543,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShop
       objectReference: {fileID: 0}
+    - target: {fileID: 3145959957156851089, guid: 13f9ad750a98ab5488438d29373b2223, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3783994968230867815, guid: 13f9ad750a98ab5488438d29373b2223, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8562363706940508946, guid: 13f9ad750a98ab5488438d29373b2223, type: 3}
       propertyPath: m_LocalPosition.x
       value: 70.44541
