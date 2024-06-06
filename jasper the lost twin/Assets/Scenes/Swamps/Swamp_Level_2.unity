@@ -11787,6 +11787,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2256859010740308343, guid: 375c1e418ab47204fa1afac124e0de5e, type: 3}
   m_PrefabInstance: {fileID: 1589843262}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1678144327
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: targetPosition.x
+      value: 63.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: targetPosition.y
+      value: 2.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: sceneToLoad.m_SceneName
+      value: Swamp_Level_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: sceneToLoad.m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: cdc68c31bc85ed641a737b7fd8a4c428, type: 3}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 61.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277681958101159029, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: m_Name
+      value: Door (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
 --- !u!1 &1688468832
 GameObject:
   m_ObjectHideFlags: 0
@@ -13063,6 +13137,14 @@ PrefabInstance:
       propertyPath: targetPosition.y
       value: 2.69
       objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: sceneToLoad.m_SceneName
+      value: Swamp_Level_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: sceneToLoad.m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: c0e99117958dbe04387f9bf2449b37d2, type: 3}
     - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.27
@@ -13133,3 +13215,4 @@ SceneRoots:
   - {fileID: 2131265692}
   - {fileID: 411566591}
   - {fileID: 1794944200}
+  - {fileID: 1678144327}

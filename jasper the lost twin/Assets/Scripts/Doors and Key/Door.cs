@@ -17,6 +17,8 @@ public class Door : MonoBehaviour
 	[SerializeField]
 	public SceneField sceneToLoad;
 	[SerializeField]
+	public SceneField[] scenesToUnLoad;
+	[SerializeField]
 	public Vector3 targetPosition; 
 
     // Start is called before the first frame update
@@ -64,7 +66,8 @@ public class Door : MonoBehaviour
 		yield return StartCoroutine(SceneTransition.instance.FadeOut());
 		// Load the new scene
 		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
-
+		UnloadScenes();
+		
 		// Wait until the new scene is fully loaded
 		while (!asyncLoad.isDone)
 		{
@@ -73,6 +76,19 @@ public class Door : MonoBehaviour
 
 		thePlayer.transform.position = targetPosition;
 		yield return StartCoroutine(SceneTransition.instance.FadeIn());
+	}
+	
+	private void UnloadScenes()
+	{
+		foreach (SceneField scene in scenesToUnLoad)
+		{
+			UnloadSceneAsync(scene);
+		}
+	}
+	
+	private void UnloadSceneAsync(SceneField scene)
+	{
+		SceneManager.UnloadSceneAsync(scene);
 	}
 
 }

@@ -4608,7 +4608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8562363706940508946, guid: 13f9ad750a98ab5488438d29373b2223, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 154.27
+      value: 439.77
       objectReference: {fileID: 0}
     - target: {fileID: 8562363706940508946, guid: 13f9ad750a98ab5488438d29373b2223, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4895,7 +4895,7 @@ Transform:
   m_GameObject: {fileID: 1413573823}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.6, y: 0, z: 0}
+  m_LocalPosition: {x: 388.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4933,7 +4933,7 @@ Transform:
   m_GameObject: {fileID: 1480295215}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 128.12119, y: -1.6256293, z: -0.0014431705}
+  m_LocalPosition: {x: 413.6212, y: -1.6256293, z: -0.0014431705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5509,6 +5509,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: targetPosition.x
+      value: 477.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: targetPosition.y
+      value: -1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
       propertyPath: sceneToLoad.m_SceneName
       value: Dune_Level_1
       objectReference: {fileID: 0}
@@ -5516,9 +5524,37 @@ PrefabInstance:
       propertyPath: sceneToLoad.m_SceneAsset
       value: 
       objectReference: {fileID: 102900000, guid: b664330b50b07014eaf6addcbc8d64e1, type: 3}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: scenesToUnLoad.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: scenesToUnLoad.Array.data[0].m_SceneName
+      value: Snow_Level_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: scenesToUnLoad.Array.data[1].m_SceneName
+      value: Snow_Level_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: scenesToUnLoad.Array.data[2].m_SceneName
+      value: Snow_Level_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: scenesToUnLoad.Array.data[0].m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 8e49cac84df5e1f49a25ba2fbf9827fc, type: 3}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: scenesToUnLoad.Array.data[1].m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 6829baeb3feb44a4ca87e5a1e1ec921d, type: 3}
+    - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
+      propertyPath: scenesToUnLoad.Array.data[2].m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: caa363b849ecb2947bc53016db160f3f, type: 3}
     - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 158.38
+      value: 443.88004
       objectReference: {fileID: 0}
     - target: {fileID: 3700230004637172648, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
       propertyPath: m_LocalPosition.y
