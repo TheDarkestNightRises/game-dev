@@ -15662,7 +15662,7 @@ PrefabInstance:
       objectReference: {fileID: 102900000, guid: 8e49cac84df5e1f49a25ba2fbf9827fc, type: 3}
     - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
       propertyPath: scenesToUnLoad.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 511344094764048700, guid: f3304dc6642bf0a4da552e79ac5909cc, type: 3}
       propertyPath: scenesToUnLoad.Array.data[0].m_SceneName
