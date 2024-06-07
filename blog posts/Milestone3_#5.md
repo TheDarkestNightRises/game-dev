@@ -1,7 +1,7 @@
 # Milestone 3 update
 
 ## Description
-N/A
+In this milestone, we enhanced our game with improved enemy AI, dynamic environmental effects, and new interactive elements. The enemy AI uses a state machine for smooth transitions between behaviors, while loot collection mechanics add rewarding gameplay. We implemented a wind shader graph for realistic sprite movement and a dynamic rain system for atmospheric depth. New features include a snow biome, pendulum mechanics, and cannons, adding variety and challenge. Additionally, the dialogue UI guides players through the game, providing essential hints and narrative context.
 
 ## Enemy AI
 ![image](https://github.com/TheDarkestNightRises/game-dev/assets/91905169/89553ce8-2e9f-4d72-9b9d-69988f99f62f)
