@@ -1,11 +1,11 @@
 # game-dev
  <br> <br>
-youtube link:  <br> <br>
-blog post 1: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/RollABall_%231.md <br>
-blog post 2: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/GameDesign_%232.md <br>
-blog post 3: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/Milestone1_%233.md <br>
-blog post 4: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/Milestone2_%234.md <br>
-blog post 5: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/Milestone3_%235.md <br>
-blog post 6: 
+Youtube link: https://youtu.be/evuXcmSl8HU <br> <br> 
+Blog post 1: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/RollABall_%231.md <br>
+Blog post 2: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/GameDesign_%232.md <br>
+Blog post 3: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/Milestone1_%233.md <br>
+Blog post 4: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/Milestone2_%234.md <br>
+Blog post 5: https://github.com/TheDarkestNightRises/game-dev/blob/main/blog%20posts/Milestone3_%235.md <br>
+Blog post 6: 
 <br> <br>
 Assets sources: https://craftpix.net/
