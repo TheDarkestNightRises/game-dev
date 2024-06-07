@@ -9,12 +9,11 @@ public class Parallax : MonoBehaviour
 	private float startPos;
 	private string cameraTag = "MainCamera";
 	public float parallaxEffect;
-	private CinemachineStateDrivenCamera camera;
+	private GameObject camera;
 	
     void Start()
     {
-	    GameObject cameraObject = GameObject.FindWithTag(cameraTag);
-	    camera = FindObjectOfType<CinemachineStateDrivenCamera>();
+	    camera = GameObject.FindWithTag(cameraTag);
 	    startPos =	transform.position.x;
 	    length = GetComponent<SpriteRenderer>().bounds.size.x;
     }

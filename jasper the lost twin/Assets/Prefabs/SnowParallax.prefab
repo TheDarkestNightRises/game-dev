@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8856964999087046782}
   - component: {fileID: 2516709969067061620}
-  - component: {fileID: 6069299780501632055}
+  - component: {fileID: 8700451711036548323}
   m_Layer: 7
   m_Name: 4
   m_TagString: Untagged
@@ -79,13 +79,13 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 60.6, y: 20}
+  m_Size: {x: 400, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6069299780501632055
+--- !u!114 &8700451711036548323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 442839697970361621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a143b251f52ff947a728f15919115a8, type: 3}
+  m_Script: {fileID: 11500000, guid: aa5ba08090a3db846ac6de9f46d209fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0.5
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717355186869975040}
   - component: {fileID: 8515009175903563293}
-  - component: {fileID: 1814767293022022945}
+  - component: {fileID: 4631790611184819188}
   m_Layer: 7
   m_Name: 2
   m_TagString: Untagged
@@ -215,13 +215,13 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 60.6, y: 20}
+  m_Size: {x: 400, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1814767293022022945
+--- !u!114 &4631790611184819188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2759389875859238501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a143b251f52ff947a728f15919115a8, type: 3}
+  m_Script: {fileID: 11500000, guid: aa5ba08090a3db846ac6de9f46d209fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0.8
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1222759999445280557}
   - component: {fileID: 4563058709973542239}
-  - component: {fileID: 2989345824506267517}
+  - component: {fileID: 2850468744349712563}
   m_Layer: 7
   m_Name: 5
   m_TagString: Untagged
@@ -313,13 +313,13 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 60.6, y: 20}
+  m_Size: {x: 400, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2989345824506267517
+--- !u!114 &2850468744349712563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3924792725227262766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a143b251f52ff947a728f15919115a8, type: 3}
+  m_Script: {fileID: 11500000, guid: aa5ba08090a3db846ac6de9f46d209fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0.4
@@ -342,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5659019034834443523}
   - component: {fileID: 5320082284922419952}
-  - component: {fileID: 4060036088331744322}
+  - component: {fileID: 9174794705381849817}
   m_Layer: 7
   m_Name: 6
   m_TagString: Untagged
@@ -411,13 +411,13 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 60.6, y: 20}
+  m_Size: {x: 400, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4060036088331744322
+--- !u!114 &9174794705381849817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4614983682407035502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a143b251f52ff947a728f15919115a8, type: 3}
+  m_Script: {fileID: 11500000, guid: aa5ba08090a3db846ac6de9f46d209fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0.4
@@ -440,7 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7636331419619530300}
   - component: {fileID: 5256629624548793895}
-  - component: {fileID: 5461994685510171145}
+  - component: {fileID: 2693429366067725643}
   m_Layer: 7
   m_Name: 1
   m_TagString: Untagged
@@ -509,13 +509,13 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 60.6, y: 20}
+  m_Size: {x: 400, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5461994685510171145
+--- !u!114 &2693429366067725643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6832098837333363178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a143b251f52ff947a728f15919115a8, type: 3}
+  m_Script: {fileID: 11500000, guid: aa5ba08090a3db846ac6de9f46d209fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 1
@@ -538,7 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7195566200054451228}
   - component: {fileID: 7426231867492940456}
-  - component: {fileID: 2033057125557062745}
+  - component: {fileID: 7437331834153360534}
   m_Layer: 7
   m_Name: 3
   m_TagString: Untagged
@@ -607,13 +607,13 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 60.6, y: 20}
+  m_Size: {x: 400, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2033057125557062745
+--- !u!114 &7437331834153360534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6979152194717891555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a143b251f52ff947a728f15919115a8, type: 3}
+  m_Script: {fileID: 11500000, guid: aa5ba08090a3db846ac6de9f46d209fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0.7
@@ -636,7 +636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6516010527928035849}
   - component: {fileID: 1716919539873440556}
-  - component: {fileID: 2623023037845415017}
+  - component: {fileID: 8468165234256422257}
   m_Layer: 7
   m_Name: 7
   m_TagString: Untagged
@@ -705,13 +705,13 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 60.6, y: 20}
+  m_Size: {x: 400, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2623023037845415017
+--- !u!114 &8468165234256422257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -720,7 +720,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8238229181483985892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a143b251f52ff947a728f15919115a8, type: 3}
+  m_Script: {fileID: 11500000, guid: aa5ba08090a3db846ac6de9f46d209fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0.4
