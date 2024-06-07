@@ -7751,21 +7751,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: DesertParallax
       objectReference: {fileID: 0}
-    - target: {fileID: 1797833086317978872, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 4021911442619406060, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 4178242822309496687, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
-      objectReference: {fileID: 0}
     - target: {fileID: 5223756382288950103, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.954243
+      value: -42.6
       objectReference: {fileID: 0}
     - target: {fileID: 5223756382288950103, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7802,34 +7790,6 @@ PrefabInstance:
     - target: {fileID: 5223756382288950103, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5496884749144837098, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 5645117959032576325, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 6961927333551766090, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 6975342293645098732, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 7413962034902669804, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 8134221846357077113, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 8213854400607130369, guid: 8722ddf085077c5498704d3548312c5e, type: 3}
-      propertyPath: m_Size.x
-      value: 61.71
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
